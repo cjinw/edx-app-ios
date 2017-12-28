@@ -52,6 +52,7 @@
 @property (nonatomic, assign) BOOL reachable;
 @property (weak, nonatomic, nullable) IBOutlet UIWebView* webview_EULA;
 @property (weak, nonatomic, nullable) IBOutlet UIButton* btn_OpenEULA;
+@property (weak, nonatomic, nullable) IBOutlet UIButton* btn_OpenEULA2;
 @property (weak, nonatomic, nullable) IBOutlet UIImageView* img_SeparatorEULA;
 @property (strong, nonatomic) IBOutlet UIView* externalAuthContainer;
 @property (weak, nonatomic, nullable) IBOutlet OEXCustomLabel* lbl_OrSignIn;
@@ -230,6 +231,7 @@
 
 - (void)setExclusiveTouch {
     self.btn_OpenEULA.exclusiveTouch = YES;
+    self.btn_OpenEULA2.exclusiveTouch = YES;
     self.btn_Login.exclusiveTouch = YES;
     self.btn_TroubleLogging.exclusiveTouch = YES;
     self.view.multipleTouchEnabled = NO;
@@ -324,6 +326,7 @@
     [self.btn_TroubleLogging setAttributedTitle:[_buttonsTitleStyle attributedStringWithText:[Strings troubleInLoginButton]] forState:UIControlStateNormal];
     [self.btn_TroubleLogging setTitleColor:[[OEXStyles sharedStyles] primaryBaseColor] forState:UIControlStateNormal];
     [self.btn_OpenEULA setTitleColor:[[OEXStyles sharedStyles] primaryBaseColor] forState:UIControlStateNormal];
+    [self.btn_OpenEULA2 setTitleColor:[[OEXStyles sharedStyles] primaryBaseColor] forState:UIControlStateNormal];
     _buttonsTitleStyle.weight = OEXTextWeightNormal;
     _buttonsTitleStyle.size = OEXTextSizeXXSmall;
 
@@ -333,6 +336,15 @@
 
     self.btn_OpenEULA.accessibilityTraits = UIAccessibilityTraitLink;
     self.btn_OpenEULA.accessibilityLabel = [NSString stringWithFormat:@"%@,%@",[Strings redirectText], termsText];
+    
+    
+    NSString *termsText2 = [Strings privacyStatment];
+    [self.btn_OpenEULA2 setAttributedTitle:[_buttonsTitleStyle attributedStringWithText:termsText2] forState:UIControlStateNormal];
+    self.btn_OpenEULA2.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.btn_OpenEULA2.accessibilityTraits = UIAccessibilityTraitLink;
+    self.btn_OpenEULA2.accessibilityLabel = [NSString stringWithFormat:@"%@,%@",[Strings redirectText], termsText2];
+    
+    
     
     [self.btn_Login applyButtonStyleWithStyle:[self.environment.styles filledPrimaryButtonStyle] withTitle:[self signInButtonText]];
     [self.activityIndicator stopAnimating];
@@ -365,10 +377,22 @@
 
 #pragma mark IBActions
 - (IBAction)openEULA:(id)sender {
-    NSURL* url = [[NSBundle mainBundle] URLForResource:@"Terms-and-Services" withExtension:@"htm"];
+//    NSURL* url = [[NSBundle mainBundle] URLForResource:@"Terms-and-Services" withExtension:@"htm"];
+//    OEXUserLicenseAgreementViewController* viewController = [[OEXUserLicenseAgreementViewController alloc] initWithContentURL:url];
+//    [self presentViewController:viewController animated:YES completion:nil];
+    
+    NSURL* url = [[NSURL alloc] initWithString:@"http://www.kmooc.kr/agreement"]; //http://www.kmooc.kr/agreement
+    OEXUserLicenseAgreementViewController* viewController = [[OEXUserLicenseAgreementViewController alloc] initWithContentURL:url];
+    [self presentViewController:viewController animated:YES completion:nil];
+    
+}
+
+- (IBAction)openEULA2:(id)sender {
+    NSURL* url = [[NSURL alloc] initWithString:@"http://www.kmooc.kr/Privacy-Policy"]; //http://www.kmooc.kr/Privacy-Policy
     OEXUserLicenseAgreementViewController* viewController = [[OEXUserLicenseAgreementViewController alloc] initWithContentURL:url];
     [self presentViewController:viewController animated:YES completion:nil];
 }
+
 
 - (IBAction)troubleLoggingClicked:(id)sender {
     if(self.reachable) {

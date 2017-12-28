@@ -157,7 +157,10 @@ NSString* NSStringForOEXStartType(OEXStartType type) {
 }
 
 - (NSString*)courseImageURL {
-    return self.course_image_url ?: self.courseImageMediaInfo.uri;
+//    return self.course_image_url ?: self.courseImageMediaInfo.uri;
+    NSString* str_temp = self.course_image_url ?: self.courseImageMediaInfo.uri;
+    NSString* str_url = [str_temp stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return str_url;
 }
 
 @end

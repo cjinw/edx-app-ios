@@ -104,7 +104,7 @@ static OEXConfig* sSharedConfig;
 }
 
 - (NSString*)platformName {
-    return [self stringForKey:OEXPlatformName] ?: @"My open edX instance";
+    return [self stringForKey:OEXPlatformName] ?: @"K-MOOC";
 }
 
 - (NSString*)platformDestinationName {

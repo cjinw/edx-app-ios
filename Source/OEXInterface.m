@@ -197,8 +197,11 @@ static OEXInterface* _sharedInterface = nil;
 
 - (void)firstLaunchWifiSetting {
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    if(![userDefaults objectForKey:USERDEFAULT_KEY_WIFIONLY]) {
-        [userDefaults setBool:YES forKey:USERDEFAULT_KEY_WIFIONLY];
+//    if(![userDefaults objectForKey:USERDEFAULT_KEY_WIFIONLY]) {
+//        [userDefaults setBool:YES forKey:USERDEFAULT_KEY_WIFIONLY];
+    if([userDefaults objectForKey:USERDEFAULT_KEY_WIFIONLY]) {
+        [userDefaults setBool:NO forKey:USERDEFAULT_KEY_WIFIONLY];
+    
     }
 }
 
@@ -254,11 +257,15 @@ static OEXInterface* _sharedInterface = nil;
             return 1.0;
             break;
         case OEXVideoSpeedSlow:
-            return 0.5;
+            return 0.75;
         case OEXVideoSpeedFast:
             return 1.5;
         case OEXVideoSpeedXFast:
             return 2.0;
+        case OEXVideoSpeedMFast:
+            return 1.25;
+        case OEXVideoSpeedMXFast:
+            return 1.75;
         default:
             return 1.0;
             break;
@@ -343,7 +350,12 @@ static OEXInterface* _sharedInterface = nil;
     }
     totalSpaceRequired = totalSpaceRequired / 1024 / 1024 / 1024;
     OEXAppDelegate* appD = (OEXAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if([OEXInterface shouldDownloadOnlyOnWifi]) {
+//    if([OEXInterface shouldDownloadOnlyOnWifi]) {
+//        if(![appD.reachability isReachableViaWiFi]) {
+//            return NO;
+//        }
+//    }
+    if(![OEXInterface shouldDownloadOnlyOnWifi]) {
         if(![appD.reachability isReachableViaWiFi]) {
             return NO;
         }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,7 +44,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TTs-EL-Jso">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TTs-EL-Jso">
                                         <rect key="frame" x="35" y="6" width="313" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="MUA-79-jE4"/>
@@ -210,7 +210,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYz-SW-wBv">
-                                        <rect key="frame" x="106" y="498" width="171" height="21"/>
+                                        <rect key="frame" x="106" y="497" width="171" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="FFH-LG-Rhl"/>
                                             <constraint firstAttribute="width" constant="191" id="jbK-Ay-hDf"/>
@@ -238,9 +238,28 @@
                                             <constraint firstAttribute="height" constant="33" placeholder="YES" id="NlG-Ps-z8A"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUV-e1-XyL">
+                                        <rect key="frame" x="106" y="508" width="171" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="191" id="F7c-39-vlb"/>
+                                            <constraint firstAttribute="height" constant="21" id="nOw-3D-Tbf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="edX End User Licensing Agreement"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="F7c-39-vlb"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="openEULA2:" destination="riJ-LC-sPF" eventType="touchUpInside" id="qIi-6e-iJh"/>
+                                            <action selector="openEULA:" destination="riJ-LC-sPF" eventType="touchUpInside" id="yBk-gk-ykl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dcW-Go-srk" firstAttribute="top" secondItem="EXv-n9-pKW" secondAttribute="bottom" constant="8" id="06n-uK-Qm2"/>
+                                    <constraint firstItem="aUV-e1-XyL" firstAttribute="top" secondItem="ZfV-aD-lBt" secondAttribute="bottom" constant="8" symbolic="YES" id="0Jg-Wt-2wY"/>
                                     <constraint firstAttribute="trailing" secondItem="huu-Bj-C7B" secondAttribute="trailing" constant="40" id="1Yb-oA-yGs"/>
                                     <constraint firstItem="dcW-Go-srk" firstAttribute="top" secondItem="EXv-n9-pKW" secondAttribute="bottom" constant="8" id="3Jo-I2-aY0"/>
                                     <constraint firstItem="EXv-n9-pKW" firstAttribute="top" secondItem="hfa-gq-20d" secondAttribute="bottom" constant="20" id="3k7-VN-Tah"/>
@@ -248,7 +267,7 @@
                                     <constraint firstAttribute="centerX" secondItem="huu-Bj-C7B" secondAttribute="centerX" id="6Fh-e6-fEp"/>
                                     <constraint firstAttribute="width" constant="320" id="8VG-bG-bsd"/>
                                     <constraint firstItem="w4q-wU-kRm" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="8uH-Fo-vzb"/>
-                                    <constraint firstItem="cYz-SW-wBv" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="39" id="9eL-mk-oUC"/>
+                                    <constraint firstItem="cYz-SW-wBv" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="38" id="9eL-mk-oUC"/>
                                     <constraint firstItem="hfa-gq-20d" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="A46-z9-ghc"/>
                                     <constraint firstItem="huu-Bj-C7B" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="BKd-v0-daG"/>
                                     <constraint firstItem="huu-Bj-C7B" firstAttribute="top" secondItem="hfa-gq-20d" secondAttribute="bottom" constant="20" id="CRV-47-xcF"/>
@@ -286,6 +305,7 @@
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="centerY" secondItem="hfa-gq-20d" secondAttribute="centerY" constant="-2" id="ahE-JE-LBq"/>
                                     <constraint firstItem="Tp9-tH-kdk" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="cBk-MT-ZNf"/>
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hfa-gq-20d" secondAttribute="bottom" id="cvm-No-bAR"/>
+                                    <constraint firstItem="aUV-e1-XyL" firstAttribute="centerX" secondItem="cYz-SW-wBv" secondAttribute="centerX" id="cyh-mt-D3d"/>
                                     <constraint firstItem="EXv-n9-pKW" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="46" id="e5Y-r9-L0p"/>
                                     <constraint firstItem="ZfV-aD-lBt" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="28" id="gP0-Ms-PjD"/>
                                     <constraint firstAttribute="trailing" secondItem="w4q-wU-kRm" secondAttribute="trailing" constant="40" id="gVw-v1-eKf"/>
@@ -299,7 +319,7 @@
                                     <constraint firstAttribute="trailing" secondItem="5Ki-dQ-Zuc" secondAttribute="trailing" constant="54" id="l8h-s4-5xV"/>
                                     <constraint firstItem="hfa-gq-20d" firstAttribute="centerX" secondItem="EXv-n9-pKW" secondAttribute="centerX" id="mDT-tx-307"/>
                                     <constraint firstItem="Pqx-qN-yU2" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="210" id="mEF-9f-cVA"/>
-                                    <constraint firstItem="ahW-UE-xWc" firstAttribute="top" secondItem="cYz-SW-wBv" secondAttribute="bottom" constant="8" symbolic="YES" id="mNG-aB-zFK"/>
+                                    <constraint firstItem="ahW-UE-xWc" firstAttribute="top" secondItem="cYz-SW-wBv" secondAttribute="bottom" constant="9" id="mNG-aB-zFK"/>
                                     <constraint firstItem="9O4-tw-OUv" firstAttribute="centerY" secondItem="2of-Hn-kff" secondAttribute="centerY" constant="22" id="nKQ-0e-tkM"/>
                                     <constraint firstItem="w4q-wU-kRm" firstAttribute="top" secondItem="EXv-n9-pKW" secondAttribute="bottom" constant="8" id="nWT-tP-Q5n"/>
                                     <constraint firstItem="ahW-UE-xWc" firstAttribute="centerX" secondItem="XeO-S4-8zQ" secondAttribute="centerX" id="od6-0B-DvE"/>
@@ -392,6 +412,7 @@
                         <outlet property="activityIndicator" destination="5Ki-dQ-Zuc" id="TO6-Z5-8Lc"/>
                         <outlet property="btn_Login" destination="gKO-wT-mn0" id="G3A-QX-wde"/>
                         <outlet property="btn_OpenEULA" destination="cYz-SW-wBv" id="s64-5e-XLZ"/>
+                        <outlet property="btn_OpenEULA2" destination="aUV-e1-XyL" id="0YZ-9r-KdZ"/>
                         <outlet property="btn_TroubleLogging" destination="Tp9-tH-kdk" id="LAh-uz-BZh"/>
                         <outlet property="constraint_ActivityIndTop" destination="RNV-2E-14V" id="rcV-Ln-jkj"/>
                         <outlet property="constraint_MapTop" destination="5At-WC-HPh" id="vB5-Im-oOp"/>

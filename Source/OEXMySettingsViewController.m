@@ -62,7 +62,23 @@ typedef NS_ENUM(NSUInteger, OEXMySettingsAlertTag) {
 }
 
 - (IBAction)wifiOnlySwitchValueChanged:(id)sender {
+//    if(!self.wifiOnlySwitch.isOn) {
+//        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[Strings cellularDownloadEnabledTitle]
+//                                                        message:[Strings cellularDownloadEnabledMessage]
+//                                                       delegate:self
+//                                              cancelButtonTitle:[Strings allow]
+//                                              otherButtonTitles:[Strings doNotAllow], nil];
+//        alert.tag = OEXMySettingsAlertTagWifiOnly;
+//        [alert show];
+//    }
+//    else {
+//        [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
+//    }
+    
     if(!self.wifiOnlySwitch.isOn) {
+        [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[Strings cellularDownloadEnabledTitle]
                                                         message:[Strings cellularDownloadEnabledMessage]
                                                        delegate:self
@@ -70,9 +86,7 @@ typedef NS_ENUM(NSUInteger, OEXMySettingsAlertTag) {
                                               otherButtonTitles:[Strings doNotAllow], nil];
         alert.tag = OEXMySettingsAlertTagWifiOnly;
         [alert show];
-    }
-    else {
-        [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
+        
     }
 }
 
@@ -80,7 +94,8 @@ typedef NS_ENUM(NSUInteger, OEXMySettingsAlertTag) {
     switch(alertView.tag) {
         case OEXMySettingsAlertTagWifiOnly: {
             if(buttonIndex == 1) {
-                [self.wifiOnlySwitch setOn:YES animated:YES];
+//                [self.wifiOnlySwitch setOn:YES animated:YES];
+                [self.wifiOnlySwitch setOn:NO animated:YES];
             }
             [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
         }

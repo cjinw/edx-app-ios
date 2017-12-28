@@ -37,8 +37,10 @@
     [super viewDidLoad];
     
     [self.signInButton setTitle:[Strings loginSplashSignIn] forState:UIControlStateNormal];
-    [self.signUpButton applyButtonStyleWithStyle:[self.environment.styles filledPrimaryButtonStyle] withTitle:[Strings loginSplashSignUp]];
+//    [self.signUpButton applyButtonStyleWithStyle:[self.environment.styles filledPrimaryButtonStyle] withTitle:[Strings loginSplashSignUp]];
+    [self.signUpButton setTitle:[Strings loginSplashSignUp] forState:UIControlStateNormal];
     [self.signInButton.titleLabel setFont:[self.environment.styles boldSansSerifOfSize:14.0f]];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

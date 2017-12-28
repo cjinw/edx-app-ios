@@ -87,10 +87,44 @@ NSString* const OEXExternalRegistrationWithExistingAccountNotification = @"OEXEx
     
     self.toggleButtonStyle = [[OEXTextStyle alloc] initWithWeight:OEXTextWeightNormal size:OEXTextSizeBase color:[[OEXStyles sharedStyles] neutralDark]];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formFieldValueDidChange:) name:NOTIFICATION_REGISTRATION_FORM_FIELD_VALUE_DID_CHANGE object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formFieldValueDidChange:) name:NOTIFICATION_REGISTRATION_FORM_FIELD_VALUE_DID_CHANGE object:nil];
+//    
+//    [self getFormFields];
     
-    [self getFormFields];
+    //Swipe Left
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeftAction:)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    //swipeLeft.delegate = self;
+    [_webView addGestureRecognizer:swipeLeft];
+    
+    //Swipe Right
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightAction:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    //swipeRight.delegate = self;
+    [_webView addGestureRecognizer:swipeRight];
+    
+    
+    NSString *urlString = @"https://www.kmooc.kr/register";
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:urlRequest];
+    [self.view addSubview:_webView];
+    
+    
 }
+
+- (void)swipeRightAction:(id)ignored
+{
+    [_webView goBack];
+    
+}
+- (void)swipeLeftAction:(id)ignored
+{
+    [_webView goForward];
+}
+
+
 
 -(void)formFieldValueDidChange: (NSNotification *)notification {
     [self refreshFormFields];
@@ -124,66 +158,66 @@ NSString* const OEXExternalRegistrationWithExistingAccountNotification = @"OEXEx
 
 - (void)initializeViews {
 
-    NSString* platform = self.environment.config.platformName;
-
-    ////Create and initalize 'btnCreateAccount' button
-    self.registerButton = [[UIButton alloc] init];
-    
-    [self.registerButton oex_addAction:^(id  _Nonnull control) {
-        [self createAccount:nil];
-    } forEvents:UIControlEventTouchUpInside];
-    
-    [self.registerButton applyButtonStyleWithStyle:[self.environment.styles filledPrimaryButtonStyle] withTitle:[Strings registrationCreateMyAccount]];
-    self.registerButton.accessibilityIdentifier = @"register";
-
-    ////Create progrssIndicator as subview to btnCreateAccount
-    self.progressIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [self.registerButton addSubview:self.progressIndicator];
-    [self.progressIndicator hidesWhenStopped];
-    self.optionalFieldsSeparator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"separator3"]];
-    //Initialize label above agreement view
-    self.agreementLabel = [[UILabel alloc] init];
-    self.agreementLabel.font = [self.environment.styles sansSerifOfSize:10.f];
-    self.agreementLabel.textAlignment = NSTextAlignmentCenter;
-    self.agreementLabel.numberOfLines = 0;
-    self.agreementLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.agreementLabel.isAccessibilityElement = NO;
-    self.agreementLabel.text = [Strings registrationAgreementMessage];
-    self.agreementLink = [[UIButton alloc] init];
-    [self.agreementLink setTitle:[Strings registrationAgreementButtonTitleWithPlatformName:platform] forState:UIControlStateNormal];
-    [self.agreementLink.titleLabel setFont:[self.environment.styles semiBoldSansSerifOfSize:10]];
-    [self.agreementLink setTitleColor:[UIColor colorWithRed:0.16 green:0.44 blue:0.84 alpha:1] forState:UIControlStateNormal];
-    self.agreementLink.accessibilityTraits = UIAccessibilityTraitLink;
-    self.agreementLink.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.agreementLink.titleLabel.textAlignment = NSTextAlignmentCenter;
-    
-    [self.agreementLink oex_addAction:^(id  _Nonnull control) {
-        [self agreementButtonTapped:nil];
-    } forEvents:UIControlEventTouchUpInside];
-    self.agreementLink.accessibilityLabel = [NSString stringWithFormat:@"%@ %@",[Strings registrationAgreementMessage],[Strings registrationAgreementButtonTitleWithPlatformName:platform]];
-
-    //This button will show and hide optional fields
-    self.toggleOptionalFieldsButton = [[UIButton alloc] init];
-    [self.toggleOptionalFieldsButton setBackgroundColor:[UIColor whiteColor]];
-    [self.toggleOptionalFieldsButton setAttributedTitle: [self.toggleButtonStyle attributedStringWithText:[Strings registrationShowOptionalFields]] forState:UIControlStateNormal];
-    [self.toggleOptionalFieldsButton addTarget:self action:@selector(toggleOptionalFields:) forControlEvents:UIControlEventTouchUpInside];
-
-    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] init];
-    [tapGesture addTarget:self action:@selector(scrollViewTapped:)];
-    [self.scrollView addGestureRecognizer:tapGesture];
-    
-    NSMutableArray* providers = [[NSMutableArray alloc] init];
-    if(self.environment.config.googleConfig.enabled) {
-        [providers addObject:[[OEXGoogleAuthProvider alloc] init]];
-    }
-    if(self.environment.config.facebookConfig.enabled) {
-        [providers addObject:[[OEXFacebookAuthProvider alloc] init]];
-    }
-    if(providers.count > 0) {
-        OEXExternalRegistrationOptionsView* headingView = [[OEXExternalRegistrationOptionsView alloc] initWithFrame:CGRectZero providers:providers];
-        headingView.delegate = self;
-        [self useHeadingView:headingView];
-    }
+//    NSString* platform = self.environment.config.platformName;
+//
+//    ////Create and initalize 'btnCreateAccount' button
+//    self.registerButton = [[UIButton alloc] init];
+//    
+//    [self.registerButton oex_addAction:^(id  _Nonnull control) {
+//        [self createAccount:nil];
+//    } forEvents:UIControlEventTouchUpInside];
+//    
+//    [self.registerButton applyButtonStyleWithStyle:[self.environment.styles filledPrimaryButtonStyle] withTitle:[Strings registrationCreateMyAccount]];
+//    self.registerButton.accessibilityIdentifier = @"register";
+//
+//    ////Create progrssIndicator as subview to btnCreateAccount
+//    self.progressIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+//    [self.registerButton addSubview:self.progressIndicator];
+//    [self.progressIndicator hidesWhenStopped];
+//    self.optionalFieldsSeparator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"separator3"]];
+//    //Initialize label above agreement view
+//    self.agreementLabel = [[UILabel alloc] init];
+//    self.agreementLabel.font = [self.environment.styles sansSerifOfSize:10.f];
+//    self.agreementLabel.textAlignment = NSTextAlignmentCenter;
+//    self.agreementLabel.numberOfLines = 0;
+//    self.agreementLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.agreementLabel.isAccessibilityElement = NO;
+//    self.agreementLabel.text = [Strings registrationAgreementMessage];
+//    self.agreementLink = [[UIButton alloc] init];
+//    [self.agreementLink setTitle:[Strings registrationAgreementButtonTitleWithPlatformName:platform] forState:UIControlStateNormal];
+//    [self.agreementLink.titleLabel setFont:[self.environment.styles semiBoldSansSerifOfSize:10]];
+//    [self.agreementLink setTitleColor:[UIColor colorWithRed:0.16 green:0.44 blue:0.84 alpha:1] forState:UIControlStateNormal];
+//    self.agreementLink.accessibilityTraits = UIAccessibilityTraitLink;
+//    self.agreementLink.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.agreementLink.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    
+//    [self.agreementLink oex_addAction:^(id  _Nonnull control) {
+//        [self agreementButtonTapped:nil];
+//    } forEvents:UIControlEventTouchUpInside];
+//    self.agreementLink.accessibilityLabel = [NSString stringWithFormat:@"%@ %@",[Strings registrationAgreementMessage],[Strings registrationAgreementButtonTitleWithPlatformName:platform]];
+//
+//    //This button will show and hide optional fields
+//    self.toggleOptionalFieldsButton = [[UIButton alloc] init];
+//    [self.toggleOptionalFieldsButton setBackgroundColor:[UIColor whiteColor]];
+//    [self.toggleOptionalFieldsButton setAttributedTitle: [self.toggleButtonStyle attributedStringWithText:[Strings registrationShowOptionalFields]] forState:UIControlStateNormal];
+//    [self.toggleOptionalFieldsButton addTarget:self action:@selector(toggleOptionalFields:) forControlEvents:UIControlEventTouchUpInside];
+//
+//    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] init];
+//    [tapGesture addTarget:self action:@selector(scrollViewTapped:)];
+//    [self.scrollView addGestureRecognizer:tapGesture];
+//    
+//    NSMutableArray* providers = [[NSMutableArray alloc] init];
+//    if(self.environment.config.googleConfig.enabled) {
+//        [providers addObject:[[OEXGoogleAuthProvider alloc] init]];
+//    }
+//    if(self.environment.config.facebookConfig.enabled) {
+//        [providers addObject:[[OEXFacebookAuthProvider alloc] init]];
+//    }
+//    if(providers.count > 0) {
+//        OEXExternalRegistrationOptionsView* headingView = [[OEXExternalRegistrationOptionsView alloc] initWithFrame:CGRectZero providers:providers];
+//        headingView.delegate = self;
+//        [self useHeadingView:headingView];
+//    }
 }
 
 - (void)useHeadingView:(UIView*)headingView {

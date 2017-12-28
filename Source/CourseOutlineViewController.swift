@@ -231,9 +231,14 @@ public class CourseOutlineViewController :
     }
     
     private func canDownloadVideo() -> Bool {
+//        let hasWifi = environment.reachability.isReachableViaWiFi()
+//        let onlyOnWifi = environment.dataManager.interface?.shouldDownloadOnlyOnWifi ?? false
+//        return !onlyOnWifi || hasWifi
+        
         let hasWifi = environment.reachability.isReachableViaWiFi()
-        let onlyOnWifi = environment.dataManager.interface?.shouldDownloadOnlyOnWifi ?? false
-        return !onlyOnWifi || hasWifi
+        let onlyOnWifi = environment.dataManager.interface?.shouldDownloadOnlyOnWifi ?? true
+        return onlyOnWifi || hasWifi
+        
     }
     
     func outlineTableController(controller: CourseOutlineTableController, choseDownloadVideos videos: [OEXHelperVideoDownload], rootedAtBlock block:CourseBlock) {

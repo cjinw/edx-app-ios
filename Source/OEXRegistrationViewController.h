@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly, nullable) id <OEXExternalAuthProvider> externalProvider;
 @property (nonatomic, readonly) NSString* externalAccessToken;
 @property (strong, nonatomic, readonly) NSArray* fieldControllers;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 - (void)makeFieldControllers;
 - (void)refreshFormFields;
