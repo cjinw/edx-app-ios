@@ -51,6 +51,16 @@
 				<string>com.nile.kmooc</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nile.kmooc</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kmoocapp</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>2.7.8</string>
@@ -70,6 +80,14 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 		<string>fb-messenger-api</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-4.5.0</string>
+		<string>kakaostory-2.9.0</string>
+		<string>storylink</string>
+		<string>naversearchapp</string>
+		<string>naversearchthirdlogin</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

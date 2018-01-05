@@ -171,6 +171,10 @@ Copyright 2016 Google
 
 ## FirebaseInstanceID
 
+Copyright 2017 Google
+
+## FirebaseMessaging
+
 Copyright 2016 Google
 
 ## GoogleAnalytics

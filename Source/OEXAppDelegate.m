@@ -37,7 +37,12 @@
 #import "OEXSession.h"
 #import "OEXSegmentConfig.h"
 
-@interface OEXAppDelegate () <UIApplicationDelegate>
+#import <UserNotifications/UserNotifications.h>
+
+@import Firebase;
+
+@interface OEXAppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate>
+
 
 @property (nonatomic, strong) NSMutableDictionary* dictCompletionHandler;
 @property (nonatomic, strong) OEXEnvironment* environment;
@@ -82,6 +87,8 @@
     
     [self configureFabricKits:launchOptions];
     
+    application.applicationIconBadgeNumber = 0;
+    
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -89,6 +96,8 @@
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     
     UIViewController *topController = self.window.rootViewController;
+    
+    application.applicationIconBadgeNumber = 0;
     
     return [topController supportedInterfaceOrientations];
 }
@@ -151,6 +160,31 @@
 #pragma mark Push Notifications
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    NSLog(@"Remote Notification: %@", [userInfo description]);
+    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+    
+    
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:[apsInfo objectForKey:@"alert"]
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                              otherButtonTitles:nil];
+    
+    
+    [alertView show];
+    
+    application.applicationIconBadgeNumber = [[apsInfo objectForKey:@"badge"] integerValue];
+    
+//    if (userInfo[kGCMMessageIDKey]) {
+//        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+//    }
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+    
+    
     [self.environment.pushNotificationManager didReceiveRemoteNotificationWithUserInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
@@ -160,6 +194,13 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    NSLog(@"APNs device token retrieved: %@", deviceToken);
+    
+    // With swizzling disabled you must set the APNs device token here.
+    
+    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+    
     [self.environment.pushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
@@ -220,6 +261,30 @@
     //Initialize Firebase
     if (config.isFirebaseEnabled) {
         [FIRApp configure];
+        
+        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {
+            UIUserNotificationType allNotificationTypes =
+            (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+            UIUserNotificationSettings *settings =
+            [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        } else {
+            // iOS 10 or later
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
+            // For iOS 10 display notification (sent via APNS)
+            [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+            UNAuthorizationOptions authOptions =
+            UNAuthorizationOptionAlert
+            | UNAuthorizationOptionSound
+            | UNAuthorizationOptionBadge;
+            [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:authOptions completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            }];
+#endif
+        }
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+       
+        
         [[FIRAnalyticsConfiguration sharedInstance] setAnalyticsCollectionEnabled:YES];
     }
 
