@@ -38,6 +38,8 @@
 #import "Reachability.h"
 #import "OEXStyles.h"
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
 #define USER_EMAIL @"USERNAME"
 
 @interface OEXLoginViewController () <UIAlertViewDelegate>
@@ -85,6 +87,9 @@
 @property (weak, nonatomic, nullable) IBOutlet UILabel* lbl_Redirect;
 @property (weak, nonatomic, nullable) IBOutlet UIActivityIndicatorView* activityIndicator;
 @property (strong, nonatomic) IBOutlet UILabel* versionLabel;
+@property (strong, nonatomic) IBOutlet UIButton *btn_Kakao;
+
+
 
 @property (nonatomic, assign) id <OEXExternalAuthProvider> authProvider;
 @property (nonatomic) OEXTextStyle *placeHolderStyle;
@@ -392,6 +397,24 @@
     OEXUserLicenseAgreementViewController* viewController = [[OEXUserLicenseAgreementViewController alloc] initWithContentURL:url];
     [self presentViewController:viewController animated:YES completion:nil];
 }
+
+- (IBAction)loginKakao:(id)sender {
+    
+    // ensure old session was closed
+    [[KOSession sharedSession] close];
+    
+    [[KOSession sharedSession] openWithCompletionHandler:^(NSError *error) {
+        if ([[KOSession sharedSession] isOpen]) {
+            // login success
+            NSLog(@"login succeeded.");
+        } else {
+            // failed
+            NSLog(@"login failed.");
+        }
+    }];
+}
+
+
 
 
 - (IBAction)troubleLoggingClicked:(id)sender {

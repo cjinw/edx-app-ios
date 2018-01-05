@@ -582,6 +582,8 @@
 		AB431C861FF4780A00BA592D /* btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C841FF4780A00BA592D /* btn1.png */; };
 		AB431C871FF4780A00BA592D /* btn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C851FF4780A00BA592D /* btn3.png */; };
 		AB52918F1FFF313600F5402F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB52918E1FFF313600F5402F /* GoogleService-Info.plist */; };
+		ABEE78B71FFF38D400BB9C8A /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */; };
+		ABEE78B91FFF3AD200BB9C8A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */; };
 		B4132C10195AAFBE00F50B46 /* OEXAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */; };
 		B419295E1A8A3F1900448AD5 /* OEXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B419295D1A8A3F1900448AD5 /* OEXNetworkManager.m */; };
 		B41F22BB1A113D3D0022E01F /* OEXDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F22BA1A113D3D0022E01F /* OEXDownloadManager.m */; };
@@ -1443,6 +1445,8 @@
 		AB431C851FF4780A00BA592D /* btn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn3.png; sourceTree = "<group>"; };
 		AB431C8A1FF4785A00BA592D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB52918E1FFF313600F5402F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../kmooc_config/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FileProvider.framework; sourceTree = "<group>"; };
 		B1AF3BB032520841A93A174B /* Pods-edX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-edX/Pods-edX.debug.xcconfig"; sourceTree = "<group>"; };
 		B4132C0E195AAFBE00F50B46 /* OEXAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXAuthentication.h; sourceTree = "<group>"; };
 		B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXAuthentication.m; sourceTree = "<group>"; };
@@ -1688,6 +1692,7 @@
 				8F562F8E1A1F450A00320DB3 /* AssetsLibrary.framework in Frameworks */,
 				8F562F8C1A1F44FC00320DB3 /* AddressBook.framework in Frameworks */,
 				77E647A31C90C10300B6740D /* edXCore.framework in Frameworks */,
+				ABEE78B91FFF3AD200BB9C8A /* FileProvider.framework in Frameworks */,
 				B4A24D0D19EE8A6600CE5010 /* CoreMedia.framework in Frameworks */,
 				77ACA1CB1A323C2500039AD1 /* Fabric.framework in Frameworks */,
 				BE8163F61954244E00F9A2C5 /* MessageUI.framework in Frameworks */,
@@ -1699,6 +1704,7 @@
 				BECB7B131924C0C3009C77F1 /* UIKit.framework in Frameworks */,
 				BECB7B0F1924C0C3009C77F1 /* Foundation.framework in Frameworks */,
 				8B900B2EB01D16A88A33BBF5 /* libPods-edX.a in Frameworks */,
+				ABEE78B71FFF38D400BB9C8A /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3134,6 +3140,8 @@
 		BECB7B0D1924C0C3009C77F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */,
+				ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */,
 				776F39281B4EF4CD00ED11E3 /* WebKit.framework */,
 				805329111B0EA2DC0093B177 /* QuartzCore.framework */,
 				77ACA1C81A323C2500039AD1 /* Crashlytics.framework */,
@@ -4754,7 +4762,10 @@
 				INFOPLIST_FILE = "Source/edX-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nile.kmooc;
 				PRODUCT_NAME = edX;
@@ -5180,7 +5191,10 @@
 				INFOPLIST_FILE = "Source/edX-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nile.kmooc;
 				PRODUCT_NAME = edX;
@@ -5218,7 +5232,10 @@
 				INFOPLIST_FILE = "Source/edX-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nile.kmooc;
 				PRODUCT_NAME = edX;
