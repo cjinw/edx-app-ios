@@ -192,7 +192,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing into the app, you agree to the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="191" translatesAutoresizingMaskIntoConstraints="NO" id="ZfV-aD-lBt" customClass="OEXCustomLabel">
-                                        <rect key="frame" x="93" y="487" width="198" height="13"/>
+                                        <rect key="frame" x="93" y="483" width="198" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="13" id="TLP-cU-G6l"/>
                                             <constraint firstAttribute="width" constant="198" id="cb4-zD-OcS"/>
@@ -210,7 +210,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYz-SW-wBv">
-                                        <rect key="frame" x="106" y="497" width="171" height="21"/>
+                                        <rect key="frame" x="106" y="493" width="171" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="FFH-LG-Rhl"/>
                                             <constraint firstAttribute="width" constant="191" id="jbK-Ay-hDf"/>
@@ -227,7 +227,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-UE-xWc">
-                                        <rect key="frame" x="174" y="527" width="36" height="12"/>
+                                        <rect key="frame" x="174" y="523" width="36" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -239,7 +239,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUV-e1-XyL">
-                                        <rect key="frame" x="106" y="508" width="171" height="21"/>
+                                        <rect key="frame" x="106" y="506" width="171" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="191" id="F7c-39-vlb"/>
                                             <constraint firstAttribute="height" constant="21" id="nOw-3D-Tbf"/>
@@ -256,18 +256,10 @@
                                             <action selector="openEULA:" destination="riJ-LC-sPF" eventType="touchUpInside" id="yBk-gk-ykl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfP-rf-Iii">
-                                        <rect key="frame" x="59" y="578" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="loginKakao:" destination="riJ-LC-sPF" eventType="touchUpInside" id="Fc2-g7-BbY"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dcW-Go-srk" firstAttribute="top" secondItem="EXv-n9-pKW" secondAttribute="bottom" constant="8" id="06n-uK-Qm2"/>
-                                    <constraint firstItem="aUV-e1-XyL" firstAttribute="top" secondItem="ZfV-aD-lBt" secondAttribute="bottom" constant="8" symbolic="YES" id="0Jg-Wt-2wY"/>
+                                    <constraint firstItem="aUV-e1-XyL" firstAttribute="top" secondItem="ZfV-aD-lBt" secondAttribute="bottom" constant="10" id="0Jg-Wt-2wY"/>
                                     <constraint firstAttribute="trailing" secondItem="huu-Bj-C7B" secondAttribute="trailing" constant="40" id="1Yb-oA-yGs"/>
                                     <constraint firstItem="dcW-Go-srk" firstAttribute="top" secondItem="EXv-n9-pKW" secondAttribute="bottom" constant="8" id="3Jo-I2-aY0"/>
                                     <constraint firstItem="EXv-n9-pKW" firstAttribute="top" secondItem="hfa-gq-20d" secondAttribute="bottom" constant="20" id="3k7-VN-Tah"/>
@@ -275,7 +267,7 @@
                                     <constraint firstAttribute="centerX" secondItem="huu-Bj-C7B" secondAttribute="centerX" id="6Fh-e6-fEp"/>
                                     <constraint firstAttribute="width" constant="320" id="8VG-bG-bsd"/>
                                     <constraint firstItem="w4q-wU-kRm" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="8uH-Fo-vzb"/>
-                                    <constraint firstItem="cYz-SW-wBv" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="38" id="9eL-mk-oUC"/>
+                                    <constraint firstItem="cYz-SW-wBv" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="34" id="9eL-mk-oUC"/>
                                     <constraint firstItem="hfa-gq-20d" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="A46-z9-ghc"/>
                                     <constraint firstItem="huu-Bj-C7B" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="40" id="BKd-v0-daG"/>
                                     <constraint firstItem="huu-Bj-C7B" firstAttribute="top" secondItem="hfa-gq-20d" secondAttribute="bottom" constant="20" id="CRV-47-xcF"/>
@@ -315,12 +307,12 @@
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hfa-gq-20d" secondAttribute="bottom" id="cvm-No-bAR"/>
                                     <constraint firstItem="aUV-e1-XyL" firstAttribute="centerX" secondItem="cYz-SW-wBv" secondAttribute="centerX" id="cyh-mt-D3d"/>
                                     <constraint firstItem="EXv-n9-pKW" firstAttribute="leading" secondItem="XeO-S4-8zQ" secondAttribute="leading" constant="46" id="e5Y-r9-L0p"/>
-                                    <constraint firstItem="ZfV-aD-lBt" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="28" id="gP0-Ms-PjD"/>
+                                    <constraint firstItem="ZfV-aD-lBt" firstAttribute="top" secondItem="BU5-Og-2jn" secondAttribute="bottom" constant="24" id="gP0-Ms-PjD"/>
                                     <constraint firstAttribute="trailing" secondItem="w4q-wU-kRm" secondAttribute="trailing" constant="40" id="gVw-v1-eKf"/>
                                     <constraint firstAttribute="bottom" secondItem="ZfV-aD-lBt" secondAttribute="bottom" constant="73" id="hB1-YP-FkD"/>
                                     <constraint firstItem="gKO-wT-mn0" firstAttribute="top" secondItem="Tp9-tH-kdk" secondAttribute="bottom" constant="28" id="hsA-cL-dmn"/>
                                     <constraint firstItem="ahW-UE-xWc" firstAttribute="top" secondItem="cYz-SW-wBv" secondAttribute="bottom" constant="8" id="itP-fL-BN2"/>
-                                    <constraint firstAttribute="bottom" secondItem="ahW-UE-xWc" secondAttribute="bottom" constant="163" id="jy5-Pa-9d6"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahW-UE-xWc" secondAttribute="bottom" constant="131" id="jy5-Pa-9d6"/>
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hfa-gq-20d" secondAttribute="leading" id="k5k-AD-EcL"/>
                                     <constraint firstItem="BU5-Og-2jn" firstAttribute="top" secondItem="9O4-tw-OUv" secondAttribute="bottom" constant="12" id="kms-gg-pIx"/>
                                     <constraint firstAttribute="bottom" secondItem="cYz-SW-wBv" secondAttribute="bottom" constant="163" id="l0T-3k-yIM"/>
@@ -418,7 +410,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="5Ki-dQ-Zuc" id="TO6-Z5-8Lc"/>
-                        <outlet property="btn_Kakao" destination="EfP-rf-Iii" id="WCa-E9-jqS"/>
                         <outlet property="btn_Login" destination="gKO-wT-mn0" id="G3A-QX-wde"/>
                         <outlet property="btn_OpenEULA" destination="cYz-SW-wBv" id="s64-5e-XLZ"/>
                         <outlet property="btn_OpenEULA2" destination="aUV-e1-XyL" id="0YZ-9r-KdZ"/>

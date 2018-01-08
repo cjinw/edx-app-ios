@@ -584,6 +584,11 @@
 		AB52918F1FFF313600F5402F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB52918E1FFF313600F5402F /* GoogleService-Info.plist */; };
 		ABEE78B71FFF38D400BB9C8A /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */; };
 		ABEE78B91FFF3AD200BB9C8A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */; };
+		ABEE78BC1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */; };
+		ABEE78BF1FFF477B00BB9C8A /* OEXKakaoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEE78BE1FFF477B00BB9C8A /* OEXKakaoConfig.m */; };
+		ABEE78C41FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEE78C21FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png */; };
+		ABEE78C51FFF5F5E00BB9C8A /* icon_kakao_brown.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEE78C31FFF5F5E00BB9C8A /* icon_kakao_brown.png */; };
+		ABEE78C71FFF62DC00BB9C8A /* OEXKakaoSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEE78C61FFF62DC00BB9C8A /* OEXKakaoSocial.m */; };
 		B4132C10195AAFBE00F50B46 /* OEXAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */; };
 		B419295E1A8A3F1900448AD5 /* OEXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B419295D1A8A3F1900448AD5 /* OEXNetworkManager.m */; };
 		B41F22BB1A113D3D0022E01F /* OEXDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F22BA1A113D3D0022E01F /* OEXDownloadManager.m */; };
@@ -1447,6 +1452,14 @@
 		AB52918E1FFF313600F5402F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../kmooc_config/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FileProvider.framework; sourceTree = "<group>"; };
+		ABEE78BA1FFF3C7500BB9C8A /* OEXKakaoAuthProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXKakaoAuthProvider.h; sourceTree = "<group>"; };
+		ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXKakaoAuthProvider.m; sourceTree = "<group>"; };
+		ABEE78BD1FFF476F00BB9C8A /* OEXKakaoConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXKakaoConfig.h; sourceTree = "<group>"; };
+		ABEE78BE1FFF477B00BB9C8A /* OEXKakaoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXKakaoConfig.m; sourceTree = "<group>"; };
+		ABEE78C21FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_kakao_brown@2x.png"; sourceTree = "<group>"; };
+		ABEE78C31FFF5F5E00BB9C8A /* icon_kakao_brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kakao_brown.png; sourceTree = "<group>"; };
+		ABEE78C61FFF62DC00BB9C8A /* OEXKakaoSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXKakaoSocial.m; sourceTree = "<group>"; };
+		ABEE78C81FFF62EC00BB9C8A /* OEXKakaoSocial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXKakaoSocial.h; sourceTree = "<group>"; };
 		B1AF3BB032520841A93A174B /* Pods-edX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-edX/Pods-edX.debug.xcconfig"; sourceTree = "<group>"; };
 		B4132C0E195AAFBE00F50B46 /* OEXAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXAuthentication.h; sourceTree = "<group>"; };
 		B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXAuthentication.m; sourceTree = "<group>"; };
@@ -2085,6 +2098,8 @@
 		69ECC5B61D50D1170030CF87 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ABEE78C21FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png */,
+				ABEE78C31FFF5F5E00BB9C8A /* icon_kakao_brown.png */,
 				AB431C841FF4780A00BA592D /* btn1.png */,
 				AB431C851FF4780A00BA592D /* btn3.png */,
 				E039A8011F74C0D80064ABDB /* loginScreenImage~ipad.png */,
@@ -2536,6 +2551,8 @@
 				77ADF4A11AC1AF9800AC8955 /* OEXFacebookAuthProvider.h */,
 				77ADF4A21AC1AF9800AC8955 /* OEXFacebookAuthProvider.m */,
 				77ADF49F1AC1AD1200AC8955 /* OEXExternalAuthProvider.h */,
+				ABEE78BA1FFF3C7500BB9C8A /* OEXKakaoAuthProvider.h */,
+				ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -2830,6 +2847,8 @@
 				8F562F871A1F2D2C00320DB3 /* OEXGoogleSocial.m */,
 				8FE04B4B1A1E2637007F88B8 /* OEXFBSocial.h */,
 				8FE04B4C1A1E2637007F88B8 /* OEXFBSocial.m */,
+				ABEE78C61FFF62DC00BB9C8A /* OEXKakaoSocial.m */,
+				ABEE78C81FFF62EC00BB9C8A /* OEXKakaoSocial.h */,
 			);
 			name = SocialLogin;
 			sourceTree = "<group>";
@@ -2918,6 +2937,8 @@
 				E0A2461E1D5DA12A0066C766 /* AppStoreConfig.swift */,
 				E06292741F7BAFFF006D5EFC /* BranchConfig.swift */,
 				E06292761F7BB452006D5EFC /* FabricKits.swift */,
+				ABEE78BD1FFF476F00BB9C8A /* OEXKakaoConfig.h */,
+				ABEE78BE1FFF477B00BB9C8A /* OEXKakaoConfig.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -3772,6 +3793,7 @@
 				69ECC62F1D50D1170030CF87 /* ic_cancel@3x.png in Resources */,
 				198826E91952FE39005D4D8A /* OEXOpenInBrowserViewController.xib in Resources */,
 				69ECC63C1D50D1170030CF87 /* icon_facebook_white.png in Resources */,
+				ABEE78C51FFF5F5E00BB9C8A /* icon_kakao_brown.png in Resources */,
 				69ECC6381D50D1170030CF87 /* ic_unwatched@2x.png in Resources */,
 				69ECC6281D50D1170030CF87 /* check.png in Resources */,
 				5DD0FFD21B1D23DA00837121 /* DiscussionNewPostViewController.xib in Resources */,
@@ -3793,6 +3815,7 @@
 				22A4191E1EB1CF1500BBC8CA /* shareCourse@2x.png in Resources */,
 				E021F46C1F739599007A26E7 /* loginScreenImage@2x~ipad.png in Resources */,
 				B4B6D64A1A95CF33000F44E8 /* OEXUserLicenseAgreementViewController.xib in Resources */,
+				ABEE78C41FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png in Resources */,
 				BD837BB81DC8D5D400341EFD /* Icon-76.png in Resources */,
 				AB431C871FF4780A00BA592D /* btn3.png in Resources */,
 				69ECC63E1D50D1170030CF87 /* icon_google_white.png in Resources */,
@@ -4142,6 +4165,7 @@
 				9E1D952E1B678E4700ABE764 /* AccessibilityCLButton.swift in Sources */,
 				7765025F1C7CEBC5007384E7 /* SingleChildContainingViewController.swift in Sources */,
 				7C2DD54F1D4A7901006148E0 /* UserPreference.swift in Sources */,
+				ABEE78BC1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m in Sources */,
 				1A3AFFE51BD56370002846F3 /* CropViewController.swift in Sources */,
 				7731813B1B6C1442000CC050 /* SeparatorInsetable.swift in Sources */,
 				B4B285DC1A9A490400DD603A /* OEXFacebookConfig.m in Sources */,
@@ -4400,6 +4424,7 @@
 				E076A5C21C7DB624008A99C6 /* DiscussionResponsesDataController.swift in Sources */,
 				1A5AC5801B94ED0D00885187 /* CourseCardViewModel.swift in Sources */,
 				77FFA2CC1AC35CE800B4D69B /* OEXRegistrationStyles.m in Sources */,
+				ABEE78BF1FFF477B00BB9C8A /* OEXKakaoConfig.m in Sources */,
 				77567B771AC9FC1400877A7B /* NSNotificationCenter+OEXSafeAccess.m in Sources */,
 				9E4E6C3F1B4BBB5C0034F7EB /* LastAccessedProvider.swift in Sources */,
 				B4B6D5E91A9490FC000F44E8 /* OEXRegistrationViewController.m in Sources */,
@@ -4452,6 +4477,7 @@
 				1AB539FA1BFE08DE0065501F /* DebugLogViewController.swift in Sources */,
 				1AE0A6CA1BF4FF9000E14917 /* UserCourseEnrollment.swift in Sources */,
 				77503E8E1B287DBF00C47229 /* KeyboardInsetsSource.swift in Sources */,
+				ABEE78C71FFF62DC00BB9C8A /* OEXKakaoSocial.m in Sources */,
 				7772BE841AF834EC0081CA7A /* CourseOutlineQuerier.swift in Sources */,
 				19BB62301A9C656B007DBF47 /* OEXMySettingsViewController.m in Sources */,
 				77B463971A30F65E0083453A /* OEXStyles.m in Sources */,

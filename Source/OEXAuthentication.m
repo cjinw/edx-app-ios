@@ -25,6 +25,10 @@
 #import "OEXSession.h"
 #import "edX-Swift.h"
 
+#import "OEXKakaoSocial.h"
+#import "OEXKakaoAuthProvider.h"
+
+
 NSString* const facebook_login_endpoint = @"facebook";
 NSString* const google_login_endpoint = @"google-oauth2";
 
@@ -83,6 +87,11 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
     NSString* body = [parameters oex_stringByUsingFormEncoding];
     NSData* bodyData = [body dataUsingEncoding:NSUTF8StringEncoding];
     
+    
+    NSLog(@"executePOST body : %@",body);
+    
+    NSLog(@"executePOST bodyData : %@",bodyData);
+    
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:endpoint];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:bodyData];
@@ -106,6 +115,9 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
     [self executePOSTRequestWithPath:path parameters:parameters completion:^(NSData *data, NSHTTPURLResponse *response, NSError *error) {
         if(!error) {
             NSHTTPURLResponse* httpResp = (NSHTTPURLResponse*) response;
+            
+            NSLog(@"httpResp.statusCode : %ld",(long)httpResp.statusCode);
+            
             if(httpResp.statusCode == 200) {
                 NSError* error;
                 NSDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];

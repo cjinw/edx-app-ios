@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class OEXParseConfig;
 @class OEXSegmentConfig;
 @class OEXZeroRatingConfig;
+@class OEXKakaoConfig;
 
 @interface OEXConfig : NSObject
 

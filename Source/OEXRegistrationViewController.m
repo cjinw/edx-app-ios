@@ -29,6 +29,8 @@
 #import "OEXUsingExternalAuthHeadingView.h"
 #import "OEXRegistrationAgreement.h"
 
+#import "OEXKakaoAuthProvider.h"
+#import "OEXKakaoConfig.h"
 
 NSString* const OEXExternalRegistrationWithExistingAccountNotification = @"OEXExternalRegistrationWithExistingAccountNotification";
 

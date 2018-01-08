@@ -39,6 +39,10 @@
 #import "OEXStyles.h"
 
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "OEXKakaoAuthProvider.h"
+#import "OEXKakaoConfig.h"
+#import "OEXKakaoSocial.h"
+
 
 #define USER_EMAIL @"USERNAME"
 
@@ -101,7 +105,7 @@
 @implementation OEXLoginViewController
 
 - (void)layoutSubviews {
-    if(!([self isFacebookEnabled] || [self isGoogleEnabled])) {
+    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled])) {
         self.lbl_OrSignIn.hidden = YES;
         self.seperatorLeft.hidden = YES;
         self.seperatorRight.hidden = YES;
@@ -144,7 +148,7 @@
         self.constraint_SignInTop.constant = 20;
         self.constraint_ActivityIndTop.constant = 55;
         self.constraint_SignTop.constant = 15;
-        if([self isGoogleEnabled] || [self isFacebookEnabled]) {
+        if([self isGoogleEnabled] || [self isFacebookEnabled] || [self isKakaoEnabled]) {
             self.constraint_LeftSepTop.constant = 25;
             self.constraint_RightSepTop.constant = 25;
             self.constraint_BySigningTop.constant = 85;
@@ -175,6 +179,10 @@
     return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config googleConfig].enabled;
 }
 
+- (BOOL)isKakaoEnabled {
+    return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config kakaoConfig].enabled;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -187,6 +195,16 @@
     if([self isFacebookEnabled]) {
         [providers addObject:[[OEXFacebookAuthProvider alloc] init]];
     }
+    
+    
+    
+    
+    if([self isKakaoEnabled]) {
+        [providers addObject:[[OEXKakaoAuthProvider alloc] init]];
+    }
+    
+    
+    
 
     __weak __typeof(self) owner = self;
     OEXExternalAuthOptionsView* externalAuthOptions = [[OEXExternalAuthOptionsView alloc] initWithFrame:self.externalAuthContainer.bounds providers:providers tapAction:^(id<OEXExternalAuthProvider> provider) {

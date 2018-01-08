@@ -32,8 +32,7 @@
         }];
     }
     return self;
-}
-
+}   
 - (void)loginFromController:(UIViewController *)controller completion:(void (^)(NSString *, NSError *))completionHandler {
     FBSDKLoginManager* fbLoginManager = [[FBSDKLoginManager alloc]init];
     [fbLoginManager logInWithReadPermissions:@[@"email", @"public_profile"] fromViewController:controller handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {

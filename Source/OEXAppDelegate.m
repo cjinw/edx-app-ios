@@ -37,6 +37,10 @@
 #import "OEXSession.h"
 #import "OEXSegmentConfig.h"
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "OEXKakaoConfig.h"
+#import "OEXKakaoSocial.h"
+
 #import <UserNotifications/UserNotifications.h>
 
 @import Firebase;
@@ -117,9 +121,26 @@
         handled = [[GIDSignIn sharedInstance] handleURL:url sourceApplication:sourceApplication annotation:annotation];
         [[OEXGoogleSocial sharedInstance] setHandledOpenUrl:YES];
     }
+    
+    if (self.environment.config.kakaoConfig.enabled){
+        if ([KOSession isKakaoAccountLoginCallback:url]) {
+            return [KOSession handleOpenURL:url];
+        }
+    }
+    
+    
    
     return handled;
 }
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [KOSession handleDidBecomeActive];
+}
+
+
+
 
 // Respond to URI scheme links
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
@@ -143,6 +164,15 @@
         handled = [[GIDSignIn sharedInstance] handleURL:url
                                    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
                                           annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    }
+    
+    
+    if (self.environment.config.kakaoConfig.enabled) {
+        if ([KOSession isKakaoAccountLoginCallback:url]) {
+            return [KOSession handleOpenURL:url];
+        }
+        
+        
     }
     
     return handled;

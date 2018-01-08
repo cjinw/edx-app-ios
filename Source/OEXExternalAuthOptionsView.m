@@ -54,11 +54,12 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         return CGSizeMake(UIViewNoIntrinsicMetric, 0);
     }
     else {
-        CGFloat height = 30;
+        CGFloat height = 60;
         NSUInteger rows = (self.optionButtons.count + self.optionButtons.count - 1) / self.itemsPerRow;
 
 
         return CGSizeMake(UIViewNoIntrinsicMetric, rows * height + self.rowSpacing * (rows - 1));
+    
     }
 }
 
@@ -86,7 +87,7 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat rows = 1;
+    CGFloat rows = 2;
     BOOL fits = false;
     
     if(self.bounds.size.width == 0) {
@@ -97,6 +98,9 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         NSUInteger itemsPerRow = [self itemsPerRow:rows];
         CGFloat rowHeight = [self rowHeightWithRowCount:rows];
         CGFloat width = [self itemWidthWithHeight:rowHeight];
+
+        
+        
         CGFloat requiredWidth = itemsPerRow * width;
         if(requiredWidth < self.bounds.size.width) {
             [self.optionButtons enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL *stop) {
@@ -108,6 +112,7 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
                 CGFloat interItemSpacing = (self.bounds.size.width - width * itemsInRow) / (itemsInRow + 1);
                 CGFloat x = column * width + (column + 1) * interItemSpacing;
                 obj.frame = CGRectMake(x, y, width, rowHeight);
+//                obj.frame = CGRectMake(x, y, 102, rowHeight);
             }];
             break;
         }
