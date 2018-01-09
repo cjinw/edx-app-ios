@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 edX. All rights reserved.
 //
 
-#import "OEXGoogleAuthProvider.h"
 #import "OEXKakaoAuthProvider.h"
 
 #import "edX-Swift.h"

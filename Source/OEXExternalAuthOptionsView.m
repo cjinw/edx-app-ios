@@ -17,6 +17,7 @@
 
 static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
 
+
 @interface OEXExternalAuthOptionsView ()
 
 @property (strong, nonatomic) NSArray* optionButtons;
@@ -44,9 +45,9 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         if (self.itemsPerRow <= 1 )
             self.itemsPerRow = 1;
     }
-
+    
     return self;
-
+    
 }
 
 - (CGSize)intrinsicContentSize {
@@ -54,12 +55,11 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         return CGSizeMake(UIViewNoIntrinsicMetric, 0);
     }
     else {
-        CGFloat height = 60;
+        CGFloat height = 80;
         NSUInteger rows = (self.optionButtons.count + self.optionButtons.count - 1) / self.itemsPerRow;
-
-
+        
+        
         return CGSizeMake(UIViewNoIntrinsicMetric, rows * height + self.rowSpacing * (rows - 1));
-    
     }
 }
 
@@ -87,7 +87,7 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat rows = 2;
+    CGFloat rows = 1;
     BOOL fits = false;
     
     if(self.bounds.size.width == 0) {
@@ -98,21 +98,18 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         NSUInteger itemsPerRow = [self itemsPerRow:rows];
         CGFloat rowHeight = [self rowHeightWithRowCount:rows];
         CGFloat width = [self itemWidthWithHeight:rowHeight];
-
-        
-        
         CGFloat requiredWidth = itemsPerRow * width;
         if(requiredWidth < self.bounds.size.width) {
             [self.optionButtons enumerateObjectsUsingBlock:^(UIButton* obj, NSUInteger idx, BOOL *stop) {
                 NSUInteger row = idx / itemsPerRow;
-                NSUInteger itemsInRow = [self itemsInRow:row withMaxItemsPerRow:itemsPerRow itemCount:self.optionButtons.count];
+//                NSUInteger itemsInRow = [self itemsInRow:row withMaxItemsPerRow:itemsPerRow itemCount:self.optionButtons.count];
+                NSUInteger itemsInRow = 2;
                 NSUInteger column = idx % itemsPerRow;
                 CGFloat y = rowHeight * row + self.rowSpacing * row;
-
+                
                 CGFloat interItemSpacing = (self.bounds.size.width - width * itemsInRow) / (itemsInRow + 1);
                 CGFloat x = column * width + (column + 1) * interItemSpacing;
                 obj.frame = CGRectMake(x, y, width, rowHeight);
-//                obj.frame = CGRectMake(x, y, 102, rowHeight);
             }];
             break;
         }

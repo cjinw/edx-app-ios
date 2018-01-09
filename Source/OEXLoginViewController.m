@@ -44,6 +44,10 @@
 #import "OEXKakaoSocial.h"
 
 
+#import "OEXNaverAuthProvider.h"
+#import "OEXNaverConfig.h"
+
+
 #define USER_EMAIL @"USERNAME"
 
 @interface OEXLoginViewController () <UIAlertViewDelegate>
@@ -91,7 +95,7 @@
 @property (weak, nonatomic, nullable) IBOutlet UILabel* lbl_Redirect;
 @property (weak, nonatomic, nullable) IBOutlet UIActivityIndicatorView* activityIndicator;
 @property (strong, nonatomic) IBOutlet UILabel* versionLabel;
-@property (strong, nonatomic) IBOutlet UIButton *btn_Kakao;
+
 
 
 
@@ -105,7 +109,7 @@
 @implementation OEXLoginViewController
 
 - (void)layoutSubviews {
-    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled])) {
+    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled] || [self isNaverEnabled])) {
         self.lbl_OrSignIn.hidden = YES;
         self.seperatorLeft.hidden = YES;
         self.seperatorRight.hidden = YES;
@@ -148,7 +152,7 @@
         self.constraint_SignInTop.constant = 20;
         self.constraint_ActivityIndTop.constant = 55;
         self.constraint_SignTop.constant = 15;
-        if([self isGoogleEnabled] || [self isFacebookEnabled] || [self isKakaoEnabled]) {
+        if([self isGoogleEnabled] || [self isFacebookEnabled] || [self isKakaoEnabled] || [self isNaverEnabled]) {
             self.constraint_LeftSepTop.constant = 25;
             self.constraint_RightSepTop.constant = 25;
             self.constraint_BySigningTop.constant = 85;
@@ -183,6 +187,10 @@
     return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config kakaoConfig].enabled;
 }
 
+- (BOOL)isNaverEnabled {
+    return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config naverConfig].enabled;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -201,6 +209,10 @@
     
     if([self isKakaoEnabled]) {
         [providers addObject:[[OEXKakaoAuthProvider alloc] init]];
+    }
+    
+    if([self isNaverEnabled]) {
+        [providers addObject:[[OEXNaverAuthProvider alloc] init]];
     }
     
     
@@ -415,25 +427,6 @@
     OEXUserLicenseAgreementViewController* viewController = [[OEXUserLicenseAgreementViewController alloc] initWithContentURL:url];
     [self presentViewController:viewController animated:YES completion:nil];
 }
-
-- (IBAction)loginKakao:(id)sender {
-    
-    // ensure old session was closed
-    [[KOSession sharedSession] close];
-    
-    [[KOSession sharedSession] openWithCompletionHandler:^(NSError *error) {
-        if ([[KOSession sharedSession] isOpen]) {
-            // login success
-            NSLog(@"login succeeded.");
-        } else {
-            // failed
-            NSLog(@"login failed.");
-        }
-    }];
-}
-
-
-
 
 - (IBAction)troubleLoggingClicked:(id)sender {
     if(self.reachable) {

@@ -13,7 +13,6 @@
 
 #import "NSNotificationCenter+OEXSafeAccess.h"
 #import "OEXConfig.h"
-#import "OEXFacebookConfig.h"
 #import "OEXSession.h"
 
 

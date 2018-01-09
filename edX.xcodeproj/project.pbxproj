@@ -582,8 +582,16 @@
 		AB431C861FF4780A00BA592D /* btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C841FF4780A00BA592D /* btn1.png */; };
 		AB431C871FF4780A00BA592D /* btn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C851FF4780A00BA592D /* btn3.png */; };
 		AB52918F1FFF313600F5402F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB52918E1FFF313600F5402F /* GoogleService-Info.plist */; };
+		AB7A4808200498F50000F43A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A4807200498F50000F43A /* FileProvider.framework */; };
+		ABC920C220047E1E0042C3AC /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; };
+		ABC920C320047E270042C3AC /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; };
+		ABC920C420047E270042C3AC /* NaverThirdPartyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABC920C720047EE70042C3AC /* OEXNaverConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC920C620047EE70042C3AC /* OEXNaverConfig.m */; };
+		ABC920CA200480520042C3AC /* OEXNaverAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC920C9200480520042C3AC /* OEXNaverAuthProvider.m */; };
+		ABC920CD200490630042C3AC /* OEXNaverSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC920CC200490630042C3AC /* OEXNaverSocial.m */; };
+		ABC920D0200498610042C3AC /* icon_naver_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC920CE200498610042C3AC /* icon_naver_green@2x.png */; };
+		ABC920D1200498610042C3AC /* icon_naver_green.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC920CF200498610042C3AC /* icon_naver_green.png */; };
 		ABEE78B71FFF38D400BB9C8A /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */; };
-		ABEE78B91FFF3AD200BB9C8A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */; };
 		ABEE78BC1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */; };
 		ABEE78BF1FFF477B00BB9C8A /* OEXKakaoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEE78BE1FFF477B00BB9C8A /* OEXKakaoConfig.m */; };
 		ABEE78C41FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEE78C21FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png */; };
@@ -779,6 +787,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				ABC920C420047E270042C3AC /* NaverThirdPartyLogin.framework in Embed Frameworks */,
 				77E647CB1C90CA1400B6740D /* edXCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1450,8 +1459,17 @@
 		AB431C851FF4780A00BA592D /* btn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn3.png; sourceTree = "<group>"; };
 		AB431C8A1FF4785A00BA592D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB52918E1FFF313600F5402F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../kmooc_config/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB7A4807200498F50000F43A /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FileProvider.framework; sourceTree = "<group>"; };
+		ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaverThirdPartyLogin.framework; sourceTree = "<group>"; };
+		ABC920C520047ED80042C3AC /* OEXNaverConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXNaverConfig.h; sourceTree = "<group>"; };
+		ABC920C620047EE70042C3AC /* OEXNaverConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverConfig.m; sourceTree = "<group>"; };
+		ABC920C82004803F0042C3AC /* OEXNaverAuthProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXNaverAuthProvider.h; sourceTree = "<group>"; };
+		ABC920C9200480520042C3AC /* OEXNaverAuthProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverAuthProvider.m; sourceTree = "<group>"; };
+		ABC920CB200490500042C3AC /* OEXNaverSocial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXNaverSocial.h; sourceTree = "<group>"; };
+		ABC920CC200490630042C3AC /* OEXNaverSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverSocial.m; sourceTree = "<group>"; };
+		ABC920CE200498610042C3AC /* icon_naver_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_naver_green@2x.png"; sourceTree = "<group>"; };
+		ABC920CF200498610042C3AC /* icon_naver_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_naver_green.png; sourceTree = "<group>"; };
 		ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
-		ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FileProvider.framework; sourceTree = "<group>"; };
 		ABEE78BA1FFF3C7500BB9C8A /* OEXKakaoAuthProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXKakaoAuthProvider.h; sourceTree = "<group>"; };
 		ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXKakaoAuthProvider.m; sourceTree = "<group>"; };
 		ABEE78BD1FFF476F00BB9C8A /* OEXKakaoConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OEXKakaoConfig.h; sourceTree = "<group>"; };
@@ -1702,10 +1720,11 @@
 				776F39291B4EF4CD00ED11E3 /* WebKit.framework in Frameworks */,
 				805329121B0EA2DC0093B177 /* QuartzCore.framework in Frameworks */,
 				8F562F901A1F451600320DB3 /* CoreMotion.framework in Frameworks */,
+				AB7A4808200498F50000F43A /* FileProvider.framework in Frameworks */,
 				8F562F8E1A1F450A00320DB3 /* AssetsLibrary.framework in Frameworks */,
 				8F562F8C1A1F44FC00320DB3 /* AddressBook.framework in Frameworks */,
 				77E647A31C90C10300B6740D /* edXCore.framework in Frameworks */,
-				ABEE78B91FFF3AD200BB9C8A /* FileProvider.framework in Frameworks */,
+				ABC920C320047E270042C3AC /* NaverThirdPartyLogin.framework in Frameworks */,
 				B4A24D0D19EE8A6600CE5010 /* CoreMedia.framework in Frameworks */,
 				77ACA1CB1A323C2500039AD1 /* Fabric.framework in Frameworks */,
 				BE8163F61954244E00F9A2C5 /* MessageUI.framework in Frameworks */,
@@ -1713,6 +1732,7 @@
 				77ACA1CA1A323C2500039AD1 /* Crashlytics.framework in Frameworks */,
 				BE0EE289192B78CF00F9FF98 /* SystemConfiguration.framework in Frameworks */,
 				BE0EE287192B78C400F9FF98 /* CoreTelephony.framework in Frameworks */,
+				ABC920C220047E1E0042C3AC /* NaverThirdPartyLogin.framework in Frameworks */,
 				BECB7B111924C0C3009C77F1 /* CoreGraphics.framework in Frameworks */,
 				BECB7B131924C0C3009C77F1 /* UIKit.framework in Frameworks */,
 				BECB7B0F1924C0C3009C77F1 /* Foundation.framework in Frameworks */,
@@ -2098,6 +2118,8 @@
 		69ECC5B61D50D1170030CF87 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ABC920CE200498610042C3AC /* icon_naver_green@2x.png */,
+				ABC920CF200498610042C3AC /* icon_naver_green.png */,
 				ABEE78C21FFF5F5E00BB9C8A /* icon_kakao_brown@2x.png */,
 				ABEE78C31FFF5F5E00BB9C8A /* icon_kakao_brown.png */,
 				AB431C841FF4780A00BA592D /* btn1.png */,
@@ -2553,6 +2575,8 @@
 				77ADF49F1AC1AD1200AC8955 /* OEXExternalAuthProvider.h */,
 				ABEE78BA1FFF3C7500BB9C8A /* OEXKakaoAuthProvider.h */,
 				ABEE78BB1FFF3C8A00BB9C8A /* OEXKakaoAuthProvider.m */,
+				ABC920C82004803F0042C3AC /* OEXNaverAuthProvider.h */,
+				ABC920C9200480520042C3AC /* OEXNaverAuthProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -2847,8 +2871,10 @@
 				8F562F871A1F2D2C00320DB3 /* OEXGoogleSocial.m */,
 				8FE04B4B1A1E2637007F88B8 /* OEXFBSocial.h */,
 				8FE04B4C1A1E2637007F88B8 /* OEXFBSocial.m */,
-				ABEE78C61FFF62DC00BB9C8A /* OEXKakaoSocial.m */,
 				ABEE78C81FFF62EC00BB9C8A /* OEXKakaoSocial.h */,
+				ABEE78C61FFF62DC00BB9C8A /* OEXKakaoSocial.m */,
+				ABC920CB200490500042C3AC /* OEXNaverSocial.h */,
+				ABC920CC200490630042C3AC /* OEXNaverSocial.m */,
 			);
 			name = SocialLogin;
 			sourceTree = "<group>";
@@ -2939,6 +2965,8 @@
 				E06292761F7BB452006D5EFC /* FabricKits.swift */,
 				ABEE78BD1FFF476F00BB9C8A /* OEXKakaoConfig.h */,
 				ABEE78BE1FFF477B00BB9C8A /* OEXKakaoConfig.m */,
+				ABC920C520047ED80042C3AC /* OEXNaverConfig.h */,
+				ABC920C620047EE70042C3AC /* OEXNaverConfig.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -3161,7 +3189,8 @@
 		BECB7B0D1924C0C3009C77F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABEE78B81FFF3AD200BB9C8A /* FileProvider.framework */,
+				AB7A4807200498F50000F43A /* FileProvider.framework */,
+				ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */,
 				ABEE78B61FFF38D400BB9C8A /* KakaoOpenSDK.framework */,
 				776F39281B4EF4CD00ED11E3 /* WebKit.framework */,
 				805329111B0EA2DC0093B177 /* QuartzCore.framework */,
@@ -3744,6 +3773,7 @@
 				69ECC64E1D50D1170030CF87 /* Default-414w-736h@3x.png in Resources */,
 				B4B6D5EA1A9490FC000F44E8 /* OEXRegistrationViewController.xib in Resources */,
 				69ECC5FE1D50D1170030CF87 /* OpenSans-Bold.ttf in Resources */,
+				ABC920D0200498610042C3AC /* icon_naver_green@2x.png in Resources */,
 				69ECC60F1D50D1170030CF87 /* arrow_next@2x.png in Resources */,
 				69ECC6451D50D1170030CF87 /* separator.png in Resources */,
 				69ECC6131D50D1170030CF87 /* loginScreenImage.png in Resources */,
@@ -3809,6 +3839,7 @@
 				69ECC6321D50D1170030CF87 /* ic_download_arrow.png in Resources */,
 				69ECC6091D50D1170030CF87 /* Icon-29@2x.png in Resources */,
 				69ECC6391D50D1170030CF87 /* ic_unwatched@3x.png in Resources */,
+				ABC920D1200498610042C3AC /* icon_naver_green.png in Resources */,
 				69ECC61B1D50D1170030CF87 /* bt_logout_active.png in Resources */,
 				1905BFF11A31B037001917FA /* COURSE_NOT_LISTED.htm in Resources */,
 				69ECC6291D50D1170030CF87 /* check@2x.png in Resources */,
@@ -4240,6 +4271,7 @@
 				B4B6D6481A95CF33000F44E8 /* OEXUserLicenseAgreementViewController.m in Sources */,
 				69EFBB0D1E36270000FF66C4 /* RatingContainerView.swift in Sources */,
 				B4B6D62D1A949F1B000F44E8 /* OEXRegistrationFieldCheckBoxController.m in Sources */,
+				ABC920CD200490630042C3AC /* OEXNaverSocial.m in Sources */,
 				77691FA31B3B4596003922F2 /* UIColor+OEXHex.m in Sources */,
 				E01F45671E03D04100B9D7DC /* FirebaseAnalyticsTracker.swift in Sources */,
 				9EEB85A71BD6564E000F3E9E /* PressableCustomButton.swift in Sources */,
@@ -4319,6 +4351,7 @@
 				778B40D91C2F62520009F33E /* EnrollmentManager.swift in Sources */,
 				BECB7B5A1924D760009C77F1 /* SWRevealViewController.m in Sources */,
 				774B393B1B5EEF8A00595D33 /* UIAlertController+Selection.swift in Sources */,
+				ABC920C720047EE70042C3AC /* OEXNaverConfig.m in Sources */,
 				69EFBB0B1E36259D00FF66C4 /* RatingViewController.swift in Sources */,
 				1AC147391BCEC09F00E0A230 /* UIImage+OEXHelpers.swift in Sources */,
 				775DF4181AFAAC8C00F96B2F /* DataManager.swift in Sources */,
@@ -4371,6 +4404,7 @@
 				9EDB10BC1B0C74F800C760C6 /* CourseVideoTableViewCell.swift in Sources */,
 				779D1CE11B8E6FE000FCC847 /* PullRefreshController.swift in Sources */,
 				B4D31D351AB1904200C8D45C /* NSJSONSerialization+OEXSafeAccess.m in Sources */,
+				ABC920CA200480520042C3AC /* OEXNaverAuthProvider.m in Sources */,
 				223895CF1F25CF76005B9C15 /* SwipeableCell.swift in Sources */,
 				777DE7141C1630110068E280 /* CourseMediaInfo.swift in Sources */,
 				E01591F21D533F3B00201B15 /* UIViewController+CommonAdditions.swift in Sources */,

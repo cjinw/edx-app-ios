@@ -440,6 +440,8 @@
 "MY_VIDEOS_TIME_LABEL" = "NA";
 /* Marked as answer for endorsed responses */
 "MARKED_ANSWER" = "Marcado como respondido";
+/* Naver login method*/
+"NAVER"="Naver";
 /* Overlay error shown when attempting an action without an internet connection */
 "NETWORK_NOT_AVAILABLE_MESSAGE"="No está conectado a Internet.";
 /* Alert dialog error shown when attempting an action without an internet connection */
