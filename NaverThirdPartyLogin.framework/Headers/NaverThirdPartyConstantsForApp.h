@@ -21,7 +21,7 @@ typedef enum {
     CLIENTNETWORKPROBLEM = 7,
     UNAUTHORIZEDCLIENT = 8,
     UNSUPPORTEDRESPONSETYPE = 9,
-    NETWORKERROR = 10,
+    NETWORKERROR = 10,  
     UNKNOWNERROR = 11
 } THIRDPARTYLOGIN_RECEIVE_TYPE;
 
@@ -32,8 +32,7 @@ typedef enum {
     OK
 } OAuthLoginState;
 
-#define kServiceAppUrlScheme    @"thirdparty20samplegame"
-
-#define kConsumerKey            @"jyvqXeaVOVmV"
-#define kConsumerSecret         @"527300A0_COq1_XV33cf"
+#define kConsumerKey            @"********************" //사용안함
+#define kConsumerSecret         @"**********"           //사용안함
+#define kServiceAppUrlScheme    @"kmoocapp"
 #define kServiceAppName         @"네이버 아이디로 로그인"

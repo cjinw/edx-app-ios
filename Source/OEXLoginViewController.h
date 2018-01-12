@@ -8,6 +8,12 @@
 
 @import UIKit;
 
+
+#import <NaverThirdPartyLogin/NaverThirdPartyLogin.h>
+#import "OEXNaverAuthProvider.h"
+#import "OEXNaverConfig.h"
+#import "OEXNaverSocial.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class OEXLoginViewController;
@@ -19,7 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface OEXLoginViewController : UIViewController
+@interface OEXLoginViewController : UIViewController<NaverThirdPartyLoginConnectionDelegate>
+{
+    NaverThirdPartyLoginConnection *_thirdPartyLoginConn;
+}
 
 @property (weak, nonatomic, nullable) id <OEXLoginViewControllerDelegate> delegate;
 @property (strong, nonatomic) RouterEnvironment* environment;

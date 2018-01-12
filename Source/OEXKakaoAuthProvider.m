@@ -43,15 +43,8 @@
     OEXKakaoSocial* kakaoManager = [[OEXKakaoSocial alloc] init]; //could be named facebookHelper.
     [kakaoManager loginFromController:controller completion:^(NSString *accessToken, NSError *error) {
         
-        NSLog(@"%@",[KOSession sharedSession].accessToken);
-        
-//        if(error){
-//            completion(accessToken, nil, error);
-//            
-//        }
-//        else{
-//            completion(accessToken, nil, error);
-//        }
+       
+//        completion([KOSession sharedSession].accessToken, nil, error);
         
         
         [KOSessionTask accessTokenInfoTaskWithCompletionHandler:^(KOAccessTokenInfo *accessTokenInfo, NSError *error) {
@@ -67,43 +60,15 @@
                 }
             } else {
                 
-//                [KOSession sharedSession].accessToken;
-                
-                
                 // 성공 (토큰이 유효함)
                 NSLog(@"남은 유효시간: %@ (단위: ms)", accessTokenInfo.expiresInMillis);
                 NSLog(@"성공시 accessToken : %@",[KOSession sharedSession].accessToken);
                 
-                completion([KOSession sharedSession].accessToken, nil, error);  
+                completion([KOSession sharedSession].accessToken, nil, error);
                 
-                
-            }   
+            }
+            completion([KOSession sharedSession].accessToken, nil, error);
         }];
-        
-        
-        
-//        completion(accessToken, nil, error);
-//        if(error) {
-//            if([error.domain isEqual:FBSDKErrorDomain] && error.code == FBSDKNetworkErrorCode) {
-//                // Hide FB specific errors inside this abstraction barrier
-//                error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorNetworkConnectionLost userInfo:error.userInfo];
-//            }
-//            completion(accessToken, nil, error);
-//            return;
-//        }
-//        if(loadUserDetails) {
-//            [facebookManager requestUserProfileInfoWithCompletion:^(NSDictionary *userInfo, NSError *error) {
-//                // userInfo is a facebook user object
-//                OEXRegisteringUserDetails* profile = [[OEXRegisteringUserDetails alloc] init];
-//                profile.email = userInfo[@"email"];
-//                profile.name = userInfo[@"name"];
-//                completion(accessToken, profile, error);
-//            }];
-//        }
-//        else {
-//            completion(accessToken, nil, error);
-//
-//        }
         
     }];
 

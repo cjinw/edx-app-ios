@@ -18,7 +18,6 @@
 
 
 #import "OEXNaverSocial.h"
-#import <KakaoOpenSDK/KakaoOpenSDK.h>
 #import "OEXNaverConfig.h"
 
 @interface OEXNaverSocial ()
@@ -34,71 +33,39 @@
         [[NSNotificationCenter defaultCenter] oex_addObserver:self notification:OEXSessionEndedNotification action:^(NSNotification *notification, OEXNaverSocial* observer, id<OEXRemovable> removable) {
             [observer logout];
         }];
+        
+       
     }
     return self;
 }
 
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+
+- (void)requestThirdpartyLogin
+{
+    // NaverThirdPartyLoginConnection의 인스턴스에 서비스앱의 url scheme와 consumer key, consumer secret, 그리고 appName을 파라미터로 전달하여 3rd party OAuth 인증을 요청한다.
+    
+    NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+    [tlogin setServiceUrlScheme:kServiceAppUrlScheme];
+    [tlogin requestThirdPartyLogin];
+//    return YES;
+}
+
+void (^myHandler)(NSString *, NSError *);
+
 - (void)loginFromController:(UIViewController *)controller completion:(void (^)(NSString *, NSError *))completionHandler {
-    //    FBSDKLoginManager* fbLoginManager = [[FBSDKLoginManager alloc]init];
-    //    [fbLoginManager logInWithReadPermissions:@[@"email", @"public_profile"] fromViewController:controller handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-    //        FBSDKAccessToken* accessToken = [FBSDKAccessToken currentAccessToken];
-    //
-    //        if (error) {
-    //            completionHandler(nil, error);
-    //        } else if (result.isCancelled) {
-    //            completionHandler(nil, error); //Reflecting as an error for now, before further discussion
-    //        } else {
-    //            if (![result.grantedPermissions containsObject:@"email"]) {
-    //                OEXLogInfo(@"SOCIAL", @"Email permission is missing");
-    //            }
-    //            if (![result.grantedPermissions containsObject:@"public_profile"]) {
-    //                OEXLogInfo(@"SOCIAL", @"Public profile permission is missing");
-    //            }
-    //            completionHandler([accessToken tokenString],error);
-    //        }
-    //    }];
+    
+
+    
+    [self requestThirdpartyLogin];
+     
+    myHandler = completionHandler;
     
     
-    //    KOSession *session = [KOSession sharedSession];
-    //
-    //    if (session.isOpen) {
-    //        [session close];
-    //    }
-    //
-    //    [session openWithCompletionHandler:^(NSError *error) {
-    //        if (!session.isOpen) {
-    //            switch (error.code) {
-    //                case KOErrorCancelled:
-    //                    break;
-    //                default:
-    //                    [[[UIAlertView alloc] initWithTitle:@"에러" message:error.description delegate:nil cancelButtonTitle:@"확인" otherButtonTitles:nil, nil] show];
-    //                    break;
-    //            }
-    //        }
-    //        else
-    //        {
-    //            completionHandler([KOSession sharedSession].accessToken,error);
-    //        }
-    //    }];
-    
-    
-    
-    
-    [[KOSession sharedSession] close];
-    
-    [[KOSession sharedSession] openWithCompletionHandler:^(NSError *error) {
-        if ([[KOSession sharedSession] isOpen]) {
-            // login success
-            NSLog(@"login succeeded.");
-            
-            NSLog(@"%@",[KOSession sharedSession].accessToken);
-            
-            completionHandler([KOSession sharedSession].accessToken,error);
-        } else {
-            // failed
-            NSLog(@"login failed.");
-        }
-    }];
     
     
 }
@@ -114,14 +81,16 @@
 
 - (void)logout {
     
-    [[KOSession sharedSession] logoutAndCloseWithCompletionHandler:^(BOOL success, NSError *error) {
-        if (success) {
-            // logout success.
-        } else {
-            // failed
-            NSLog(@"failed to logout.");
-        }
-    }];
+    [[NaverThirdPartyLoginConnection getSharedInstance] resetToken];
+    
+//    [[KOSession sharedSession] logoutAndCloseWithCompletionHandler:^(BOOL success, NSError *error) {
+//        if (success) {
+//            // logout success.
+//        } else {
+//            // failed
+//            NSLog(@"failed to logout.");
+//        }
+//    }];
     
     
     
@@ -132,6 +101,10 @@
 }
 
 - (void)requestUserProfileInfoWithCompletion:(void (^)(NSDictionary*, NSError *))completion {
+    
+    
+    
+    
     //    if([FBSDKAccessToken currentAccessToken])
     //    {
     //        [[[FBSDKGraphRequest alloc]initWithGraphPath:@"me" parameters:nil] startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {

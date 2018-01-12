@@ -43,6 +43,12 @@
 
 #import <UserNotifications/UserNotifications.h>
 
+#import <NaverThirdPartyLogin/NaverThirdPartyLogin.h>
+#import "OEXNaverConfig.h"
+#import "OEXNaverSocial.h"
+
+
+
 @import Firebase;
 
 @interface OEXAppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate>
@@ -94,6 +100,19 @@
     application.applicationIconBadgeNumber = 0;
     
     
+    //Naver Login
+    
+   
+    NaverThirdPartyLoginConnection *thirdConn = [NaverThirdPartyLoginConnection getSharedInstance];
+    [thirdConn setServiceUrlScheme:kServiceAppUrlScheme];
+    [thirdConn setConsumerKey:kConsumerKey];
+    [thirdConn setConsumerSecret:kConsumerSecret];
+    [thirdConn setAppName:kServiceAppName];
+    
+    [thirdConn setIsInAppOauthEnable:YES];
+    [thirdConn setIsNaverAppOauthEnable:YES];
+    
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -128,6 +147,10 @@
         }
     }
     
+    if (self.environment.config.naverConfig.enabled){
+        NSLog(@"annotation");
+        return [[NaverThirdPartyLoginConnection getSharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    }
     
    
     return handled;
@@ -173,6 +196,11 @@
         }
         
         
+    }
+    
+    if (self.environment.config.naverConfig.enabled){
+        NSLog(@"options222222222\n\n\n\n\n\n");
+        return [[NaverThirdPartyLoginConnection getSharedInstance] application:app openURL:url options:options];
     }
     
     return handled;
