@@ -582,7 +582,7 @@
 		AB431C861FF4780A00BA592D /* btn1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C841FF4780A00BA592D /* btn1.png */; };
 		AB431C871FF4780A00BA592D /* btn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB431C851FF4780A00BA592D /* btn3.png */; };
 		AB52918F1FFF313600F5402F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB52918E1FFF313600F5402F /* GoogleService-Info.plist */; };
-		AB7A4808200498F50000F43A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A4807200498F50000F43A /* FileProvider.framework */; };
+		AB7A4808200498F50000F43A /* FileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7A4807200498F50000F43A /* FileProvider.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		ABC920C220047E1E0042C3AC /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; };
 		ABC920C320047E270042C3AC /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; };
 		ABC920C420047E270042C3AC /* NaverThirdPartyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABC920C120047E1E0042C3AC /* NaverThirdPartyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -4831,6 +4831,7 @@
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos10.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/edX-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -5260,6 +5261,7 @@
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos10.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/edX-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -5301,6 +5303,7 @@
 				PRODUCT_NAME = edX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos10.3;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/edX-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

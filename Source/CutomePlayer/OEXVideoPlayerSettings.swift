@@ -66,7 +66,7 @@ private func setupTable(table: UITableView) {
                 rows.append(item)
             }
             
-            let cc = OEXVideoPlayerSetting(title: "Closed Captions", rows: rows, isSelected: { (row) -> Bool in
+            let cc = OEXVideoPlayerSetting(title: "자막(Captions)", rows: rows, isSelected: { (row) -> Bool in
                 var selected = false
                 if let selectedLanguage:String = OEXInterface.getCCSelectedLanguage() {
                     let lang = rows[row].value as! String

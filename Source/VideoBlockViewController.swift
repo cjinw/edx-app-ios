@@ -283,8 +283,8 @@ class VideoBlockViewController : UIViewController, CourseBlockViewController, OE
     
     private func canDownloadVideo() -> Bool {
         let hasWifi = environment.reachability.isReachableViaWiFi() 
-        let onlyOnWifi = environment.dataManager.interface?.shouldDownloadOnlyOnWifi ?? false
-        return !onlyOnWifi || hasWifi
+        let onlyOnWifi = environment.dataManager.interface?.shouldDownloadOnlyOnWifi ?? true
+        return onlyOnWifi || hasWifi
     }
     
     override var childViewControllerForStatusBarStyle: UIViewController? {

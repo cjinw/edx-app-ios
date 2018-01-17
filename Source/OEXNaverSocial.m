@@ -83,6 +83,10 @@ void (^myHandler)(NSString *, NSError *);
     
     [[NaverThirdPartyLoginConnection getSharedInstance] resetToken];
     
+    
+//    NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+//    [tlogin requestDeleteToken];
+    
 //    [[KOSession sharedSession] logoutAndCloseWithCompletionHandler:^(BOOL success, NSError *error) {
 //        if (success) {
 //            // logout success.

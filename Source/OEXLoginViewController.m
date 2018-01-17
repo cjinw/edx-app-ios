@@ -202,7 +202,7 @@ NSError *naver_error = NULL;
 - (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFinishAuthorizationWithResult:(THIRDPARTYLOGIN_RECEIVE_TYPE)recieveType
 {
     NSLog(@"Getting auth code from NaverApp success!");
-    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+//    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
 }
 
 - (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFailAuthorizationWithRecieveType:(THIRDPARTYLOGIN_RECEIVE_TYPE)recieveType
