@@ -22,7 +22,8 @@ static NSString* const OEXNaverConfigKey = @"NAVER";
     self = [super init];
     if(self) {
         _enabled = [dictionary[@"ENABLED"] boolValue];
-        //        _apiKey = dictionary[@"GOOGLE_PLUS_KEY"];
+        _apiKey = dictionary[@"CONSUMERKEY"];
+        _apiKey2 = dictionary[@"CONSUMERSECRET"];
     }
     return self;
 }

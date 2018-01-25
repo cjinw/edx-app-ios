@@ -105,8 +105,14 @@
    
     NaverThirdPartyLoginConnection *thirdConn = [NaverThirdPartyLoginConnection getSharedInstance];
     [thirdConn setServiceUrlScheme:kServiceAppUrlScheme];
-    [thirdConn setConsumerKey:kConsumerKey];
-    [thirdConn setConsumerSecret:kConsumerSecret];
+   
+    [thirdConn setConsumerKey:self.environment.config.naverConfig.apiKey];
+    [thirdConn setConsumerSecret:self.environment.config.naverConfig.apiKey2];
+        
+//    [thirdConn setConsumerKey:kConsumerKey];
+//    [thirdConn setConsumerSecret:kConsumerSecret];
+    
+    
     [thirdConn setAppName:kServiceAppName];
     
     [thirdConn setIsInAppOauthEnable:YES];

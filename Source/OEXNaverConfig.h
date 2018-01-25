@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OEXNaverConfig : NSObject
 @property(nonatomic, readonly, assign, getter = isEnabled) BOOL enabled;
 @property(nonatomic, readonly, copy, nullable) NSString* apiKey;
+@property(nonatomic, readonly, copy, nullable) NSString* apiKey2;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
