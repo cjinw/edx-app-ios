@@ -640,10 +640,10 @@ NSError *naver_error = NULL;
 - (void)loginHandleLoginError:(NSError*)error {
     if(error.code == -1003 || error.code == -1009 || error.code == -1005) {
         [self loginFailedWithErrorMessage:[Strings invalidUsernamePassword] title:nil];
-    }
+        }
     else {
         if(error.code == 401) {
-            [[OEXGoogleSocial sharedInstance] clearHandler];
+//            [[OEXGoogleSocial sharedInstance] clearHandler];
 
             // MOB - 1110 - Social login error if the user's account is not linked with edX.
             if(self.authProvider != nil) {

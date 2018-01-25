@@ -15,6 +15,9 @@
 #import "OEXPersistentCredentialStorage.h"
 #import "OEXUserDetails.h"
 
+#import "OEXNaverSocial.h"
+#import "OEXKakaoSocial.h"
+
 //#import <NaverThirdPartyLogin/NaverThirdPartyLogin.h>
 
 NSString* const OEXSessionStartedNotification = @"OEXSessionStartedNotification";
@@ -90,7 +93,15 @@ static NSString* OEXSessionClearedCache = @"OEXSessionClearedCache";
     self.currentUser = nil;
     self.token = nil;
     
+//    NaverThirdPartyLoginConnection *_tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+//    [[_tlogin delegate]self];
+//    NSLog(@"1 accessToken : %@\n",_tlogin.accessToken);
+//    [_tlogin resetToken];
+//    NSLog(@"2 accessToken : %@\n",_tlogin.accessToken);
+//    
+//    
 //    [[NaverThirdPartyLoginConnection getSharedInstance] resetToken];
+//    [[NaverThirdPartyLoginConnection getSharedInstance] requestDeleteToken];
     [[NSNotificationCenter defaultCenter] postNotificationName:OEXSessionEndedNotification object:nil];
 }
 

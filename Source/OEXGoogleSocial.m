@@ -26,7 +26,7 @@
 @end
 
 @implementation OEXGoogleSocial
-+ (id)sharedInstance {
++ (id)  sharedInstance {
     static OEXGoogleSocial* sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -73,7 +73,7 @@
         return [[GIDSignIn sharedInstance] hasAuthInKeychain];
     }
 
-    return NO;
+    return NO;  
 }
 
 - (void)logout {
@@ -83,6 +83,7 @@
     if(googleConfig.apiKey && googleConfig.enabled) {
         [[GIDSignIn sharedInstance] signOut];
     }
+//    [[NaverThirdPartyLoginConnection getSharedInstance] resetToken];
 }
 
 - (void)clearHandler {

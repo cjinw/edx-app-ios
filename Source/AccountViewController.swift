@@ -118,7 +118,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
             case .SubmitFeedback:
                 launchEmailComposer()
             case .Logout:
-                OEXFileUtility.nukeUserPIIData()
+                OEXFileUtility.nukeUserPIIData()    
                 environment.router?.logout()
             }
         }

@@ -28,6 +28,9 @@
 #import "OEXKakaoSocial.h"
 #import "OEXKakaoAuthProvider.h"
 
+#import "OEXNaverSocial.h"
+#import "OEXNaverAuthProvider.h"
+
 
 NSString* const facebook_login_endpoint = @"facebook";
 NSString* const google_login_endpoint = @"google-oauth2";
@@ -219,7 +222,7 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
         dispatch_async(dispatch_get_main_queue(), ^{
                 OEXWrapURLCompletion(completionHandler)(userdata, userresponse, usererror);
             });
-    }];
+        }];
 }
 
 + (void)registerUserWithParameters:(NSDictionary*)parameters completionHandler:(OEXURLRequestHandler)handler {

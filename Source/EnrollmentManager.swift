@@ -6,7 +6,7 @@
 //  Copyright © 2015 edX. All rights reserved.
 //
 
-import Foundation
+    import Foundation
 
 public class EnrollmentManager : NSObject {
     private let interface: OEXInterface?

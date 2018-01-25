@@ -49,7 +49,15 @@
 {
     // NaverThirdPartyLoginConnection의 인스턴스에 서비스앱의 url scheme와 consumer key, consumer secret, 그리고 appName을 파라미터로 전달하여 3rd party OAuth 인증을 요청한다.
     
+    
+    
     NaverThirdPartyLoginConnection *tlogin = [NaverThirdPartyLoginConnection getSharedInstance];
+    
+    if ( tlogin.isValidAccessTokenExpireTimeNow ) {
+        [tlogin resetToken];
+        NSLog(@"resetToken before 3rd party login\n\n\n");
+    }
+    
     [tlogin setServiceUrlScheme:kServiceAppUrlScheme];
     [tlogin requestThirdPartyLogin];
 //    return YES;

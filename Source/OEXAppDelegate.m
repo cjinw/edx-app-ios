@@ -199,7 +199,6 @@
     }
     
     if (self.environment.config.naverConfig.enabled){
-        NSLog(@"options222222222\n\n\n\n\n\n");
         return [[NaverThirdPartyLoginConnection getSharedInstance] application:app openURL:url options:options];
     }
     
