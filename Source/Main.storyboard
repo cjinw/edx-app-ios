@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="QZv-Oh-XSY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="QZv-Oh-XSY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +22,6 @@
                 <navigationController navigationBarHidden="YES" id="QZv-Oh-XSY" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d3D-qd-xvw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -62,14 +60,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rh2-oS-pei" customClass="ProfileImageView" customModule="edX" customModuleProvider="target">
-                                                    <rect key="frame" x="28" y="33" width="85" height="85"/>
+                                                    <rect key="frame" x="36" y="30" width="85" height="85"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" secondItem="rh2-oS-pei" secondAttribute="width" multiplier="1:1" identifier="profileHeight" id="5eM-f9-yvT"/>
                                                         <constraint firstAttribute="width" constant="85" identifier="profileWidth" id="cXu-y6-QLj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="201" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ov6-L3-h2F">
-                                                    <rect key="frame" x="129" y="65" width="111" height="22"/>
+                                                    <rect key="frame" x="137" y="64" width="95" height="19"/>
                                                     <accessibility key="accessibilityConfiguration" label=""/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,10 +93,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JBK-jV-hWX">
-                                                    <rect key="frame" x="30" y="49" width="210" height="1"/>
+                                                    <rect key="frame" x="38" y="49" width="194" height="1"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="203" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY COURSES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-ZJ-taY" customClass="OEXCustomLabel">
-                                                    <rect key="frame" x="30" y="0.0" width="210" height="50"/>
+                                                    <rect key="frame" x="38" y="0.0" width="194" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" label="">
                                                         <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                     </accessibility>
@@ -129,7 +127,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="204" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Catalog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGl-2p-wzA">
-                                                    <rect key="frame" x="30" y="0.0" width="210" height="50"/>
+                                                    <rect key="frame" x="38" y="0.0" width="194" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" label="">
                                                         <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                     </accessibility>
@@ -138,7 +136,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mzz-7S-jEk">
-                                                    <rect key="frame" x="30" y="49" width="210" height="1"/>
+                                                    <rect key="frame" x="38" y="49" width="194" height="1"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.23529411759999999" green="0.25098039220000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,10 +160,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1.png" translatesAutoresizingMaskIntoConstraints="NO" id="93k-X3-oKY">
-                                                    <rect key="frame" x="30" y="49" width="210" height="1"/>
+                                                    <rect key="frame" x="38" y="49" width="194" height="1"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="205" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-PU-vDe">
-                                                    <rect key="frame" x="30" y="0.0" width="210" height="50"/>
+                                                    <rect key="frame" x="38" y="0.0" width="194" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" label="">
                                                         <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                     </accessibility>
@@ -187,18 +185,51 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellDebug" rowHeight="50" id="lzd-ss-mgn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellSetting" rowHeight="50" id="jcv-hm-NMa" userLabel="CellFeedBack">
                                         <rect key="frame" x="0.0" y="291" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jcv-hm-NMa" id="AL8-rz-KjH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHF-9b-J4a">
+                                                    <rect key="frame" x="38" y="49" width="194" height="1"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="205" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEEDBACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-nh-Biy" userLabel="FEEDBACK">
+                                                    <rect key="frame" x="38" y="0.0" width="194" height="50"/>
+                                                    <accessibility key="accessibilityConfiguration" label="">
+                                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.23529411759999999" green="0.25098039220000001" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fAi-nh-Biy" secondAttribute="trailing" constant="72" id="9Jn-U7-eTc"/>
+                                                <constraint firstAttribute="bottom" secondItem="fAi-nh-Biy" secondAttribute="bottom" id="UWp-Y7-stn"/>
+                                                <constraint firstItem="fAi-nh-Biy" firstAttribute="top" secondItem="AL8-rz-KjH" secondAttribute="top" id="a2M-Sm-SFX"/>
+                                                <constraint firstItem="fAi-nh-Biy" firstAttribute="leading" secondItem="jHF-9b-J4a" secondAttribute="leading" id="cMk-yE-gJd"/>
+                                                <constraint firstItem="fAi-nh-Biy" firstAttribute="bottom" secondItem="jHF-9b-J4a" secondAttribute="bottom" id="duM-cl-NG8"/>
+                                                <constraint firstItem="fAi-nh-Biy" firstAttribute="leading" secondItem="AL8-rz-KjH" secondAttribute="leadingMargin" constant="22" id="knP-TT-kNy"/>
+                                                <constraint firstItem="fAi-nh-Biy" firstAttribute="centerX" secondItem="jHF-9b-J4a" secondAttribute="centerX" id="sNy-cO-sZ7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellDebug" rowHeight="50" id="lzd-ss-mgn">
+                                        <rect key="frame" x="0.0" y="341" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lzd-ss-mgn" id="IyX-WK-94J">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QFG-e0-gcE">
-                                                    <rect key="frame" x="30" y="49" width="210" height="1"/>
+                                                    <rect key="frame" x="38" y="49" width="194" height="1"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="204" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEBUG MENU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37K-Bp-8DS" customClass="OEXCustomLabel">
-                                                    <rect key="frame" x="30" y="0.0" width="210" height="50"/>
+                                                    <rect key="frame" x="38" y="0.0" width="194" height="50"/>
                                                     <accessibility key="accessibilityConfiguration" label="">
                                                         <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                                     </accessibility>
@@ -238,6 +269,7 @@
                         <outlet property="accountLabel" destination="5Et-PU-vDe" id="I4z-Xr-VI3"/>
                         <outlet property="courseCatalogLabel" destination="pGl-2p-wzA" id="MzW-Y6-HZE"/>
                         <outlet property="coursesLabel" destination="Lcp-ZJ-taY" id="Ltg-vL-WbI"/>
+                        <outlet property="submitFeedback" destination="fAi-nh-Biy" id="N0A-hn-pTe"/>
                         <outlet property="userNameLabel" destination="Ov6-L3-h2F" id="ey0-hL-y2k"/>
                         <outlet property="userProfilePicture" destination="rh2-oS-pei" id="xmf-XA-MXT"/>
                     </connections>
@@ -251,9 +283,4 @@
         <image name="avatarPlaceholder" width="12" height="12"/>
         <image name="separator1.png" width="416" height="1"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

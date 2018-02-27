@@ -11,7 +11,7 @@ import MessageUI
 import edXCore
 
 private enum OEXRearViewOptions: Int {
-    case UserProfile, MyCourse, CourseCatalog, UserAccount, Debug
+    case UserProfile, MyCourse, CourseCatalog, UserAccount, SubmitFeedback, Debug
 }
 
 private let versionButtonStyle = OEXTextStyle(weight:.normal, size:.xxSmall, color: OEXStyles.shared().neutralWhite())
@@ -34,6 +34,7 @@ class OEXRearTableViewController : UITableViewController {
     @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var courseCatalogLabel: UILabel!
     @IBOutlet var userProfilePicture: UIImageView!
+    @IBOutlet var submitFeedback: UILabel!
     
     lazy var environment = Environment()
     var profileFeed: Feed<UserProfile>?
@@ -41,7 +42,7 @@ class OEXRearTableViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProfileLoader()
-        updateUIWithUserInfo()
+            updateUIWithUserInfo()
         
         //Listen to notification
         NotificationCenter.default.addObserver(self, selector: #selector(OEXRearTableViewController.dataAvailable(notification:)), name: NSNotification.Name(rawValue: NOTIFICATION_URL_RESPONSE), object: nil)
@@ -49,6 +50,9 @@ class OEXRearTableViewController : UITableViewController {
         coursesLabel.text = Strings.myCourses.oex_uppercaseStringInCurrentLocale()
         accountLabel.text = Strings.userAccount.oex_uppercaseStringInCurrentLocale()
         courseCatalogLabel.text = courseCatalogTitle().oex_uppercaseStringInCurrentLocale()
+//        submitFeedback.text = OEXLocalizedString("SUBMIT_FEEDBACK.OPTION_TITLE", nil)
+        submitFeedback.text = Strings.SubmitFeedback.optionTitle
+        
         setNaturalTextAlignment()
         setAccessibilityLabels()
         
@@ -96,6 +100,7 @@ class OEXRearTableViewController : UITableViewController {
         userNameLabel.textAlignment = .natural
         userNameLabel.adjustsFontSizeToFitWidth = true
         courseCatalogLabel.textAlignment = .natural
+//        SubmitFeedback.textAlignment = .natural
     }
     
     private func setAccessibilityLabels() {
@@ -104,6 +109,7 @@ class OEXRearTableViewController : UITableViewController {
         accountLabel.accessibilityLabel = accountLabel.text
         courseCatalogLabel.accessibilityLabel = courseCatalogLabel.text
         userProfilePicture.accessibilityLabel = Strings.accessibilityUserAvatar
+//        SubmitFeedback.accessibilityLabel = SubmitFeedback.text
     }
     
     private func courseCatalogTitle() -> String {
@@ -153,8 +159,12 @@ class OEXRearTableViewController : UITableViewController {
                 environment.router?.showCourseCatalog()
             case .UserAccount:
                 environment.router?.showAccount()
+            case .SubmitFeedback:
+                launchEmailComposer()
             case .Debug:
                 environment.router?.showDebugPane()
+            
+        
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)
@@ -178,5 +188,32 @@ class OEXRearTableViewController : UITableViewController {
         if successString == NOTIFICATION_VALUE_URL_STATUS_SUCCESS && URLString == environment.interface?.urlString(forType: URL_USER_DETAILS) {
             updateUIWithUserInfo()
         }
+    }
+    
+}
+extension OEXRearTableViewController : MFMailComposeViewControllerDelegate {
+    func launchEmailComposer() {
+        if !MFMailComposeViewController.canSendMail() {
+            let alert = UIAlertView(title: Strings.emailAccountNotSetUpTitle,
+                                    message: Strings.emailAccountNotSetUpMessage,
+                                    delegate: nil,
+                                    cancelButtonTitle: Strings.ok)
+            alert.show()
+        } else {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.navigationBar.tintColor = OEXStyles.shared().navigationItemTintColor()
+            mail.setSubject(Strings.SubmitFeedback.messageSubject)
+            
+            mail.setMessageBody(EmailTemplates.supportEmailMessageTemplate(), isHTML: false)
+            if let fbAddress = environment.config.feedbackEmailAddress() {
+                mail.setToRecipients([fbAddress])
+            }
+            present(mail, animated: true, completion: nil)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
     }
 }

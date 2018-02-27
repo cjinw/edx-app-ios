@@ -11,11 +11,17 @@ import MessageUI
 
 fileprivate enum AccountviewOptions : Int {
     case Profile,
-         UserSettings,
-         SubmitFeedback,
-         Logout
+    UserSettings,
+    Logout
     
-        static let accountOptions = [Profile, UserSettings, SubmitFeedback, Logout]
+    static let accountOptions = [Profile, UserSettings, Logout]
+    
+//    case Profile,
+//         UserSettings,
+//         SubmitFeedback,
+//         Logout
+//
+//        static let accountOptions = [Profile, UserSettings, SubmitFeedback, Logout]
 }
 
 class AccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -115,8 +121,8 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
             case .Profile:
                 guard environment.config.profilesEnabled, let currentUserName = environment.session.currentUser?.username  else { break }
                 environment.router?.showProfileForUsername(controller: self, username: currentUserName, editable: true)
-            case .SubmitFeedback:
-                launchEmailComposer()
+//            case .SubmitFeedback:
+//                launchEmailComposer()
             case .Logout:
                 OEXFileUtility.nukeUserPIIData()    
                 environment.router?.logout()
@@ -136,7 +142,9 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func accessoryType(option: AccountviewOptions) -> UITableViewCellAccessoryType{
         switch option {
-        case .SubmitFeedback, .Logout:
+//        case .SubmitFeedback, .Logout:
+//            return .none
+        case .Logout:
             return .none
     
         default:
@@ -151,8 +159,8 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         case .Profile:
             guard environment.config.profilesEnabled else { break }
             return Strings.UserAccount.profile
-        case .SubmitFeedback:
-            return Strings.SubmitFeedback.optionTitle
+//        case .SubmitFeedback:
+//            return Strings.SubmitFeedback.optionTitle
         case .Logout:
             return Strings.logout
         }
@@ -187,3 +195,5 @@ extension AccountViewController : MFMailComposeViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
 }
+
+
