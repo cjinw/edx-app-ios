@@ -19,7 +19,8 @@
 }
 
 - (NSString*)oex_buildVersionString {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey: (__bridge NSString*)kCFBundleVersionKey];
+//    return [[NSBundle mainBundle] objectForInfoDictionaryKey: (__bridge NSString*)kCFBundleVersionKey];
+    return @"2.7.8";
 }
 
 - (NSLocale*)oex_displayLocale {
