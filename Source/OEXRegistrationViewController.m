@@ -85,9 +85,46 @@ NSString* const OEXExternalRegistrationWithExistingAccountNotification = @"OEXEx
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formFieldValueDidChange:) name:NOTIFICATION_REGISTRATION_FORM_FIELD_VALUE_DID_CHANGE object:nil];
     
-    [self getFormFields];
-    [self setAccessibilityIdentifiers];
+//    [self getFormFields];
+//    [self setAccessibilityIdentifiers];
+//
+    //Swipe Left
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeftAction:)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    //swipeLeft.delegate = self;
+    [_webView addGestureRecognizer:swipeLeft];
+    
+    //Swipe Right
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightAction:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    //swipeRight.delegate = self;
+    [_webView addGestureRecognizer:swipeRight];
+    
+    
+    
+    NSString *urlString = @"https://www.kmooc.kr/register";
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [_webView loadRequest:urlRequest];
+    [_webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.querySelector('meta[name=viewport]').setAttribute('content', 'width=%d;', false); ", (int)_webView.frame.size.width]];
+    self.webView.frame = self.view.bounds;
+    self.webView.scalesPageToFit = true;
+    [self.view addSubview:_webView];
+    
+    
 }
+
+- (void)swipeRightAction:(id)ignored
+{
+    [_webView goBack];
+    
+}
+- (void)swipeLeftAction:(id)ignored
+{
+    [_webView goForward];
+}
+
     //set accessibility identifiers for the developer automation use
 - (void)setAccessibilityIdentifiers {
     self.registerButton.accessibilityIdentifier = @"RegistrationViewController:register-button";
