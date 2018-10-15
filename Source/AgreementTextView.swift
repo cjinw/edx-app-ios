@@ -36,17 +36,21 @@ class AgreementTextView: UITextView {
             break
         }
         let eulaText = Strings.Agreement.linkTextEula(platformName: platformName)
-        let tosText = Strings.Agreement.linkTextTos(platformName: platformName)
+//        let tosText = Strings.Agreement.linkTextTos(platformName: platformName)
         let privacyPolicyText = Strings.Agreement.linkTextPrivacyPolicy
 //        let agreementText = "\(prefix)\(Strings.Agreement.text(eula: eulaText, tos: tosText, privacyPolicy: privacyPolicyText))"
         let agreementText = "\(prefix)\(Strings.Agreement.text(eula: eulaText,privacyPolicy: privacyPolicyText))"
         var attributedString = style.attributedString(withText: agreementText)
         if let eulaUrl = config?.agreementURLsConfig.eulaURL,
-            let tosUrl = config?.agreementURLsConfig.tosURL,
+//            let tosUrl = config?.agreementURLsConfig.tosURL,
             let privacyPolicyUrl = config?.agreementURLsConfig.privacyPolicyURL {
             attributedString = attributedString.addLink(on: eulaText, value: eulaUrl)
-            attributedString = attributedString.addLink(on: tosText, value: tosUrl)
+//            attributedString = attributedString.addLink(on: tosText, value: tosUrl)
             attributedString = attributedString.addLink(on: privacyPolicyText, value: privacyPolicyUrl)
+        
+            
+            
+            
         }
         attributedText = attributedString
         isUserInteractionEnabled = true

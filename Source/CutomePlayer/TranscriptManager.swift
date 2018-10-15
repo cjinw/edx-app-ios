@@ -64,8 +64,19 @@ class TranscriptManager: NSObject {
     
    private func closedCaptioning(at URLString: String?) {
         if let localFile: String = OEXFileUtility.filePath(forRequestKey: URLString) {
+            
+            let transcriptLang = captionURL.components(separatedBy: "lang=")
+           
             // File to string
             if FileManager.default.fileExists(atPath: localFile) {
+                
+                if transcriptLang[1] == "ko"{
+                    TranscriptObject.ko_set = 1
+                }
+                else {
+                    TranscriptObject.ko_set = 0
+                }
+                
                 // File to string
                 do {
                     let transcript = try String(contentsOfFile: localFile, encoding: .utf8)
@@ -73,14 +84,14 @@ class TranscriptManager: NSObject {
                         transcripts = transcriptParser.transcripts
                         delegate?.transcriptsLoaded(manager: self, transcripts: transcripts)
                     })
-                }
-                catch _ {}
+                }                catch _ {}
             }
             else {
                 environment.interface?.download(withRequest: URLString, forceUpdate: false)
             }
         }
     }
+    
     
     func transcript(at time: TimeInterval) -> String {
         let filteredSubTitles = transcripts.filter { return time > $0.start && time < $0.end }

@@ -11,12 +11,15 @@ import UIKit
 
 typealias SubTitleParsingCompletion = (_ parsed: Bool,_ error: Error?) -> Void
 
+
 struct TranscriptObject {
     var text: String
     var start: TimeInterval
     var end: TimeInterval
     var index: Int
     
+    static var ko_set = 0
+        
     init(with text: String, start: TimeInterval, end: TimeInterval, index: Int) {
         self.text = text
         self.start = start
@@ -41,7 +44,13 @@ class TranscriptParser: NSObject {
         
         // Fall back to \n\n separation
         if components.count == 1 {
-            components = transcriptString.components(separatedBy: "\n\n")
+            
+            if TranscriptObject.ko_set == 1 {
+                components = transcriptString.components(separatedBy: "\n\n\n\n")
+            }
+            else {
+                components = transcriptString.components(separatedBy: "\n\n")
+            }
         }
         
         for component in components {

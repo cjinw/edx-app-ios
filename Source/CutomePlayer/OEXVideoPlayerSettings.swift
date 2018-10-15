@@ -43,8 +43,10 @@ class VideoPlayerSettings : NSObject {
     var settings: [OEXVideoPlayerSetting]  {
         get {
             self.updateMargins() //needs to be done here because the table loads the data too soon otherwise and it's nil
-            let rows:[RowType] = [("0.5x",  OEXVideoSpeed.slow), ("1.0x", OEXVideoSpeed.default), ("1.5x", OEXVideoSpeed.fast), ("2.0x", OEXVideoSpeed.xFast)]
-            let speeds = OEXVideoPlayerSetting(title: "Video Speed", rows:rows , isSelected: { (row) -> Bool in
+//            let rows:[RowType] = [("0.5x",  OEXVideoSpeed.slow), ("1.0x", OEXVideoSpeed.default), ("1.5x", OEXVideoSpeed.fast), ("2.0x", OEXVideoSpeed.xFast)]
+//            let speeds = OEXVideoPlayerSetting(title: "Video Speed", rows:rows , isSelected: { (row) -> Bool in
+            let rows:[RowType] = [("0.75x",  OEXVideoSpeed.slow), ("1.0x", OEXVideoSpeed.default), ("1.25x", OEXVideoSpeed.mFast), ("1.5x", OEXVideoSpeed.fast),("1.75x", OEXVideoSpeed.mxFast), ("2.0x", OEXVideoSpeed.xFast)]
+            let speeds = OEXVideoPlayerSetting(title: "속도(Speed)", rows:rows , isSelected: { (row) -> Bool in
                 var selected = false
                 let savedSpeed = OEXInterface.getCCSelectedPlaybackSpeed()
     
@@ -67,7 +69,7 @@ class VideoPlayerSettings : NSObject {
                     rows.append(item)
                 }
     
-                let cc = OEXVideoPlayerSetting(title: "Closed Captions", rows: rows, isSelected: { (row) -> Bool in
+                let cc = OEXVideoPlayerSetting(title: "자막(Captions)", rows: rows, isSelected: { (row) -> Bool in
                     var selected = false
                     if let selectedLanguage:String = OEXInterface.getCCSelectedLanguage() {
                         let lang = rows[row].value as! String

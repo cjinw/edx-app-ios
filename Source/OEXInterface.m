@@ -254,11 +254,15 @@ static OEXInterface* _sharedInterface = nil;
             return 1.0;
             break;
         case OEXVideoSpeedSlow:
-            return 0.5;
+            return 0.75;
         case OEXVideoSpeedFast:
             return 1.5;
         case OEXVideoSpeedXFast:
             return 2.0;
+        case OEXVideoSpeedMFast:
+            return 1.25;
+        case OEXVideoSpeedMXFast:
+            return 1.75;
         default:
             return 1.0;
             break;

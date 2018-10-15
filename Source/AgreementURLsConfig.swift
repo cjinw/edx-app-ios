@@ -23,7 +23,8 @@ class AgreementURLsConfig : NSObject {
             self.eulaURL = URL(string: eulaURL)
         }
         else {
-            eulaURL = Bundle.main.url(forResource: "MobileAppEula", withExtension: "htm")
+//            eulaURL = Bundle.main.url(forResource: "MobileAppEula", withExtension: "htm")
+            eulaURL = URL(string: "http://www.kmooc.kr/agreement")
         }
         
         if let tosURL = dictionary[AgreementURLsKeys.tosURL] as? String {
@@ -37,7 +38,8 @@ class AgreementURLsConfig : NSObject {
             self.privacyPolicyURL = URL(string: privacyPolicyURL)
         }
         else {
-            privacyPolicyURL = Bundle.main.url(forResource: "PrivacyPolicy", withExtension: "htm")
+//            privacyPolicyURL = Bundle.main.url(forResource: "PrivacyPolicy", withExtension: "htm")
+            privacyPolicyURL = URL(string: "http://www.kmooc.kr/Privacy-Policy")
         }
     }
 }
