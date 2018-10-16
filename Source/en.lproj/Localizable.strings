@@ -243,9 +243,9 @@
 /* Button text for cancelling any action */
 "CANCEL"="Cancel";
 /* Alert explaining charges will apply since the "Wi-fi only" switch was turned off */
-"CELLULAR_DOWNLOAD_ENABLED_MESSAGE"="Allow your device to download videos over your cellular connection when Wi-Fi is not available. Data charges may apply.";
+"CELLULAR_DOWNLOAD_ENABLED_MESSAGE"="Allow your device to download videos using cellular networks when Wi-Fi is not available. Data charges may apply.";
 /* Title of alert explaining charges will apply since the "Wi-fi only" switch was turned off */
-"CELLULAR_DOWNLOAD_ENABLED_TITLE"="Allow Cellular Download";
+"CELLULAR_DOWNLOAD_ENABLED_TITLE"="Enable cellular download";
 /* Error message shown when there is a problem loading a video */
 "CHECK_CONNECTION"="Problem loading video.\nPlease check your Internet connection.";
 /* Generic action button label when the user chooses a thing */
@@ -806,8 +806,8 @@
 /*Whats new screen done button title*/
 "WHATS_NEW.DONE"="Done";
 /*Title for wifi only switch at Settings screen*/
-"WIFI_ONLY_TITLE" = "Wi-fi only download";
+"WIFI_ONLY_TITLE" = "Enable cellular download";
 /*Detail message for wifi only switch at Settings screen*/
-"WIFI_ONLY_DETAIL_MESSAGE" = "Only download content when Wi-Fi is turned on";
+"WIFI_ONLY_DETAIL_MESSAGE" = "Enable downloads via cellular network connections";
 /* Alert dialog button title to confirm an action */
 "YES"="Yes";
