@@ -25,6 +25,9 @@
 #import "OEXSession.h"
 #import "edX-Swift.h"
 
+#import "OEXKakaoSocial.h"
+#import "OEXKakaoAuthProvider.h"
+
 NSString* const facebook_login_endpoint = @"facebook";
 NSString* const google_login_endpoint = @"google-oauth2";
 

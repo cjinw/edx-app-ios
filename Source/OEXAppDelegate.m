@@ -39,6 +39,11 @@
 
 #import <UserNotifications/UserNotifications.h>
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "OEXKakaoConfig.h"
+#import "OEXKakaoSocial.h"
+
+
 @import Firebase;
 
 @interface OEXAppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate>
@@ -124,8 +129,27 @@
                                           annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
     }
     
+    if (self.environment.config.kakaoConfig.enabled) {
+        if ([KOSession isKakaoAccountLoginCallback:url]) {
+            return [KOSession handleOpenURL:url];
+        }
+    }
+    
+//    if (self.environment.config.naverConfig.enabled){
+//        return [[NaverThirdPartyLoginConnection getSharedInstance] application:app openURL:url options:options];
+//    }
+    
+    
     return handled;
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [KOSession handleDidBecomeActive];
+}
+
+
+
 
 // Respond to Universal Links
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {

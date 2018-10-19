@@ -118,6 +118,19 @@ class IOSHelper {
         addURLScheme(scheme, plist)
     }
 
+   def addKakaoConfig(config, plist) {
+        def kakao = config['KAKAO'] ?: [:]
+        def key = kakao['APP_KEY']
+        if(!key) {
+            return
+        }
+
+        plist["KAKAO_APP_KEY"] = key
+        def scheme = "kakao" + key
+        addURLScheme(scheme, plist)
+    }
+
+
     def addFabricConfig(config, plist) {
         def fabric = config['FABRIC'] ?: [:]
         
@@ -190,6 +203,7 @@ task applyConfig << {
     helper.addFacebookConfig(config, plist)
     helper.addFabricConfig(config, plist)
     helper.addGoogleConfig(config, plist)
+    helper.addKakaoConfig(config, plist)
     helper.writeInfoPlist(plist)
 
     // double check that the config file actually got made
