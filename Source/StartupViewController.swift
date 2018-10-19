@@ -21,6 +21,7 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
     private let messageLabel = UILabel()
     fileprivate let environment: Environment
 
+    
     init(environment: Environment) {
         self.environment = environment
 
@@ -37,6 +38,8 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
         setupMessageLabel()
         setupSearchView()
         setupBottomBar()
+    
+//        self.view.backgroundColor = UIColor.red
         
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addAction { [weak self] _ in
@@ -93,8 +96,12 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
         logoImageView.isAccessibilityElement = true
         logoImageView.accessibilityTraits = UIAccessibilityTraitImage
         logoImageView.accessibilityIdentifier = "StartUpViewController:logo-image-view"
+        
+//        logoImageView.backgroundColor = UIColor.green
+        
+        
         view.addSubview(logoImageView)
-
+    
         logoImageView.snp.makeConstraints { make in
             make.leading.equalTo(safeLeading).offset(2*StandardHorizontalMargin)
             make.centerY.equalTo(view.snp.bottom).dividedBy(6.0)
@@ -105,6 +112,7 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
 
     private func setupMessageLabel() {
         let labelStyle = OEXTextStyle(weight: .semiBold, size: .xxLarge, color: environment.styles.primaryBaseColor())
+//        let labelStyle = OEXTextStyle(weight: .semiBold, size: .xxLarge, color: environment.styles.primaryDarkColor())
         messageLabel.numberOfLines = 0
         messageLabel.attributedText = labelStyle.attributedString(withText: Strings.Startup.infoMessageText)
         messageLabel.accessibilityIdentifier = "StartUpViewController:message-label"

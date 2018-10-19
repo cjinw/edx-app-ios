@@ -37,7 +37,11 @@
 #import "OEXSession.h"
 #import "OEXSegmentConfig.h"
 
-@interface OEXAppDelegate () <UIApplicationDelegate>
+#import <UserNotifications/UserNotifications.h>
+
+@import Firebase;
+
+@interface OEXAppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary* dictCompletionHandler;
 @property (nonatomic, strong) OEXEnvironment* environment;
@@ -82,6 +86,8 @@
     
     [self configureFabricKits:launchOptions];
     
+    application.applicationIconBadgeNumber = 0;
+    
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -89,6 +95,7 @@
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     
     UIViewController *topController = self.window.rootViewController;
+    application.applicationIconBadgeNumber = 0;
     
     return [topController supportedInterfaceOrientations];
 }
@@ -132,6 +139,60 @@
 #pragma mark Push Notifications
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    
+//    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+    
+    NSLog(@"Remote Notification: %@", [userInfo description]);
+    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+ 
+    
+    UIAlertController * alert= [UIAlertController
+                                alertControllerWithTitle:nil
+                                message:[apsInfo objectForKey:@"alert"]
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+   
+    
+    [alert addAction:ok];
+  
+    UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    
+    [vc presentViewController:alert animated:YES completion:nil];
+    
+    
+    
+//    UIAlertController * alert=   [UIAlertController
+//                                  alertControllerWithTitle:nil
+//                                  message:[apsInfo objectForKey:@"alert"]
+//                                  preferredStyle:UIAlertControllerStyleAlert];
+//
+//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+//
+//        //do something when click button
+//    }];
+//    [alert addAction:okAction];
+//    UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+//    [vc presentViewController:alert animated:YES completion:nil];
+    
+    
+    application.applicationIconBadgeNumber = [[apsInfo objectForKey:@"badge"] integerValue];
+    
+    //    if (userInfo[kGCMMessageIDKey]) {
+    //        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+    //    }
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+    
     [self.environment.pushNotificationManager didReceiveRemoteNotificationWithUserInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
@@ -141,6 +202,12 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog(@"APNs device token retrieved: %@", deviceToken);
+    
+    // With swizzling disabled you must set the APNs device token here.
+    
+    [[FIRInstanceID instanceID] setAPNSToken:deviceToken type:FIRInstanceIDAPNSTokenTypeSandbox];
+    
     [self.environment.pushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
@@ -201,6 +268,26 @@
     //Initialize Firebase
     if (config.firebaseConfig.analyticsEnabled) {
         [FIRApp configure];
+        
+        
+        if([NSNotificationCenter class] != nil) {
+            // iOS 10 or later
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+            center.delegate = self;
+            [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+//                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            }];
+        }else{
+            // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
+            if ([[UIApplication sharedApplication] respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+                [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+//                     [[UIApplication sharedApplication] registerForRemoteNotifications];
+            }
+        }
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+
+        
         [[FIRAnalyticsConfiguration sharedInstance] setAnalyticsCollectionEnabled:YES];
     }
 

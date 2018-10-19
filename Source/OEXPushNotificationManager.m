@@ -14,6 +14,8 @@
 #import "OEXPushSettingsManager.h"
 #import "OEXSession.h"
 
+//#import <UserNotifications/UserNotifications.h>
+
 @interface OEXPushNotificationManager ()
 
 @property (strong, nonatomic) NSMutableArray* providers;
@@ -50,6 +52,28 @@
     UIUserNotificationType types = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
     UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:[NSSet set]];
     [application registerUserNotificationSettings:settings];
+    
+//    if ([NSNotificationCenter class] != nil) {
+//        // iOS 10 or later
+//        // For iOS 10 display notification (sent via APNS)
+//        [[UNUserNotificationCenter currentNotificationCenter].delegate self];
+//        UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
+//        UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+//        [[UNUserNotificationCenter currentNotificationCenter]
+//         requestAuthorizationWithOptions:authOptions
+//         completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//             // ...
+//         }];
+//    } else {
+//        // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
+//        UIUserNotificationType allNotificationTypes =
+//        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+//        UIUserNotificationSettings *settings =
+//        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+//        [application registerUserNotificationSettings:settings];
+//    }
+//
+//
     [application registerForRemoteNotifications];
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJC-c2-JVU">
-                    <rect key="frame" x="62.5" y="600" width="250" height="25"/>
+                    <rect key="frame" x="62" y="600" width="250" height="25"/>
                     <accessibility key="accessibilityConfiguration" identifier="login"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="cz8-9B-leE"/>
@@ -147,7 +147,7 @@
     </objects>
     <resources>
         <image name="bt_signin_active.png" width="525" height="100"/>
-        <image name="launchBackground.png" width="1122" height="1920"/>
+        <image name="launchBackground.png" width="586" height="999"/>
         <image name="logo.png" width="141" height="65"/>
     </resources>
 </document>
