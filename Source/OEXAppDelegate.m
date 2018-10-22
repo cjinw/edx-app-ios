@@ -43,6 +43,10 @@
 #import "OEXKakaoConfig.h"
 #import "OEXKakaoSocial.h"
 
+#import <NaverThirdPartyLogin/NaverThirdPartyLogin.h>
+#import "OEXNaverConfig.h"
+#import "OEXNaverSocial.h"
+
 
 @import Firebase;
 
@@ -93,6 +97,24 @@
     
     application.applicationIconBadgeNumber = 0;
     
+    //Naver Login
+    
+    
+    NaverThirdPartyLoginConnection *thirdConn = [NaverThirdPartyLoginConnection getSharedInstance];
+    [thirdConn setServiceUrlScheme:kServiceAppUrlScheme];
+    
+    [thirdConn setConsumerKey:self.environment.config.naverConfig.apiKey];
+    [thirdConn setConsumerSecret:self.environment.config.naverConfig.apiKey2];
+    
+    //    [thirdConn setConsumerKey:kConsumerKey];
+    //    [thirdConn setConsumerSecret:kConsumerSecret];
+    
+    
+    [thirdConn setAppName:kServiceAppName];
+    
+    [thirdConn setIsInAppOauthEnable:YES];
+    [thirdConn setIsNaverAppOauthEnable:YES];
+    
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -135,9 +157,10 @@
         }
     }
     
-//    if (self.environment.config.naverConfig.enabled){
-//        return [[NaverThirdPartyLoginConnection getSharedInstance] application:app openURL:url options:options];
-//    }
+    if (self.environment.config.naverConfig.enabled){
+        return [[NaverThirdPartyLoginConnection getSharedInstance] application:app openURL:url options:options];
+        
+    }
     
     
     return handled;

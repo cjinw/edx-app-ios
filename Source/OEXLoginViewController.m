@@ -83,8 +83,22 @@
 
 @implementation OEXLoginViewController
 
+- (id)init {
+    if ((self = [super init])) {
+        _thirdPartyLoginConn = [NaverThirdPartyLoginConnection getSharedInstance];
+        _thirdPartyLoginConn.delegate = self;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+        int version = [[[UIDevice currentDevice] systemVersion] intValue];
+        if (7 <= version) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+#endif
+    }
+    return self;
+}
+
 - (void)layoutSubviews {
-    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled])) {
+    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled] || [self isNaverEnabled] )) {
         self.lbl_OrSignIn.hidden = YES;
         self.seperatorLeft.hidden = YES;
         self.seperatorRight.hidden = YES;
@@ -109,6 +123,42 @@
     }
 }
 
+//NAVER LOGIN
+NSError *naver_error = NULL;
+
+- (void)oauth20ConnectionDidFinishRequestACTokenWithAuthCode {
+    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+}
+
+- (void)oauth20ConnectionDidFinishRequestACTokenWithRefreshToken {
+    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+}
+- (void)oauth20ConnectionDidFinishDeleteToken {
+    //    [_mainView setResultLabelText:[NSString stringWithFormat:@"인증해제 완료"]];
+}
+
+- (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFinishAuthorizationWithResult:(THIRDPARTYLOGIN_RECEIVE_TYPE)recieveType
+{
+    NSLog(@"Getting auth code from NaverApp success!");
+    //    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+}
+
+- (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFailAuthorizationWithRecieveType:(THIRDPARTYLOGIN_RECEIVE_TYPE)recieveType
+{
+    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+}
+
+- (void)oauth20ConnectionDidOpenInAppBrowserForOAuth:(NSURLRequest *)request {
+    //    [self presentWebviewControllerWithRequest:request];
+    myHandler(_thirdPartyLoginConn.accessToken, naver_error);
+}
+
+- (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFailWithError:(NSError *)error {
+    
+    myHandler(_thirdPartyLoginConn.accessToken, error);
+}
+
+
 
 #pragma mark - NSURLConnection Delegtates
 
@@ -131,6 +181,10 @@
     return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config kakaoConfig].enabled;
 }
 
+- (BOOL)isNaverEnabled {
+    return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config naverConfig].enabled;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -146,6 +200,15 @@
     if([self isKakaoEnabled]) {
         [providers addObject:[[OEXKakaoAuthProvider alloc] init]];
     }
+    
+    if([self isNaverEnabled]) {
+        
+        _thirdPartyLoginConn = [NaverThirdPartyLoginConnection getSharedInstance];
+        _thirdPartyLoginConn.delegate = self;
+
+        [providers addObject:[[OEXNaverAuthProvider alloc] init]];
+    }
+    
 
     __weak __typeof(self) owner = self;
     OEXExternalAuthOptionsView* externalAuthOptions = [[OEXExternalAuthOptionsView alloc] initWithFrame:self.externalAuthContainer.bounds providers:providers tapAction:^(id<OEXExternalAuthProvider> provider) {
@@ -707,6 +770,11 @@
 - (UIInterfaceOrientationMask) supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
+
+
+
+
+
 
 
 @end

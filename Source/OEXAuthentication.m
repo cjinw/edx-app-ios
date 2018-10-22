@@ -28,6 +28,9 @@
 #import "OEXKakaoSocial.h"
 #import "OEXKakaoAuthProvider.h"
 
+#import "OEXNaverSocial.h"
+#import "OEXNaverAuthProvider.h"
+
 NSString* const facebook_login_endpoint = @"facebook";
 NSString* const google_login_endpoint = @"google-oauth2";
 

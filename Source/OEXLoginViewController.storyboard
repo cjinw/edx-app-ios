@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Login-->
         <scene sceneID="Slz-r3-iLv">
@@ -209,7 +204,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-UE-xWc">
-                                        <rect key="frame" x="170" y="575" width="36" height="12"/>
+                                        <rect key="frame" x="170" y="523" width="36" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -226,7 +221,7 @@
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="top" relation="lessThanOrEqual" secondItem="hfa-gq-20d" secondAttribute="top" id="F7N-ml-idG"/>
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="centerX" secondItem="hfa-gq-20d" secondAttribute="centerX" id="FGc-BN-pGf"/>
                                     <constraint firstItem="9O4-tw-OUv" firstAttribute="leading" secondItem="2of-Hn-kff" secondAttribute="trailing" constant="-3" id="Gyr-Qu-EyO"/>
-                                    <constraint firstAttribute="bottom" secondItem="ahW-UE-xWc" secondAttribute="bottom" constant="89" id="I8N-Tb-r0n"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahW-UE-xWc" secondAttribute="bottom" constant="112" id="I8N-Tb-r0n"/>
                                     <constraint firstItem="w4q-wU-kRm" firstAttribute="trailing" secondItem="huu-Bj-C7B" secondAttribute="trailing" id="JtW-Is-pA3"/>
                                     <constraint firstItem="2of-Hn-kff" firstAttribute="width" secondItem="Pqx-qN-yU2" secondAttribute="width" id="KFH-Ha-8MB"/>
                                     <constraint firstAttribute="trailing" secondItem="hfa-gq-20d" secondAttribute="trailing" constant="35" id="LXJ-sW-Z9Z"/>
@@ -252,7 +247,7 @@
                                     <constraint firstItem="TTs-EL-Jso" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hfa-gq-20d" secondAttribute="leading" id="k5k-AD-EcL"/>
                                     <constraint firstItem="BU5-Og-2jn" firstAttribute="top" secondItem="9O4-tw-OUv" secondAttribute="bottom" constant="12" id="kms-gg-pIx"/>
                                     <constraint firstItem="9O4-tw-OUv" firstAttribute="centerY" secondItem="2of-Hn-kff" secondAttribute="centerY" constant="22" id="nKQ-0e-tkM"/>
-                                    <constraint firstItem="ahW-UE-xWc" firstAttribute="top" secondItem="tdT-OS-lpR" secondAttribute="bottom" constant="8" id="oLv-XG-VYc"/>
+                                    <constraint firstItem="ahW-UE-xWc" firstAttribute="top" secondItem="tdT-OS-lpR" secondAttribute="bottom" constant="-44" id="oLv-XG-VYc"/>
                                     <constraint firstItem="ahW-UE-xWc" firstAttribute="centerX" secondItem="XeO-S4-8zQ" secondAttribute="centerX" id="od6-0B-DvE"/>
                                     <constraint firstItem="tdT-OS-lpR" firstAttribute="leading" secondItem="gKO-wT-mn0" secondAttribute="leading" id="ofK-sR-7T6"/>
                                     <constraint firstAttribute="trailing" secondItem="gKO-wT-mn0" secondAttribute="trailing" constant="40" id="rec-Tq-Vqf"/>
