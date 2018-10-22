@@ -2,21 +2,21 @@
     "fields":[
     {
               "name" : "account_privacy",
-              "label" : "Other learners can see my:",
+              "label" : "K-MOOC 학습자가 나에 대해 볼 수 있는 것은:",
               "type" : "switch",
               "data_type" : "boolean",
               "options" : {
                 "values" : [
-                            { "name" : "Full Profile", "value" : "all_users" },
-                            { "name" : "Limited Profile",  "value" : "private" }
+                            { "name" : "전체 프로필", "value" : "all_users" },
+                            { "name" : "제한적 프로필",  "value" : "private" }
                  ]
               },
-              "instructions" : "A limited profile only shares your username and profile photo.",
+              "instructions" : "제한적 프로필은 아이디와 사진만 공개 합니다.\n(사진과 자기소개 이외의 프로필 수정은 kmooc.kr에서 가능합니다.)",
               "accessibility_hint" : "Change what information is shared with others."
     },
     {
               "name" : "year_of_birth",
-              "label" : "Birth year",
+              "label" : "출생연도",
               "type" : "select",
               "options" : {
                 "range_min" : 1896,
@@ -29,7 +29,7 @@
     },
     {
               "name" : "country",
-              "label" : "Location",
+              "label" : "국가",
               "type" : "select",
               "data_type" : "country",
               "options" : {
@@ -40,7 +40,7 @@
     },
     {
               "name" : "language_proficiencies",
-              "label" : "Primary language",
+              "label" : "언어 추가",
               "type" : "select",
               "data_type" : "language",
               "options" : {
@@ -51,9 +51,9 @@
     },
     {
               "name" : "bio",
-              "label" : "About me",
+              "label" : "자기소개",
               "type" : "textarea",
-              "placeholder" : "I would like to learn..."
+              "placeholder" : "다른 학습자들에게 간단하게 나를 소개합니다. 관심사, 수강 이유 또는 학습 목표 같은 것을 쓰면 됩니다."
     }
     ]
 }
