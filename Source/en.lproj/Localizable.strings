@@ -694,9 +694,9 @@
 /* Label for date when course starts */
 "STARTING"="Starting {start_date}";
 /* Info message text on the startup screen */
-"STARTUP.INFO_MESSAGE_TEXT"="Free courses from the world's best universities in your pocket.";
+"STARTUP.INFO_MESSAGE_TEXT"="An Open Campus in Your Hand";
 /*Placeholder text for search textfield on the startup screen*/
-"STARTUP.SEARCH_PLACEHOLDER_TEXT"="Search Courses";
+"STARTUP.SEARCH_PLACEHOLDER_TEXT"="What do you want to learn today?";
 /*Log In button title on the startup screen*/
 "STARTUP.LOGIN_TEXT"="Log In";
 /*Create your Account button title on the startup screen*/

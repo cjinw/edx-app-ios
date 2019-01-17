@@ -34,12 +34,13 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLogo()
+//        setupLogo()
         setupMessageLabel()
+        setupLogo()
         setupSearchView()
         setupBottomBar()
     
-//        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = environment.styles.primaryBaseColor()
         
         let tapGesture = UITapGestureRecognizer()
         tapGesture.addAction { [weak self] _ in
@@ -104,14 +105,16 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
     
         logoImageView.snp.makeConstraints { make in
             make.leading.equalTo(safeLeading).offset(2*StandardHorizontalMargin)
-            make.centerY.equalTo(view.snp.bottom).dividedBy(6.0)
-            make.width.equalTo((logo?.size.width ?? 0) / 2)
-            make.height.equalTo((logo?.size.height ?? 0) / 2)
+//            make.centerY.equalTo(view.snp.bottom).dividedBy(6.0)
+            make.centerX.equalTo(view.snp.right).dividedBy(2.0)
+            make.width.equalTo((logo?.size.width ?? 0) / 1.2)
+            make.height.equalTo((logo?.size.height ?? 0) / 1.2)
+            make.top.equalTo(messageLabel.snp.bottom).offset(5 * StandardVerticalMargin)
         }
     }
-
+    
     private func setupMessageLabel() {
-        let labelStyle = OEXTextStyle(weight: .semiBold, size: .xxLarge, color: environment.styles.primaryBaseColor())
+        let labelStyle = OEXTextStyle(weight: .semiBold, size: .xxLarge, color: environment.styles.neutralWhiteT())
 //        let labelStyle = OEXTextStyle(weight: .semiBold, size: .xxLarge, color: environment.styles.primaryDarkColor())
         messageLabel.numberOfLines = 0
         messageLabel.attributedText = labelStyle.attributedString(withText: Strings.Startup.infoMessageText)
@@ -119,9 +122,11 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
         view.addSubview(messageLabel)
         
         messageLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoImageView.snp.bottom).offset(3 * StandardVerticalMargin)
-            make.leading.equalTo(logoImageView)
-            make.trailing.equalTo(safeTrailing).offset(-2 * StandardHorizontalMargin)
+//            make.top.equalTo(logoImageView.snp.bottom).offset(3 * StandardVerticalMargin)
+//            make.leading.equalTo(logoImageView)
+//            make.trailing.equalTo(safeTrailing).offset(-2 * StandardHorizontalMargin)
+            make.centerY.equalTo(view.snp.bottom).dividedBy(6.0)
+            make.centerX.equalTo(view.snp.right).dividedBy(2.0)
         }
     }
     
@@ -129,12 +134,14 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
         view.addSubview(searchView)
         let borderStyle = BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(1), color: environment.styles.primaryBaseColor())
         searchView.applyBorderStyle(style: borderStyle)
+        searchView.backgroundColor = environment.styles.neutralWhiteT()
 
         searchView.snp.makeConstraints { make in
-            make.top.equalTo(messageLabel.snp.bottom).offset(6 * StandardVerticalMargin)
+//            make.top.equalTo(messageLabel.snp.bottom).offset(6 * StandardVerticalMargin)
             make.leading.equalTo(messageLabel)
             make.trailing.equalTo(messageLabel)
             make.height.equalTo(45)
+            make.top.equalTo(logoImageView.snp.bottom).offset(8 * StandardVerticalMargin)
         }
         
         let searchIcon = Icon.Discovery.imageWithFontSize(size: 15)
@@ -170,6 +177,7 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
 
     private func setupBottomBar() {
         let bottomBar = BottomBarView(environment: environment)
+        
         view.addSubview(bottomBar)
         bottomBar.snp.makeConstraints { make in
             make.bottom.equalTo(safeBottom)
@@ -209,23 +217,26 @@ private class BottomBarView: UIView, NSCopying {
         let signInButton = UIButton()
         let registerButton = UIButton()
 
-        bottomBar.backgroundColor = environment?.styles.standardBackgroundColor()
+//        bottomBar.backgroundColor = environment?.styles.standardBackgroundColor()
+        bottomBar.backgroundColor = environment?.styles.primaryBaseColor()
         
-        let signInBorderStyle = BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(1), color: environment?.styles.primaryBaseColor())
+//        let signInBorderStyle = BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(1), color: environment?.styles.primaryBaseColor())
+        let signInBorderStyle = BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(1), color: environment?.styles.neutralWhiteT())
         signInButton.applyBorderStyle(style: signInBorderStyle)
         signInButton.accessibilityIdentifier = "StartUpViewController:sign-in-button"
         
-        let signinTextStyle = OEXTextStyle(weight: .normal, size: .large, color: environment?.styles.primaryBaseColor())
+        let signinTextStyle = OEXTextStyle(weight: .bold, size: .xLarge, color: environment?.styles.neutralWhiteT())
         signInButton.setAttributedTitle(signinTextStyle.attributedString(withText: Strings.Startup.loginText), for: .normal)
         let signInEvent = OEXAnalytics.loginEvent()
         signInButton.oex_addAction({ [weak self] _ in
             self?.showLogin()
             }, for: .touchUpInside, analyticsEvent: signInEvent)
 
-        registerButton.backgroundColor = environment?.styles.primaryDarkColor()
-        registerButton.applyBorderStyle(style: BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(0), color: nil))
+        registerButton.backgroundColor = environment?.styles.primaryBaseColor()
+//        registerButton.applyBorderStyle(style: BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(0), color: nil))
+        registerButton.applyBorderStyle(style: BorderStyle(cornerRadius: .Size(CornerRadius), width: .Size(1), color: environment?.styles.neutralWhiteT()))
         registerButton.accessibilityIdentifier = "StartUpViewController:register-button"
-        let registerTextStyle = OEXTextStyle(weight: .normal, size: .large, color: environment?.styles.neutralWhite())
+        let registerTextStyle = OEXTextStyle(weight: .bold, size: .xLarge, color: environment?.styles.neutralWhite())
         registerButton.setAttributedTitle(registerTextStyle.attributedString(withText: Strings.Startup.createYourAccountText), for: .normal)
         let signUpEvent = OEXAnalytics.registerEvent(name: AnalyticsEventName.UserRegistrationClick.rawValue, displayName: AnalyticsDisplayName.CreateAccount.rawValue)
         registerButton.oex_addAction({ [weak self] _ in
