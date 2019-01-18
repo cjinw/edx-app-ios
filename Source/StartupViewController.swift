@@ -138,8 +138,10 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
 
         searchView.snp.makeConstraints { make in
 //            make.top.equalTo(messageLabel.snp.bottom).offset(6 * StandardVerticalMargin)
-            make.leading.equalTo(messageLabel)
-            make.trailing.equalTo(messageLabel)
+//            make.leading.equalTo(messageLabel)
+//            make.trailing.equalTo(messageLabel)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
             make.height.equalTo(45)
             make.top.equalTo(logoImageView.snp.bottom).offset(8 * StandardVerticalMargin)
         }
