@@ -40,7 +40,7 @@
     },
     {
               "name" : "language_proficiencies",
-              "label" : "언어 추가",
+              "label" : "선호하는 언어",
               "type" : "select",
               "data_type" : "language",
               "options" : {

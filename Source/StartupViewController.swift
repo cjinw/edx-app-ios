@@ -143,7 +143,7 @@ class StartupViewController: UIViewController, InterfaceOrientationOverriding {
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
             make.height.equalTo(45)
-            make.top.equalTo(logoImageView.snp.bottom).offset(8 * StandardVerticalMargin)
+            make.top.equalTo(logoImageView.snp.bottom).offset(7 * StandardVerticalMargin)
         }
         
         let searchIcon = Icon.Discovery.imageWithFontSize(size: 15)
