@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>147811869446-m1eer6a5cotqbcosqopngmmihagcntv2.apps.googleusercontent.com</string>
+	<string>285210390101-h21kpqtgmc4j3cm1v11jj5qvb0elq99o.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.147811869446-m1eer6a5cotqbcosqopngmmihagcntv2</string>
+	<string>com.googleusercontent.apps.285210390101-h21kpqtgmc4j3cm1v11jj5qvb0elq99o</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC_OPLdsAdByBd6kce5RbE1rN-VxIb1AKU</string>
+	<string>AIzaSyBzKIKTaoEcaaiM2ob0s3dxwMq9OtCalAo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>147811869446</string>
+	<string>285210390101</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kotech</string>
+	<string>com.nile.kmooc</string>
 	<key>PROJECT_ID</key>
-	<string>kmooctest2-165811</string>
+	<string>k-mooc-96316</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kmooctest2-165811.appspot.com</string>
+	<string>k-mooc-96316.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
 	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:147811869446:ios:8340624440066a73</string>
+	<string>1:285210390101:ios:f59be8f1053427b5</string>
 	<key>DATABASE_URL</key>
-	<string>https://kmooctest2-165811.firebaseio.com</string>
+	<string>https://k-mooc-96316.firebaseio.com</string>
 </dict>
 </plist>
