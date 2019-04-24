@@ -188,8 +188,8 @@ static OEXInterface* _sharedInterface = nil;
 
 - (void)firstLaunchWifiSetting {
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    if(![userDefaults objectForKey:USERDEFAULT_KEY_WIFIONLY]) {
-        [userDefaults setBool:YES forKey:USERDEFAULT_KEY_WIFIONLY];
+    if([userDefaults objectForKey:USERDEFAULT_KEY_WIFIONLY]) {
+        [userDefaults setBool:NO forKey:USERDEFAULT_KEY_WIFIONLY];
     }
 }
 
@@ -319,7 +319,7 @@ static OEXInterface* _sharedInterface = nil;
 
 - (BOOL) canDownload {
     OEXAppDelegate* appDelegate = (OEXAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if ([OEXInterface shouldDownloadOnlyOnWifi]) {
+    if (![OEXInterface shouldDownloadOnlyOnWifi]) {
         return [appDelegate.reachability isReachableViaWiFi];
     }
     return [appDelegate.reachability isReachable];
@@ -328,12 +328,12 @@ static OEXInterface* _sharedInterface = nil;
 - (NSString* _Nullable) networkErrorMessage {
     OEXAppDelegate* appDelegate = (OEXAppDelegate *)[[UIApplication sharedApplication] delegate];
     if ([OEXInterface shouldDownloadOnlyOnWifi]) {
+        return Strings.networkNotAvailableMessage;
+    }
+    else if (![appDelegate.reachability isReachable]) {
         if (![appDelegate.reachability isReachableViaWiFi]) {
             return Strings.noWifiMessage;
         }
-    }
-    else if (![appDelegate.reachability isReachable]) {
-        return Strings.networkNotAvailableMessage;
     }
     return nil;
 }
@@ -896,7 +896,7 @@ static OEXInterface* _sharedInterface = nil;
     OEXAppDelegate* appD = (OEXAppDelegate *)[[UIApplication sharedApplication] delegate];
     if([OEXInterface isURLForVideo:video.summary.downloadURL]) {
         if([OEXInterface shouldDownloadOnlyOnWifi]) {
-            if(![appD.reachability isReachableViaWiFi]) {
+            if([appD.reachability isReachableViaWiFi]) {
                 completionHandler(NO);
                 return;
             }

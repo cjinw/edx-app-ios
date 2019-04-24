@@ -64,7 +64,9 @@ typedef NS_ENUM(NSUInteger, OEXMySettingsAlertTag) {
 
 - (IBAction)wifiOnlySwitchValueChanged:(id)sender {
     if(!self.wifiOnlySwitch.isOn) {
-        
+        [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
+    }
+    else {
         [[UIAlertController alloc] showInViewController:self title:[Strings cellularDownloadEnabledTitle] message:[Strings cellularDownloadEnabledMessage] preferredStyle:UIAlertControllerStyleAlert cancelButtonTitle:[Strings allow] destructiveButtonTitle:nil otherButtonsTitle:@[[Strings doNotAllow]] tapBlock:^(UIAlertController *alertController, UIAlertAction *alertAction, NSInteger buttonIndex) {
             // Allow
             if ( buttonIndex == 0 ) {
@@ -72,12 +74,9 @@ typedef NS_ENUM(NSUInteger, OEXMySettingsAlertTag) {
             }
             // Don't Allow
             else if ( buttonIndex == 1 ) {
-                [self.wifiOnlySwitch setOn:YES animated:YES];
+                [self.wifiOnlySwitch setOn:NO animated:YES];
             }
-        } textFieldWithConfigurationHandler:nil];
-    }
-    else {
-        [OEXInterface setDownloadOnlyOnWifiPref:self.wifiOnlySwitch.isOn];
+        } textFieldWithConfigurationHandler:nil];      
     }
 }
 
