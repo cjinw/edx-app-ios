@@ -162,13 +162,13 @@
 /* Add your post button title used in discussion's add a post textview */
 "ADD_YOUR_POST"="글을 추가하세요";
 /*Agreement text*/
-"AGREEMENT.TEXT"="당신은 {eula}와 {tos}에 동의하고 {privacy_policy}를 인정합니다.";
+"AGREEMENT.TEXT"="다음 약관에 동의하게 됩니다.\n{eula}\n{privacy_policy}";
 /*Agreement text prefix for user on signin screen*/
-"AGREEMENT.TEXT_PREFIX_SIGNIN"="이 앱에 로그인하면,";
+"AGREEMENT.TEXT_PREFIX_SIGNIN"="이 앱에 로그인 함으로서 ";
 /*Agreement text prefix for user on signup screen*/
 "AGREEMENT.TEXT_PREFIX_SIGNUP"="계정을 생성함으로써,";
 /*Link Text for End Use License Agreement*/
-"AGREEMENT.LINK_TEXT_EULA"="{platform_name} 최종 사용자 사용권 계약";
+"AGREEMENT.LINK_TEXT_EULA"="{platform_name} 서비스 이용약관";
 /*Link Text for End Use License Agreement*/
 "AGREEMENT.LINK_TEXT_TOS"="{platform_name} 서비스 약관 ";
 /*Link Text for End Use License Agreement*/
