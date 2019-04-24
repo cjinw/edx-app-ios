@@ -686,7 +686,7 @@
 /* Discussion topics search placeholder */
 "SEARCH_ALL_POSTS"="Search all posts";
 /*Placeholder text for search course textfield*/
-"SEARCH_COURSES_PLACEHOLDER_TEXT"="Search course";
+"SEARCH_COURSES_PLACEHOLDER_TEXT"="What do you want to learn today?";
 /*Placeholder text for search program textfield*/
 "SEARCH_PROGRAMS_PLACEHOLDER_TEXT"="Search program";
 /*Placeholder text for search degree textfield*/
@@ -714,7 +714,7 @@
 /* Label for posts pinned by Staff */
 "STAFF"="STAFF";
 /* Info message text on the startup screen */
-"STARTUP.INFO_MESSAGE_TEXT"="Courses from the world's best universities in your pocket.";
+"STARTUP.INFO_MESSAGE_TEXT"="An Open Campus in Your Hand";
 /*Log In button title on the startup screen*/
 "STARTUP.LOGIN_TEXT"="Log In";
 /*Create your Account button title on the startup screen*/
@@ -814,8 +814,8 @@
 /*Whats new screen done button title*/
 "WHATS_NEW.DONE"="Done";
 /*Title for wifi only switch at Settings screen*/
-"WIFI_ONLY_TITLE" = "Wi-fi only download";
+"WIFI_ONLY_TITLE" = "Enable cellular download";
 /*Detail message for wifi only switch at Settings screen*/
-"WIFI_ONLY_DETAIL_MESSAGE" = "Only download content when Wi-Fi is turned on";
+"WIFI_ONLY_DETAIL_MESSAGE" = "Enable downloads via cellular network connections";
 /* Alert dialog button title to confirm an action */
 "YES"="Yes";

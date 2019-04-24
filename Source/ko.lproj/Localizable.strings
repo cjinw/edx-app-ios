@@ -9,337 +9,296 @@
 // Please keep in alphabetical order
 
 /* Alert dialog confirmation button when user chooses to download a large video */
-"ACCEPT_LARGE_VIDEO_DOWNLOAD"="Descargar";
+"ACCEPT_LARGE_VIDEO_DOWNLOAD"="다운로드";
 /*Accessibility label for bulk download view when in downloading state */
-"ACCESSIBILITY.DOWNLOADING_VIDEOS_TITLE" = "Downloading Videos";
+"ACCESSIBILITY.DOWNLOADING_VIDEOS_TITLE" = "비디오 다운로드";
 /* Label for check box when it's checked. */
-"ACCESSIBILITY_CHECKBOX_CHECKED" = "Marcado";
+"ACCESSIBILITY_CHECKBOX_CHECKED" = "확인 완료";
 /* Label for check box when it's checked. */
-"ACCESSIBILITY_CHECKBOX_UNCHECKED" = "Desmarcado";
+"ACCESSIBILITY_CHECKBOX_UNCHECKED" = "확인 완료 표시 해제";
 /* Label for action hint on check box when it's checked. */
-"ACCESSIBILITY_CHECKBOX_HINT_CHECKED" = "Limpiar el marcado";
+"ACCESSIBILITY_CHECKBOX_HINT_CHECKED" = "체크박스 선택 해제";
 /* Label for action hint on check box when it's checked. */
-"ACCESSIBILITY_CHECKBOX_HINT_UNCHECKED" = "Toque para seleccionar";
+"ACCESSIBILITY_CHECKBOX_HINT_UNCHECKED" = "선택하려면 터치하세요";
 /* Appending By before course organization and number on My Find Courses*/
-"ACCESSIBILITY_BY" = "Por";
+"ACCESSIBILITY_BY" = "에 의해 작성되었습니다";
 /*Accessibility hint for user bio on user profile screen*/
 "ACCESSIBILITY.ACCOUNT.BIO_LABEL" = "Description";
 /* Accessibility hint for subject name label */
-"ACCESSIBILITY.BROWSER_BY_SUBJECT_HINT" = "Double tap to browse by subject, {subject_name}";
+"ACCESSIBILITY.BROWSER_BY_SUBJECT_HINT" = "제목을 두번 탭하여 찾아보기, {subject_name}";
 /* Accessibility hint for bulk download switch when in new state */
-"ACCESSIBILITY.BULK_DOWNLOAD_HINT" = "Toggling the switch on, will download all videos of this course";
+"ACCESSIBILITY.BULK_DOWNLOAD_HINT" = "스위치를 활성화 하면 이 강좌의 모든 동영상을 다운로드 합니다. ";
 /* Accessibility hint for bulk download switch when in new partial or downloading state */
-"ACCESSIBILITY.BULK_DOWNLOAD_DOWNLOADING_HINT" = "Toggling the switch off, will cancel downloading of all videos and will delete all downloaded videos of this course.";
+"ACCESSIBILITY.BULK_DOWNLOAD_DOWNLOADING_HINT" = "스위치를 비활성화 하면 이 강좌의 모든 동영상의 다운로드를 취소하고 삭제합니다.";
 /* Accessibility hint for bulk download switch when in downloaded state */
-"ACCESSIBILITY.BULK_DOWNLOAD_DOWNLOADED_HINT" = "Toggling the switch off, will delete all downloaded videos of this course.";
+"ACCESSIBILITY.BULK_DOWNLOAD_DOWNLOADED_HINT" = "스위치를 끄면 다운로드된 이 강좌의 모든 동영상을 삭제 합니다. ";
 /* Accessibility hint for close button*/
-"ACCESSIBILITY.CLOSE_HINT" = "Toque dos veces para cerrar.";
+"ACCESSIBILITY.CLOSE_HINT" = "두번 탭 하여 닫기";
 /* Accessibility label for posted data of discussion responses*/
-"ACCESSIBILITY.DISCUSSION_POSTED_ON" = "Publicado el {date}";
+"ACCESSIBILITY.DISCUSSION_POSTED_ON" = "{date} 에 작성되었습니다";
 /* Accessibility hint for Vote button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_VOTE_HINT" = "Toque dos veces para votar.";
+"ACCESSIBILITY.DISCUSSION_VOTE_HINT" = "투표를 위해 두번 터치하세요.";
 /* Accessibility hint for Unvote button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_UNVOTE_HINT" = "Toque dos veces para eliminar su voto.";
+"ACCESSIBILITY.DISCUSSION_UNVOTE_HINT" = "투표 취소를 위해 두번 터치하세요.";
 /* Accessibility hint for Report button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_REPORT_HINT" = "Toque dos veces para reportar.";
+"ACCESSIBILITY.DISCUSSION_REPORT_HINT" = "보고를 위해 두번 터치하세요.";
 /* Accessibility hint for Unreport button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_UNREPORT_HINT" = "Toque dos veces para eliminar su reporte.";
+"ACCESSIBILITY.DISCUSSION_UNREPORT_HINT" = "보고 취소를 위해 두번 터치하세요.";
 /* Accessibility hint for Follow button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_FOLLOW_HINT" = "Toque dos veces para seguir.";
+"ACCESSIBILITY.DISCUSSION_FOLLOW_HINT" = "팔로우를 위해 두번 터치하세요.";
 /* Accessibility hint for Unfollow button for discussion responses*/
-"ACCESSIBILITY.DISCUSSION_UNFOLLOW_HINT" = "Toque dos veces para dejar de seguir.";
+"ACCESSIBILITY.DISCUSSION_UNFOLLOW_HINT" = "언팔로우를 위해 두번 터치하세요.";
 /*Accessibility hint for disabled buttons, cells, etc like for disabled user profile fields on user edit profile screen*/
 "ACCESSIBILITY.DISABLED_HINT" = "Dimmed";
-/* Acessibility label for the download progress button. {percent_complete} is an already localized numeric percentage like "44%" */
-/* Acessibility label for the download progress button. {percent_complete} is an already localized numeric percentage like "44%" */
-"ACCESSIBILITY_DOWNLOAD_PROGRESS_BUTTON##{one}" = "Descarga en progreso: {percent_complete}";
-"ACCESSIBILITY_DOWNLOAD_PROGRESS_BUTTON##{other}" = "Descargas en progreso: {percent_complete}";
 /* Acessibility hint for the show downloads button. */
-"ACCESSIBILITY.SHOW_CURRENT_DOWNLOADS_BUTTON_HINT" = "Double tap to view current downloads";
+"ACCESSIBILITY.SHOW_CURRENT_DOWNLOADS_BUTTON_HINT" = "현재 다운로드를 보려면 두 번 탭 하세요.";
+/* Accessibility hint for view all subjects label*/
+"ACCESSIBILITY.VIEW_ALL_SUBJECTS_HINT" = "모든 제목을 보려면 두 번 탭 하세요.";
+/* Acessibility label for the download progress button. {percent_complete} is an already localized numeric percentage like "44%" */
+/* Acessibility label for the download progress button. {percent_complete} is an already localized numeric percentage like "44%" */
+"ACCESSIBILITY_DOWNLOAD_PROGRESS_BUTTON##{other}" = "현재 다운로드 중입니다: {percent_complete}";
 /* Accessibility hint for video download list row cells. {video_name} is the name of video being downloaded. {percent_complete} is an already localized numeric percentage like "44%". */
 /* Accessibility hint for video download list row cells. {video_name} is the name of video being downloaded. {percent_complete} is an already localized numeric percentage like "44%". */
-"ACCESSIBILITY_DOWNLOAD_VIEW_CELL##{one}" = "Descargando {video_name}. {percent_complete} completado.";
-"ACCESSIBILITY_DOWNLOAD_VIEW_CELL##{other}" = "Descargando {video_name}. {percent_complete} por ciento completado.";
+"ACCESSIBILITY_DOWNLOAD_VIEW_CELL##{other}" = "{video_name} 를 다운로드 중입니다. {percent_complete} 퍼센트 완료되었습니다.";
 /* Accessibility hint for number of downloadable videos */
 /* Accessibility hint for number of downloadable videos */
-"ACCESSIBILITY_DOWNLOADABLE_VIDEOS##{one}" = "Descargas {video_count} video.";
-"ACCESSIBILITY_DOWNLOADABLE_VIDEOS##{other}" = "Descargas {video_count} videos.";
+"ACCESSIBILITY_DOWNLOADABLE_VIDEOS##{other}" = "{video_count} 개 동영상을 다운로드 합니다.";
 /* Accessibility label for fullscreen button on video player */
-"ACCESSIBILITY_FULLSCREEN" = "Pantalla completa";
+"ACCESSIBILITY_FULLSCREEN" = "전체 화면";
 /* Accessibility label for fullscreen button on video player when player is in fullscreen mode*/
-"ACCESSIBILITY_EXIT_FULLSCREEN" = "Salir de pantalla completa";
+"ACCESSIBILITY_EXIT_FULLSCREEN" = "전체 화면 나가기";
 /* Accessibility hint for error*/
-"ACCESSIBILITY.ERROR_TEXT" = "Error";
+"ACCESSIBILITY.ERROR_TEXT" = "오류";
 /* Accessibility label for HTML Icon in the Courseware screens */
 "ACCESSIBILITY_HTML" = "HTML";
 /* Accessibility label for Pause Button in the Video Player */
-"ACCESSIBILITY_PAUSE" = "Pausar";
+"ACCESSIBILITY_PAUSE" = "정지";
 /* Accessibility label for Play Button in the Video Player */
-"ACCESSIBILITY_PLAY" = "Reproducir";
+"ACCESSIBILITY_PLAY" = "재생";
 /* Accessibility lable for the avatar image */
-"ACCESSIBILITY_USER_AVATAR" = "Su imagen de avatar";
+"ACCESSIBILITY_USER_AVATAR" = "사용중인 아바타 이미지";
 /* Accessibility label for Problem Icon in the Courseware screens */
-"ACCESSIBILITY_PROBLEM" = "Problema";
+"ACCESSIBILITY_PROBLEM" = "문제";
 /* Optional text needs to be added for accesibility*/
-"ACCESSIBILITY.OPTIONAL_INPUT"="Opcional";
+"ACCESSIBILITY.OPTIONAL_INPUT"="선택 사항";
 /* Required text needs to be added for accesibility*/
-"ACCESSIBILITY_REQUIRED_INPUT"="Requerido";
+"ACCESSIBILITY_REQUIRED_INPUT"="Required";
 /* Accessibility label for Rewind Button in the Video Player */
-"ACCESSIBILITY_REWIND" = "Retroceder";
+"ACCESSIBILITY_REWIND" = "뒤로감기";
 /* Call to action for Rewind Button in the Video Player */
-"ACCESSIBILITY_REWIND_HINT" = "Retroceder 30 segundos";
+"ACCESSIBILITY_REWIND_HINT" = "30초 뒤로감기.";
 /* Accessibility label for Seek bar in the Video Player */
-"ACCESSIBILITY_SEEK_BAR" = "Barra de búsqueda";
+"ACCESSIBILITY_SEEK_BAR" = "검색 창";
 /* Accessibility label for Settings Button in the Video Player */
-"ACCESSIBILITY_SETTINGS" = "Configuración";
+"ACCESSIBILITY_SETTINGS" = "설정";
 /* Call to action for Course content on Home Screen */
-"ACCESSIBILITY_SHOWS_COURSE_CONTENT" = "Toque dos veces para ver el contenido del curso.";
+"ACCESSIBILITY_SHOWS_COURSE_CONTENT" = "강좌 콘텐츠를 보려면 두번 터치하세요.";
 /* We don't have a accessility trait for dropdown, so we will be achieving dropdown trait through accessibility label */
-"ACCESSIBILITY_DROPDOWN_TRAIT" = "Dropdown.";
+"ACCESSIBILITY_DROPDOWN_TRAIT" = "드롭다운";
 /* Call to action for Opening Dropdown */
-"ACCESSIBILITY_SHOWS_DROPDOWN_HINT" = "Toque dos veces para abrir el menú desplegable.";
+"ACCESSIBILITY_SHOWS_DROPDOWN_HINT" = "드롭다운을 열기 위해 두번 터치하세요.";
 /* Call to action for Selecting Option */
-"ACCESSIBILITY_SELECT_VALUE_HINT" = "Toque dos veces para seleccionar.";
+"ACCESSIBILITY_SELECT_VALUE_HINT" = "선택하려면 두번 터치하세요.";
 /* Accessibility label for Unknown Icon in the Courseware screens */
-"ACCESSIBILITY_UNKNOWN" = "Desconocido";
+"ACCESSIBILITY_UNKNOWN" = "알 수 없음";
 /* Accessibility label for Video Icon in the Courseware screens */
-"ACCESSIBILITY_VIDEO" = "Video";
+"ACCESSIBILITY_VIDEO" = "동영상";
 /* Text spoken for Navigation Button on Course List Screen */
-"ACCESSIBILITY_MENU" = "Menú de Navegación";
+"ACCESSIBILITY_MENU" = "탐색 메뉴";
 /* Accessibility label for close button when left drawer is open*/
-"ACCESSIBILITY_CLOSE_MENU" = "Cerrar Menú de Navegación";
+"ACCESSIBILITY_CLOSE_MENU" = "탐색 메뉴 닫기";
 /* Accessibility label for hiding keyboard*/
-"ACCESSIBILITY_HIDE_KEYBOARD" = "Ocultar el teclado";
+"ACCESSIBILITY_HIDE_KEYBOARD" = "키보드 숨기기";
 /* Accessibility Hint to view user profile*/
-"ACCESSIBILITY_SHOW_USER_PROFILE_HINT" = "Toque dos veces para ver el perfil de usuario.";
+"ACCESSIBILITY_SHOW_USER_PROFILE_HINT" = "사용자 프로필을 조회하려면 두번 터치하세요";
 /*Accessibility text for pinned discussion thread(Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_PINNED" = "Marcado";
+"ACCESSIBILITY.DISCUSSION_PINNED" = "고정됨";
 /*Accessibility text for closed discussion thread(Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_CLOSED" = "Cerrado";
+"ACCESSIBILITY.DISCUSSION_CLOSED" = "닫기 완료";
 /*Accessibility text for followed discussion thread(Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_FOLLOWED" = "Siguiendo";
+"ACCESSIBILITY.DISCUSSION_FOLLOWED" = "팔로우 완료";
 /* Accessibility text for unread discussion comments count (Posts screen) - {count} is a number of unread comments */
-"ACCESSIBILITY.DISCUSSION_UNREAD_REPLIES"="{count} respuestas no leídas";
+"ACCESSIBILITY.DISCUSSION_UNREAD_REPLIES"="{count} 안읽은 답변이 있습니다";
 /*Accessibility text for unread discussion thread (Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_UNREAD_THREAD" = "Discusión no leída";
+"ACCESSIBILITY.DISCUSSION_UNREAD_THREAD" = "읽지 않은 게시판 쓰레드";
 /*Accessibility text for read discussion thread (Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_READ_THREAD" = "Discusión leída";
+"ACCESSIBILITY.DISCUSSION_READ_THREAD" = "읽은 게시판 쓰레드";
 /*Accessibility text for discussion thread last seen date(Posts screen) - {date} last updated thread date*/
-"ACCESSIBILITY.DISCUSSION_LAST_POST_ON" = "Última publicación hecha el {date}";
+"ACCESSIBILITY.DISCUSSION_LAST_POST_ON" = "{date} 에 마지막 글이 올라왔습니다";
 /*Accessibility hint for discussion thread(Posts screen)*/
-"ACCESSIBILITY.DISCUSSION_THREAD_HINT" = "Toque dos veces para ver.";
+"ACCESSIBILITY.DISCUSSION_THREAD_HINT" = "쓰레드를 보기 위해 두번 터치하세요.";
 /*Accessibility hint for sort button(Posts Screen)*/
-"ACCESSIBILITY.DISCUSSION_SORT_BY" = "Ordenar por {sort_by}";
+"ACCESSIBILITY.DISCUSSION_SORT_BY" = "{sort_by} 정렬";
 /*Accessibility hint for filter button(Posts Screen)*/
-"ACCESSIBILITY.DISCUSSION_FILTER_BY" = "Filtrar por {filter_by}";
+"ACCESSIBILITY.DISCUSSION_FILTER_BY" = "{filter_by} 필터";
 /*Accessibility label for user profile in left drawer*/
-"ACCESSIBILITY.LEFT_DRAWER.PROFILE_LABEL" = "Ha iniciado sesión como {user_name}, {user_email}";
+"ACCESSIBILITY.LEFT_DRAWER.PROFILE_LABEL" = "현재 {user_name}, {user_email} 로 로그인 됨";
 /*Accessibility hint for user profile in left drawer*/
-"ACCESSIBILITY.LEFT_DRAWER.PROFILE_HINT" = "Toque dos veces para abrir su perfil";
+"ACCESSIBILITY.LEFT_DRAWER.PROFILE_HINT" = "계정 확인을 위해 두번 탭 하세요";
 /*Accessibility text for close button on whats new screen*/
-"ACCESSIBILITY.WHATSNEW.CLOSE_LABEL"="Cerrar";
+"ACCESSIBILITY.WHATSNEW.CLOSE_LABEL"="닫기";
 /*Accessibility label for header on new screen*/
-"ACCESSIBILITY.WHATSNEW.HEADER_LABEL"="Nuevas funciones de la versión {app_version}";
+"ACCESSIBILITY.WHATSNEW.HEADER_LABEL"="버전 {app_version}, 새로운 기능";
 /*Accessibility text for course share button on course dashboard*/
-"ACCESSIBILITY.SHARE_A_COURSE"="Compartir un curso";
+"ACCESSIBILITY.SHARE_A_COURSE"="코스 공유";
 /*Accessibility text for close button*/
-"ACCESSIBILITY.CLOSE_LABEL"="Cerrado";
+"ACCESSIBILITY.CLOSE_LABEL"="닫기";
 /*Accessibility text for profile button*/
-"ACCESSIBILITY.PROFILE_LABEL"="Perfil";
+"ACCESSIBILITY.PROFILE_LABEL"="Profile";
 /* Title of user profile section for user accomplishments (like badges) */
-"ACCOMPLISHMENTS.TITLE" = "Logros";
+"ACCOMPLISHMENTS.TITLE" = "달성한 성과";
 /* Default text template when user shares an accomplishment */
-"ACCOMPLISHMENTS.SHARE_TEXT" = "He ganado una insignia en {platform_name}! Dale un vistazo";
-/* Accessibility hint for view all subjects label*/
-"ACCESSIBILITY.VIEW_ALL_SUBJECTS_HINT" = "Double tap to view all subjects";
+"ACCOMPLISHMENTS.SHARE_TEXT" = "{platform_name} 에서 배지를 받았습니다! 확인해 보세요: ";
 /* Add a comment button title and place holder used in discussion comment text view */
-"ADD_A_COMMENT"="Añadir comentario";
+"ADD_A_COMMENT"="댓글 추가하기";
 /* Add a response button title used in discussion's responses screen */
-"ADD_A_RESPONSE"="Añadir respuesta";
+"ADD_A_RESPONSE"="답변 추가하기";
 /* Add comment button title used in discussion's Add a comment */
-"ADD_COMMENT"="Añadir comentario";
+"ADD_COMMENT"="댓글 추가하기";
 /* Add post button title used in discussion's Create a new post */
-"ADD_POST"="Añadir publicación";
+"ADD_POST"="글 추가하기";
 /* Add response button title used in discussion's Add a response */
-"ADD_RESPONSE"="Añadir respuesta";
+"ADD_RESPONSE"="답변 추가하기";
 /* Add your post button title used in discussion's add a post textview */
-"ADD_YOUR_POST"="Añadir su publicación";
+"ADD_YOUR_POST"="글을 추가하세요";
 /*Agreement text*/
-"AGREEMENT.TEXT"="you agree to the {eula} and {tos} and acknowledge the {privacy_policy}.";
+"AGREEMENT.TEXT"="당신은 {eula}와 {tos}에 동의하고 {privacy_policy}를 인정합니다.";
 /*Agreement text prefix for user on signin screen*/
-"AGREEMENT.TEXT_PREFIX_SIGNIN"="By signing-in to this app, ";
+"AGREEMENT.TEXT_PREFIX_SIGNIN"="이 앱에 로그인하면,";
 /*Agreement text prefix for user on signup screen*/
-"AGREEMENT.TEXT_PREFIX_SIGNUP"="By creating an account, ";
+"AGREEMENT.TEXT_PREFIX_SIGNUP"="계정을 생성함으로써,";
 /*Link Text for End Use License Agreement*/
-"AGREEMENT.LINK_TEXT_EULA"="{platform_name} End User License Agreement";
+"AGREEMENT.LINK_TEXT_EULA"="{platform_name} 최종 사용자 사용권 계약";
 /*Link Text for End Use License Agreement*/
-"AGREEMENT.LINK_TEXT_TOS"="{platform_name} Terms of Service and Honor Code";
+"AGREEMENT.LINK_TEXT_TOS"="{platform_name} 서비스 약관 ";
 /*Link Text for End Use License Agreement*/
-"AGREEMENT.LINK_TEXT_PRIVACY_POLICY"="Privacy Policy";
+"AGREEMENT.LINK_TEXT_PRIVACY_POLICY"="개인정보처리방침";
 /* Alert dialog button allowing user to chosing to allow downloads on cellular */
-"ALLOW"="Permitir";
+"ALLOW"="허용";
 /* Filtering option to show all discussion posts */
-"ALL_POSTS"="Todas las publicaciones";
+"ALL_POSTS"="전체 글";
 /*Subtitle for bulk download view when in downloading state */
-"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count} Remaining, {remaining_videos_size}MB total";
+"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count} 개의 동영상 남음, 총 {remaining_videos_size }MB ";
 /*Title for bulk download view when in downloaded state */
-"ALL_VIDEOS_DOWNLOADED_TITLE" = "All Videos Downloaded";
+"ALL_VIDEOS_DOWNLOADED_TITLE" = "다운로드 한 모든 동영상";
 /* Message shown when there are no announcements for a course */
-"ANNOUNCEMENT_UNAVAILABLE"="No hay anuncios para este curso.";
+"ANNOUNCEMENT_UNAVAILABLE"="현재 이 강좌에 공지사항이 없습니다.";
 /* Label indicating the response answer in Discussion Add comment screen */
-"ANSWER"="Responder";
+"ANSWER"="답변";
 /* Navigation title for a Question Post which has endorsed answers */
-"ANSWERED_QUESTION"="Pregunta respondida";
+"ANSWERED_QUESTION"="답변 완료된 질문";
 /* Accessibility label for rating control of app review. */
-"APP_REVIEW.RATING_CONTROL_ACCESSIBILITY_LABEL" = "Control de valoraciones.";
+"APP_REVIEW.RATING_CONTROL_ACCESSIBILITY_LABEL" = "등급 제어.";
 /* Accessibility hint for rating control of app review. */
-"APP_REVIEW.RATING_CONTROL_ACCESSIBILITY_HINT" = "Toque dos veces y mantega presionado para cambiar el valor.";
+"APP_REVIEW.RATING_CONTROL_ACCESSIBILITY_HINT" = "값을 변경하려면  두번 탭하고 길게 누르세요.";
 /* Alert title for positive app review */
-"APP_REVIEW.RATE_THE_APP" = "Valorar la aplicación";
+"APP_REVIEW.RATE_THE_APP" = "앱 평가하기";
 /* Positive review message */
-"APP_REVIEW.POSITIVE_REVIEW_MESSAGE" = "Comparta su opinión sobre la aplicación con los demás escribiendo una breve crítica en la App Store";
+"APP_REVIEW.POSITIVE_REVIEW_MESSAGE" = "앱 스토어에 빠른 리뷰를 작성하여 앱에 대해 어떻게 생각하는지 다른 사람들에게 알리세요.";
 /* Send feedback message for negative app review */
-"APP_REVIEW.SEND_FEEDBACK_TITLE" = "Enviar Comentario?";
+"APP_REVIEW.SEND_FEEDBACK_TITLE" = "의견을 보내시겠습니까?";
 /* Help us improve message for negative app review */
-"APP_REVIEW.HELP_US_IMPROVE" = "¡Ayúdenos a mejorar!";
+"APP_REVIEW.HELP_US_IMPROVE" = "개선 할 수 있도록 도와주세요!";
 /* Maybe later message for positive/negative app review */
-"APP_REVIEW.MAYBE_LATER" = "Quizás más tarde";
+"APP_REVIEW.MAYBE_LATER" = "나중에";
 /* Send feedback message for negative app review */
-"APP_REVIEW.SEND_FEEDBACK" = "Enviar Comentario";
+"APP_REVIEW.SEND_FEEDBACK" = "의견 보내기";
 /* Question for rating view */
-"APP_REVIEW.RATE_THE_APP_QUESTION" = "¿Cómo valoraría la aplicación?";
+"APP_REVIEW.RATE_THE_APP_QUESTION" = "앱을 어떻게 평가하겠습니까?";
 /* Submit button for rating view */
-"APP_REVIEW.SUBMIT" = "Enviar";
+"APP_REVIEW.SUBMIT" = "제출";
 /* App Review message email title */
-"APP_REVIEW.MESSAGE_SUBJECT" = "Crítica del cliente";
+"APP_REVIEW.MESSAGE_SUBJECT" = "고객 리뷰";
 /*Asteric for marking fields required*/
 "ASTERIC" = "*";
 /* This error message will be shown if user tried to login with third party (facebook/google) and server returns 400 status code*/
-"AUTH_PROVIDER_ERROR" = "This {auth_provider} account is not linked with any {platform_name} account. Please register.";
+"AUTH_PROVIDER_ERROR" = "이메일/아이디 또는 비밀번호를 정확히 입력하셨는지 확인해주세요.\n{auth_provider}계정 로그인을 시도하셨다면, 먼저 {platform_name}웹사이트의 계정설정에서 계정연동을 해주세요.";
 /*Subtitle for bulk download view when in new, partial or downloaded state - {count} is single video*/
-"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{one}" = "{count} Video, {videos_size}MB total";
 /*Subtitle for bulk download view when in new, partial or downloaded state - {count} is number of videos*/
-"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{other}" = "{count} Videos, {videos_size}MB total";
+"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{other}" = "\n{count} 개 동영상,  총 {videos_size} MB ";
 /* Prefix used with Staff of Community TA on the posts screen */
-"BY_AUTHOR" = "Por {author_name}";
+"BY_AUTHOR" = "{author_name} 가 작성";
 /* Prefix used with Staff of Community TA on the posts screen */
-"BY_AUTHOR_LOWER_CASE" = "por {author_name}";
+"BY_AUTHOR_LOWER_CASE" = "{author_name} 가 작성";
 /* Course completion title */
-"CERTIFICATES.COURSE_COMPLETION_TITLE"="FELICITACIONES!";
+"CERTIFICATES.COURSE_COMPLETION_TITLE"="축하합니다!";
 /* Course completion subtitle */
-"CERTIFICATES.COURSE_COMPLETION_SUBTITLE"="Ha aprobado el curso.";
+"CERTIFICATES.COURSE_COMPLETION_SUBTITLE"="강좌를 통과했습니다.";
 /* Get certificate button text. */
-"CERTIFICATES.GET_CERTIFICATE"="Ver certificado";
+"CERTIFICATES.GET_CERTIFICATE"="이수증 조회";
 /* Text to share on FB & Twitter when sharing a course cert */
-"CERTIFICATES.SHARE_TEXT"="Acabo de obtener un Certificado en {platform_name}! Dale un vistazo:";
+"CERTIFICATES.SHARE_TEXT"="{platform_name} 에서 방금 이수증을 받았습니다! 확인해 보세요: ";
 /* Title bar when viewing an actual certificate */
-"CERTIFICATES.VIEW_CERT_TITLE"="Certificado";
+"CERTIFICATES.VIEW_CERT_TITLE"="이수증";
 /* Title of course announcements section */
-"COURSE_ANNOUNCEMENTS"="Anuncios";
+"COURSE_ANNOUNCEMENTS"="공지사항";
 /* Title of course handouts section */
-"COURSE_HANDOUTS"="Recursos";
+"COURSE_HANDOUTS"="학습자료";
 /* Title of resources tab in course dashboardTabBar view */
-"RESOURSES"="Recursos";
+"RESOURSES"="기타";
 /* Title of course important dates screen */
-"COURSEDATES.COURSE_IMPORTANT_DATES_TITLE"="Fechas importantes";
+"COURSEDATES.COURSE_IMPORTANT_DATES_TITLE"="중요한 날들";
 /* Button text for cancelling any action */
-"CANCEL"="Cancelar";
+"CANCEL"="취소";
 /* Alert explaining charges will apply since the "Wi-fi only" switch was turned off */
-"CELLULAR_DOWNLOAD_ENABLED_MESSAGE"="Permitir que su dispositivo descargue videos usando su conexión de datos móviles cuando no haya una red Wi-Fi disponible. Pueden aplicar cargos de datos.";
+"CELLULAR_DOWNLOAD_ENABLED_MESSAGE"="와이파이가 연결되지 않았을 때 3G/LTE를 사용한 동영상 다운로드를 허용합니다. 데이터 요금이 청구될 수 있습니다.";
 /* Title of alert explaining charges will apply since the "Wi-fi only" switch was turned off */
-"CELLULAR_DOWNLOAD_ENABLED_TITLE"="Permitir descarga de datos móviles";
+"CELLULAR_DOWNLOAD_ENABLED_TITLE"="3G/LTE 연결시 다운로드 허용하기";
 /* Error message shown when there is a problem loading a video */
-"CHECK_CONNECTION"="Problema cargando el video.\nPor favor revise su conexión a Internet.";
+"CHECK_CONNECTION"="동영상 로딩중에 문제가 발생했습니다.\n인터넷 연결 상태를 확인해보세요.";
 /* Generic action button label when the user chooses a thing */
-"CHOOSE" = "Elegir";
+"CHOOSE" = "선택";
 /* Title of dropdown from which the user can select topics on New Post Screen */
-"CHOOSE_A_TOPIC" = "Seleccione un tema...";
+"CHOOSE_A_TOPIC" = "주제를 선택하세요...";
 /* Prompt text shown after user chooses to begin registering with an external service like Facebook or Google. {service} will be replaced with a service name like Google or Facebook. */
-"COMPLETE_REGISTRATION_INFO" = "Ha iniciado sesión exitosamente con {service}. Sólo necesitamos un poco más de información antes de que empiece a aprender con {platform_name}.";
+"COMPLETE_REGISTRATION_INFO" = "{service} 로 성공적으로 로그인 하였습니다. {platform_name} 을 시작하기 전에 약간의 추가 정보가 필요합니다.";
 /* Prompt text shown after user chooses to begin registering with an external service like Facebook or Google */
-"COMPLETE_REGISTRATION_PROMPT" = "Complete su incripción";
+"COMPLETE_REGISTRATION_PROMPT" = "등록을 완료하세요";
 /* Title of alert when confirming deletion of a video */
-"CONFIRM_DELETE_TITLE"="Confirmar borrado";
+"CONFIRM_DELETE_TITLE"="삭제 확인";
 /* Text of alert when confirming video deletion */
 /* Text of alert when confirming video deletion */
-"CONFIRM_DELETE_MESSAGE##{one}"="¿Está seguro de querer borrar este video?";
-"CONFIRM_DELETE_MESSAGE##{other}"="¿Está seguro de querer borrar estos videos?";
+"CONFIRM_DELETE_MESSAGE##{other}"="동영상을 삭제하겠습니까?";
 /* Text of push notification announcing a new course announcement */
-"COURSE_ANNOUNCEMENT_NOTIFICATION_BODY"="Nuevo anuncio: {course_name}";
+"COURSE_ANNOUNCEMENT_NOTIFICATION_BODY"="새 공지사항: {course_name}";
 /* Alert dialog button text */
-"CLOSE"="Cerrar";
+"CLOSE"="닫기";
 /* Discussion response comment - {count} is a number of comments */
 /* Discussion response comment - {count} is a number of comments */
-"COMMENT##{one}"="{count} comentario";
-"COMMENT##{other}"="{count} comentarios";
+"COMMENT##{other}"="{count} 개 댓글";
 /* Discussion comments */
-"COMMENTS"="Comentarios";
+"COMMENTS"="댓글";
 /* Text displayed when comments are disabled for a Response */
-"COMMENTS_CLOSED" = "Los comentarios están cerrados para esta respuesta";
+"COMMENTS_CLOSED" = "이 답변에는 댓글을 작성할 수 없습니다";
 /* Discussion comment (Posts screen) - {count} is a number of comments */
 /* Discussion comment (Posts screen) - {count} is a number of comments */
-"COMMENTS_TO_RESPONSE##{one}"="{count} Comentario";
-"COMMENTS_TO_RESPONSE##{other}"="{count} Comentarios";
+"COMMENTS_TO_RESPONSE##{other}"="{count} 개 댓글";
 /* Label for posts pinned by Community TA(s)" */
-"COMMUNITY_TA"="PROFESOR ASISTENTE DE LA COMUNIDAD";
+"COMMUNITY_TA"="커뮤니티 조교";
 /* Label indicating the amount of time a course will take */
-"COURSE_DETAIL.EFFORT"="Esfuerzo:";
+"COURSE_DETAIL.EFFORT"="노력:";
 /* Label indicating when a course ends. */
-"COURSE_DETAIL.END_DATE"="Fecha de finalización:";
+"COURSE_DETAIL.END_DATE"="종료 날짜:";
 /* Button title allowing user to enroll in a course */
-"COURSE_DETAIL.ENROLL_NOW" = "Inscribirse ahora";
+"COURSE_DETAIL.ENROLL_NOW" = "지금 등록하세요";
 /* Button title allowing user to view a course from the course's catalog detail page */
-"COURSE_DETAIL.VIEW_COURSE" = "Ver curso";
+"COURSE_DETAIL.VIEW_COURSE" = "강좌 보기";
 /* Button title describing that the course is invitation only */
-"COURSE_DETAIL.INVITATION_ONLY" = "Solo con invitación";
+"COURSE_DETAIL.INVITATION_ONLY" = "초대장 만";
 /* Message shown when there is no course content */
-"COURSEWARE_UNAVAILABLE"="No hay ningún contenido del curso disponible en este momento.";
+"COURSEWARE_UNAVAILABLE"="현재 코스 내용이 없습니다.";
 /* Message shown when there is no course video */
-"COURSE_VIDEO_UNAVAILABLE"="Este curso no incluye ningún video.";
+"COURSE_VIDEO_UNAVAILABLE"="이 과정에는 비디오가 포함되어 있지 않습니다.";
 /* Message shown when attempting to display content not available on the app */
-"COURSE_CONTENT_UNKNOWN" = "Este componente interactivo aún no está disponible desde dispositivos móviles.\n\nExplore otras partes de este curso o véalo en línea.";
+"COURSE_CONTENT_UNKNOWN" = "상호작용 구성요소는 현재 모바일 환경에서 사용할 수 없습니다.\n이 강좌의 다른 부분을 탐색하거나 웹 환경에서 다시 시도해 보세요.";
 /* Message shown when there is no course dates */
-"COURSEDATES.COURSE_DATE_UNAVAILABLE"="Las fechas del curso no están disponibles en este momento.";
-/* Title text for the Announcements section within the course dashboard */
-"DASHBOARD.COURSE_ANNOUNCEMENTS"="Anuncios";
-/* Text describing the Announcements section within the course dashboard */
-"DASHBOARD.COURSE_ANNOUNCEMENTS_DETAIL"="Manténgase actualizado";
-/* Title text for the Courseware section of the course dashboard */
-"DASHBOARD.COURSE_COURSEWARE"="Curso";
-/* Text describing the Courseware section within the course dashboard */
-"DASHBOARD.COURSE_COURSE_DETAIL"="Acceda a videos y actividades";
-/* Title text for the videos section of the course dashboard */
-"DASHBOARD.COURSE_Videos"="Videos";
-/* Text describing the Videos section within the course dashboard */
-"DASHBOARD.COURSE_Videos_DETAIL"="Ver videos del curso";
-/* Title text for the Discussions section of the course dashboard */
-"DASHBOARD.COURSE_DISCUSSION"="Debate";
-/* Text describing the Discussions section within the course dashboard */
-"DASHBOARD.COURSE_DISCUSSION_DETAIL"="Únase a la conversación";
-/* Title text for the Handouts section of the course dashboard  */
-"DASHBOARD.COURSE_HANDOUTS"="Recursos";
-/* Text describing the Handouts section within the course dashboard */
-"DASHBOARD.COURSE_HANDOUTS_DETAIL"="Encuentre información importante del curso";
-/* Title text for the Important dates section of the course dashboard  */
-"DASHBOARD.COURSE_IMPORTANT_DATES"="Fechas";
-/* Text describing the Important dates section of the course dashboard  */
-"DASHBOARD.COURSE_IMPORTANT_DATES_DETAIL"="Realice un seguimiento de los plazos y cumpla con lo planeado";
-/*Text for browse by subject label on subject discovery */
-"DISCOVERY.BROWSE_BY_SUBJECT" = "Browse By Subject";
-/*Placeholder text for subjects searchbar*/
-"DISCOVERY.SUBJECT_SEARCH_BAR_PLACEHOLDER" = "Search Subject";
-/*Label text for view all subjects cell*/
-"DISCOVERY.VIEW_ALL_SUBJECTS" = "View All Subjects";
-/* Text describing the course due date for same day*/
-"COURSE_DUE_DATE_SAME_DAY"="debido hoy a las {due_date} {time_zone}";
-/* Text describing the course due date*/
-"COURSE_DUE_DATE"="debido {due_date}";
+"COURSEDATES.COURSE_DATE_UNAVAILABLE"="코스 날짜는 현재 사용할 수 없습니다.";
 /* Label for date when course starts */
-"COURSE.STARTING"="Comenzando el {start_date}";
-/* Label indicating that a course will end */
-"COURSE.ENDING"="Tarmina {end_date}";
+"COURSE.STARTING" = "개강예정(개강일:{start_date}일)";
+/* Label for date when course end */
+"COURSE.ENDING" = "진행중(종강일:{end_date}일)";
 /* Label indicated that a course has ended */
-"COURSE.ENDED"="Terminado {end_date}";
+"COURSE.ENDED"="종료(종강일:{end_date}일)";
 /* Course audit will expires on date*/
 "COURSE.AUDIT.EXPIRES_ON" = "Course access expires on {expiry_date}";
 /* Course audit will expires in {time_duration}*/
@@ -353,469 +312,494 @@
 /* Course audit expiry in n number of days*/
 "COURSE.AUDIT.DAYS" = "{days} days";
 /* 1 hour remaining in course audit expiry*/
-"COURSE_AUDIT_REMAINING_HOURS##{one}" = "{hours} hour";
 /* More than 1 hours remaining in course audit expiry*/
 "COURSE_AUDIT_REMAINING_HOURS##{other}" = "{hours} hours";
 /* 1 minutes remaining in course audit expiry*/
-"COURSE_AUDIT_REMAINING_MINUTES##{one}" = "{minutes} minute";
 /* More than 1 minutes remaining in course audit expiry*/
 "COURSE_AUDIT_REMAINING_MINUTES##{other}" = "{minutes} minutes";
 /* 1 second remaining in course audit expiry*/
-"COURSE_AUDIT_REMAINING_SECONDS##{one}" = "{seconds} second";
 /* More than 1 seconds remaining in course audit expiry*/
 "COURSE_AUDIT_REMAINING_SECONDS##{other}" = "{seconds} seconds";
 /*Error meessage on course content screen if course audit expires*/
 "COURSE_AUDIT_EXPIRED_ERROR_MESSAGE" = "Your access to this course has expired";
+/* Title text for the Announcements section within the course dashboard */
+"DASHBOARD.COURSE_ANNOUNCEMENTS"="공지 사항";
+/* Text describing the Announcements section within the course dashboard */
+"DASHBOARD.COURSE_ANNOUNCEMENTS_DETAIL"="강좌의 최근 소식이 게시됩니다.";
+/* Title text for the Courseware section of the course dashboard */
+"DASHBOARD.COURSE_COURSEWARE"="강좌";
+/* Text describing the Courseware section within the course dashboard */
+"DASHBOARD.COURSE_COURSE_DETAIL"="강의 내용 및 과제에 액세스";
+/* Title text for the videos section of the course dashboard */
+"DASHBOARD.COURSE_Videos"="동영상";
+/* Text describing the Videos section within the course dashboard */
+"DASHBOARD.COURSE_Videos_DETAIL"="강의 동영상 보기";
+/* Title text for the Discussions section of the course dashboard */
+"DASHBOARD.COURSE_DISCUSSION"="게시판";
+/* Text describing the Discussions section within the course dashboard */
+"DASHBOARD.COURSE_DISCUSSION_DETAIL"="대화에 참여";
+/* Title text for the Handouts section of the course dashboard  */
+"DASHBOARD.COURSE_HANDOUTS"="학습자료";
+/* Text describing the Handouts section within the course dashboard */
+"DASHBOARD.COURSE_HANDOUTS_DETAIL"="중요한 과정 정보 찾기";
+/* Title text for the Important dates section of the course dashboard  */
+"DASHBOARD.COURSE_IMPORTANT_DATES"="날짜";
+/* Text describing the Important dates section of the course dashboard  */
+"DASHBOARD.COURSE_IMPORTANT_DATES_DETAIL"="마감 시간을 추적하고 궤도에 머물러 라.";
+/*Text for browse by subject label on subject discovery */
+"DISCOVERY.BROWSE_BY_SUBJECT" = "제목으로 찾아보기";
+/*Placeholder text for subjects searchbar*/
+"DISCOVERY.SUBJECT_SEARCH_BAR_PLACEHOLDER" = "제목 검색";
+/*Label text for view all subjects cell*/
+"DISCOVERY.VIEW_ALL_SUBJECTS" = "모든 주제보기";
+/* Text describing the course due date for same day*/
+"COURSE_DUE_DATE_SAME_DAY"="오늘 마감 예정 {due_date} {time_zone}";
+/* Text describing the course due date*/
+"COURSE_DUE_DATE"="{due_date} 까지";
 /* Option to show all different types of course content. Constrasts with 'Show Videos Only'. */
-"COURSE_MODE_FULL"="Mostrar curso completo";
+"COURSE_MODE_FULL"="전체 강좌 보기";
 /* Label to describe the button that allows choosing between Video only mode and All Course Content mode */
-"COURSE_MODE_PICKER_DESCRIPTION" = "Selector de modo";
+"COURSE_MODE_PICKER_DESCRIPTION" = "모드 선택";
 /* Text displayed when Can't find one of your courses is tapped on My Courses screen */
-"COURSE_NOT_LISTED" = "Estamos trabajando para hacer que todos nuestros cursos sean compatibles con dispositivos móviles. Si no encuentra un curso, vuelva a consultar pronto. ¡Estamos añadiendo cursos todos los días!";
+"COURSE_NOT_LISTED" = "모든 강좌를 모바일 환경에서 사용할 수 있도록 최선을 다하고 있습니다. 만약 강좌를 찾을 수 없다면 나중에 다시 시도해 보세요. 매일매일 새로운 강좌를 추가하고 있습니다!";
 /* Message shown on a course when it hasn't started yet.*/
-"COURSE_NOT_STARTED"="Este curso no ha comenzado todavía.";
+"COURSE_NOT_STARTED"="강좌가 아직 시작되지 않았습니다.";
 /* Message shown on a course when it hasn't started yet. {date} will be a localized date string */
-"COURSE_WILL_START_AT"="Este curso no ha comenzado todavía. Regrese el {date} para poder ver sus videos.";
+"COURSE_WILL_START_AT"="강좌가 아직 시작되지 않았습니다. 동영상을 보기 위해 {date} 에 다시 확인해보세요.";
 /* Create a new post button title used in discussions' posts screen */
-"CREATE_A_NEW_POST"="Crear nueva publicación";
+"CREATE_A_NEW_POST"="새 글 작성하기";
 /* Button text to initiate or confirm deletion */
-"DELETE"="Borrar";
+"DELETE"="삭제";
 /* Discussion used in the segmented control Creating a new post */
-"DISCUSSION"="Discusión";
+"DISCUSSION"="게시판";
 /* Discussion comment overlay message when new comment added */
-"DISCUSSION_COMMENT_POSTED" = "Su comentario ha sido añadido.";
+"DISCUSSION_COMMENT_POSTED" = "댓글이 추가되었습니다.";
 /* Title of button to allow user to follow a discussion post */
-"DISCUSSION_FOLLOW"="Seguir";
+"DISCUSSION_FOLLOW"="팔로우";
 /* Title of action to report a discussion post/response/comment to the course staff */
-"DISCUSSION_REPORT"="Reportar";
+"DISCUSSION_REPORT"="보고";
 /* Discussion response overlay message when new response added */
-"DISCUSSION_THREAD_POSTED" = "Su respuesta ha sido añadida.";
+"DISCUSSION_THREAD_POSTED" = "답변이 추가되었습니다.";
 /* Title of the navigation bar when entering the course discussion */
-"DISCUSSION_TOPICS"="Temas de discusión";
+"DISCUSSION_TOPICS"="게시판 주제";
 /* Title of button to allow user to unfollow a discussion post */
-"DISCUSSION_UNFOLLOW"="Dejar de seguir";
+"DISCUSSION_UNFOLLOW"="언팔로우";
 /* Title of action to unreport a discussion post/response/comment to the course staff */
-"DISCUSSION_UNREPORT"="Anular reporte";
+"DISCUSSION_UNREPORT"="보고 취소";
 /* Discussion comments count (Posts screen) - {count} is a number of comments */
-"DISCUSSIONS.REPLIES_COUNT"="{count} Respuestas";
+"DISCUSSIONS.REPLIES_COUNT"="{count} 개 답변";
 /*Discussion posts screen last post date - {date} last updated thread date*/
-"DISCUSSIONS.LAST_POST" = "Última publicación: {date}";
+"DISCUSSIONS.LAST_POST" = "최근 작성한 글: {date}";
 /* Alert dialog button for allowing/disallowing downloads on cellular data */
-"DO_NOT_ALLOW"="No permitir";
+"DO_NOT_ALLOW"="허용하지 않기";
 /* Description about for button to download videos. For example, "Download 1 video" */
 /* Description about for button to download videos. For example, "Download 3 videos" */
-"DOWNLOAD_MANY_VIDEOS##{one}" = "Descargar {video_count} video";
-"DOWNLOAD_MANY_VIDEOS##{other}" = "Descargar {video_count} videos";
+"DOWNLOAD_MANY_VIDEOS##{other}" = "{video_count} 개 동영상을 다운로드 하였습니다";
 /* Button text for confirming download */
-"DOWNLOAD" = "Descargar";
+"DOWNLOAD" = "다운로드";
 /* Label indicating that a video or videos have been downloaded */
-"DOWNLOADED" = "Descargados";
+"DOWNLOADED" = "다운로드 완료";
 /* Description about downloaded videos. For example, "Downloaded 1 video" */
 /* Description about downloaded videos. For example, "Downloaded 3 videos" */
-"DOWNLOADED_MANY_VIDEOS##{one}" = "Descargar {video_count} video.";
-"DOWNLOADED_MANY_VIDEOS##{other}" = "Descargar {video_count} videos";
+"DOWNLOADED_MANY_VIDEOS##{other}" = "{video_count} 개 동영상을 다운로드 합니다";
 /* Label indicating that a video or videos are downloading */
-"DOWNLOADING" = "Descargando";
+"DOWNLOADING" = "다운로드 중";
 /* Title of video downloads screen */
-"DOWNLOADS"="Descargas";
+"DOWNLOADS"="다운로드 목록";
 /* Overlay message after user chooses to download a video */
-"DOWNLOADING_1_VIDEO"="Descargando 1 video.";
+"DOWNLOADING_1_VIDEO"="1 동영상을 다운로드 중입니다.";
 /*Title for bulk download view when in downloading state */
-"DOWNLOADING_VIDEOS_TITLE" = "Downloading Videos...";
+"DOWNLOADING_VIDEOS_TITLE" = "다운로드중...";
 /*Title for bulk download view when in new or partial state */
-"DOWNLOAD_TO_DEVICE_TITLE" = "Download to Device";
+"DOWNLOAD_TO_DEVICE_TITLE" = "다운로드하기";
 /*Discover in left drawer(used for courses and programs discovery)*/
-"DISCOVER"="Exploración";
+"DISCOVER"="강좌찾기";
 /*Title for the programs in tabbar and navigation bar*/
-"PROGRAMS"="Programs";
+"PROGRAMS"="프로그램";
 /*Title for the degrees in navigation bar*/
 "DEGREES"="Degrees";
 /*Debug option title in tabbar */
-"DEBUG"="Debug";
+"DEBUG"="디버그";
 /* Error message shown when email address is not properly formatted */
-"ERROR_MESSAGE.INVALID_EMAIL_FORMAT"="Por favor revise su dirección de correo e intente de nuevo.";
+"ERROR_MESSAGE.INVALID_EMAIL_FORMAT"="이메일 주소의 형식이 올바른지 확인하고 다시 시도하십시오.";
 /* Alert message shown when user tries to send an email, but email isn't setup */
-"EMAIL_ACCOUNT_NOT_SET_UP_MESSAGE"="Al parecer su cliente de correo no está configurado.";
+"EMAIL_ACCOUNT_NOT_SET_UP_MESSAGE"="이메일 클라이언트 설정이 완료되지 않았습니다.";
 /* Alert dialog title shown when user tries to send an email, but email isn't setup */
-"EMAIL_ACCOUNT_NOT_SET_UP_TITLE"="No se pudo enviar el correo";
+"EMAIL_ACCOUNT_NOT_SET_UP_TITLE"="이메일을 발송할 수 없었습니다";
 /* Placeholder text for email address entry field */
-"EMAIL_ADDRESS_PROMPT"="Dirección de correo electrónico";
+"EMAIL_ADDRESS_PROMPT"="이메일 주소";
 /* Text displayed when no results are found in the search */
-"EMPTY_RESULTSET" = "Resultados no encontrados para \"{query_string}\". Intente usando otro término de búsqueda o seleccione una categoría de discusión a explorar.";
+"EMPTY_RESULTSET" = "\"{query_string}\" 에 대한 결과를 찾을 수 없었습니다. 다른 키워드로 검색하거나 게시판을 검색해보세요.";
 /* Prompt shown to users on the course list encouraging them to find new courses */
-"ENROLLMENT_LIST.FIND_COURSES_PROMPT" = "¿Buscando un nuevo desafío?";
+"ENROLLMENT_LIST.FIND_COURSES_PROMPT" = "새롭게 도전하시겠습니까?";
 /* Button title opening course catalog */
-"ENROLLMENT_LIST.FIND_COURSES" = "Encuentre un curso";
+"ENROLLMENT_LIST.FIND_COURSES" = "강좌 검색";
 /* Error message when user is not enrolled to any course and course discovery is also disabled.*/
-"ENROLLMENT_LIST.NO_ENROLLMENT" = "Parece que todavía no está inscrito en ningún curso.";
+"ENROLLMENT_LIST.NO_ENROLLMENT" = "아직 강좌에 등록하지 않았습니다.";
 /* Prompt indicating user needs to enter an email address */
-"ENTER_EMAIL"="Por favor ingrese su nombre de usuario o dirección de correo e intente de nuevo.";
+"ENTER_EMAIL"="메일 주소를 입력하고 다시 시도하십시오.";
 /* Prompt indicating user needs to enter a password */
-"ENTER_PASSWORD"="Por favor ingrese su contraseña e intente de nuevo.";
+"ENTER_PASSWORD"="비밀번호를 입력하고 다시 시도해 보세요.";
 /* Text used when the post is visible to everyone */
-"EVERYONE"="todos";
+"EVERYONE"="모두";
 /* Message when user attempts to register an account using an external service like Facebook or Google, but they already have an account linked to that service */
-"EXTERNAL_REGISTRATION_BECAME_LOGIN" = "Ya estableció una cuenta de {platform_name} usando su cuenta de {service}. Se ha iniciado sesión con esa cuenta.";
+"EXTERNAL_REGISTRATION_BECAME_LOGIN" = "{service} 계정으로 이미 {platform_name} 계정 설정을 완료하였습니다. 해당 계정으로 로그인 하였습니다.";
 /* Endorsed text */
-"ENDORSED" = "Validado";
+"ENDORSED" = "추천";
 /* Facebook login method */
-"FACEBOOK"="Facebook";
+"FACEBOOK"="페이스북";
 /* Overlay message shown when facebook login fails because the user's account isn't linked */
-"FAILED_TO_LOAD_TOPICS"="Falló al cargar los temas.";
+"FAILED_TO_LOAD_TOPICS"="주제 로딩에 실패하였습니다.";
 /* Title of find courses screen */
-"FIND_COURSES"="Encontrar cursos";
+"FIND_COURSES"="강좌 목록";
 /* No available courses on find courses section */
-"FIND_COURSES_NO_AVAILABLE_COURSES"="No hay cursos disponibles";
+"FIND_COURSES_NO_AVAILABLE_COURSES"="No available courses";
 /* Overlay message shown when enrolling in a course fails because the user is already in the course */
-"FIND_COURSES_ALREADY_ENROLLED_MESSAGE"="Ya está inscrito en este curso";
+"FIND_COURSES_ALREADY_ENROLLED_MESSAGE"="이미 이 강좌에 등록하였습니다";
 /* Overlay message shown when enrolling in a course fails */
-"FIND_COURSES_ENROLLMENT_ERROR_DESCRIPTION"="Ocurrió un error al crear su inscripción al curso";
+"FIND_COURSES_ENROLLMENT_ERROR_DESCRIPTION"="신규 강좌 등록 중에 오류가 발생하였습니다";
 /* AlertView message shown when enrolling in a course fails */
 "FIND_COURSES_UNABLE_TO_ENROLL_ERROR_DESCRIPTION"="We are unable to enroll you in this course at this time using the {platform_name} mobile application. Please try again on your web browser";
 /* Title of overlay message shown when enrolling in a course fails */
-"FIND_COURSES_ENROLLMENT_ERROR_TITLE"="Error en la inscripción";
+"FIND_COURSES_ENROLLMENT_ERROR_TITLE"="등록 오류";
 /* Title of overlay message shown when enrolling in a course succeeds */
-"FIND_COURSES_ENROLLMENT_SUCCESSFUL_MESSAGE"="Ya está inscrito en este curso.";
+"FIND_COURSES_ENROLLMENT_SUCCESSFUL_MESSAGE"="강좌 등록을 완료하였습니다";
 /* Title of overlay message shown when enrolling in a course succeeds */
-"FIND_COURSES_OFFLINE_MESSAGE"="Usted está en modo offline.\nPara encontrar cursos, debe estar conectado a Internet";
+"FIND_COURSES_OFFLINE_MESSAGE"="오프라인 모드를 사용중입니다.\n강좌 검색을 위해 인터넷에 접속하세요";
 /* Title of overlay message shown when sign in fails */
-"FLOATING_ERROR_LOGIN_TITLE"="Error de inicio de sesión";
+"FLOATING_ERROR_LOGIN_TITLE"="로그인 오류";
 /* Title of overlay message shown when reset password fails */
-"FLOATING_ERROR_TITLE"="Error al reiniciar la contraseña";
+"FLOATING_ERROR_TITLE"="비밀번호 오류 재설정";
 /* Adds a `:` after a label, used in form. Eg. "{First Name}: Bob" */
 "FORM_LABEL"="{label}:";
 /* Google login method */
-"GOOGLE"="Google";
+"GOOGLE"="구글";
 /* Overlay message shown when third party login fails because the user's account isn't linked. {service} is a third party login service like "Facebook". {platform_name} is the name of the service like "edX". {destination_name} is the name of service's web destination like "edx.org" */
-"SERVICE_ACCOUNT_NOT_ASSOCIATED_MESSAGE"="Asegúrese de que su cuenta de {service} está asociada con su cuenta de {platform_name} en {destination_name}";
+"SERVICE_ACCOUNT_NOT_ASSOCIATED_MESSAGE"="{destination_name} 에서 {platform_name} 계정에 {service}  계정을 연동시키세요.";
 /* Title of overlay message shown when login through an external service fails because the user's account isn't linked. For example, "Google account not associated with edX account" */
-"SERVICE_ACCOUNT_NOT_ASSOCIATED_TITLE"="cuenta de {service} no asociada con cuenta de {platform_name}";
+"SERVICE_ACCOUNT_NOT_ASSOCIATED_TITLE"="{service} 계정이 {platform_name} 계정에 연동되지 않았습니다";
 /* Indicator for course content that is marked as having a graded component */
-"GRADED" = "Calificable";
+"GRADED" = "채점 완료";
 /* Warning shown to indicate that the user is in a section of graded content. */
-"GRADED_CONTENT_WARNING" = "Recomendamos que complete las secciones calificables como ésta en su navegador de internet hasta que estén apoyadas de forma completa en dispositivos móviles.";
+"GRADED_CONTENT_WARNING" = "모바일 환경에서 완전히 지원되기 전까지 이와 같은 점수 반영 항목은 웹 브라우저에서 완료하는 것을 권장합니다.";
 /* Message shown when there are no handouts for a course */
-"HANDOUTS_UNAVAILABLE"="No hay entregas para este curso.";
+"HANDOUTS_UNAVAILABLE"="현재 이 강좌에 학습자료가 없습니다.";
 /* Overlay error shown when logging in with an invalid email address */
-"INVALID_EMAIL_MESSAGE"="Por favor revise su nombre de usuario o dirección de correo e intente de nuevo.";
+"INVALID_EMAIL_MESSAGE"="이메일 주소 형식 확인 후 다시 시도해 보세요.";
 /* Overlay error shown when logging in with an invalid username or password */
-"INVALID_USERNAME_PASSWORD"="Por favor revise su nombre de usuario o dirección de correo e intente de nuevo.";
+"INVALID_USERNAME_PASSWORD"="이메일 주소와 비밀번호를 확인한 뒤 다시 시도해 보세요.";
 /* Alert dialog text asking whether it's okay to download large videos */
-"LARGE_DOWNLOAD_MESSAGE"="Los videos que seleccionó suman más de 1 GB. ¿Desea descargarlos?";
+"LARGE_DOWNLOAD_MESSAGE"="선택한 동영상 크기는 1GB를 넘습니다. 이 동영상들을 다운로드 하겠습니까?";
 /* Alert dialog title when asking whether it's okay to download large videos */
-"LARGE_DOWNLOAD_TITLE"="Descarga grande";
+"LARGE_DOWNLOAD_TITLE"="대용량 다운로드";
 /* Title for Course Item that was last accessed */
-"LAST_ACCESSED" = "Último acceso";
+"LAST_ACCESSED" = "최근 접속";
 /* Prompt leading user to create account screen */
-"LOGIN_SPLASH_SIGN_UP"="Inicie sesión y comience a aprender";
+"LOGIN_SPLASH_SIGN_UP"="회원가입";
 /* Prompt leading user to sign in screen */
-"LOGIN_SPLASH_SIGN_IN"="¿Ya tiene una cuenta? Inicie sesión";
+"LOGIN_SPLASH_SIGN_IN"="로그인";
 /* Button title to log out the current user */
-"LOGOUT"="Salir";
+"LOGOUT"="로그아웃";
 /* Option to sort discussion post list by most activity */
-"MOST_ACTIVITY"="Mayor actividad";
+"MOST_ACTIVITY"="가장 많은 활동";
 /* Option to sort discussion post list by most votes */
-"MOST_VOTES"="Más votos";
+"MOST_VOTES"="가장 많은 표";
 /* Screen title showing a user's courses */
-"COURSES"="Cursos";
+"COURSES"="내 강의실";
 /* Screen title showing a user's settings */
-"MY_SETTINGS"="Mis opciones";
+"MY_SETTINGS"="설정";
 /* Marked as answer for endorsed responses */
-"MARKED_ANSWER" = "Marcado como respondido";
+"MARKED_ANSWER" = "정답으로 표시하기";
 /* Overlay error shown when attempting an action without an internet connection */
-"NETWORK_NOT_AVAILABLE_MESSAGE"="No está conectado a Internet.";
+"NETWORK_NOT_AVAILABLE_MESSAGE"="현재 인터넷에 연결되어 있지 않습니다.";
 /* Alert dialog error shown when attempting an action without an internet connection */
-"NETWORK_NOT_AVAILABLE_MESSAGE_TROUBLE"="No está conectado a Internet. Por favor revise su conexión de red.";
+"NETWORK_NOT_AVAILABLE_MESSAGE_TROUBLE"="현재 인터넷에 연결되어 있지 않습니다. 인터넷 연결을 다시 확인해 보세요.";
 /* Title of alert dialog shown when attempting an action without an internet connection */
-"NETWORK_NOT_AVAILABLE_TITLE"="Error de conexión";
+"NETWORK_NOT_AVAILABLE_TITLE"="접속 오류";
 /* Button title for moving to the next block in the course */
-"NEXT" = "Siguiente";
+"NEXT" = "다음";
 /* Button title for moving to the next unit in the course */
-"NEXT_UNIT" = "Siguiente unidad";
+"NEXT_UNIT" = "다음 학습활동";
 /* Message shown when tapping on enroll courses when in app course enrollment is disabled */
-"NO_ENROLLMENT_INTERSTITIAL_BOTTOM_LABEL" = "Mientras tanto, puede inscribirse en cursos a través de nuestro sitio web - tendrá que iniciar sesión, inscribirse, y volver a la aplicación después de haber realizado estos pasos.";
+"NO_ENROLLMENT_INTERSTITIAL_BOTTOM_LABEL" = "웹사이트에서 강좌에 등록할 수 있습니다. 로그인 한 뒤 등록 완료 후 앱으로 돌아오면 됩니다.";
 /* Message shown when tapping on enroll courses when in app course enrollment is disabled */
-"NO_ENROLLMENT_INTERSTITIAL_TOP_LABEL" = "Nuestro equipo está trabajando para permitir las inscripciones desde la app.";
+"NO_ENROLLMENT_INTERSTITIAL_TOP_LABEL" = "앱에서 강좌에 등록할 수 있도록 최선을 다하고 있습니다.";
 /* Message shown when no results are found while filtering discussions */
-"NO_RESULTS_FOUND" = "No hay entradas para esta categoría de discusión.";
+"NO_RESULTS_FOUND" = "이 게시판 항목에는 글이 없습니다.";
 /* Message shown to indicate video transcript support has not yet been implemented */
-"NO_TRANSCRIPT" = "La transcripción de este video aún no está disponible.";
+"NO_TRANSCRIPT" = "이 동영상의 자막이 아직 없습니다.";
 /* Message shown when user attempts to download a video over cellular data, but has chosen to only allow video downloads over wifi */
-"NO_WIFI_MESSAGE" = "Su actual configuración solo permite descargar a través de Wi-Fi.\nPor favor conéctese a una red Wi-Fi o cambie las configuraciones de descarga.";
+"NO_WIFI_MESSAGE" = "현재 와이파이 환경에서만 다운로드 할 수 있도록 설정되어 있습니다.\n와이파이에 연결한 뒤 다시 시도하거나 다운로드 설정을 변경하세요.";
 /* Text displayed when no results are found for following*/
-"NO_FOLLOWING_RESULTS" = "Usted no está siguiendo ninguna publicación.";
+"NO_FOLLOWING_RESULTS" = "현재 글을 팔로우하고 있지 않습니다.";
 /* Message shown when no results are found for all posts*/
-"NO_COURSE_RESULTS" = "No hay comentarios en esta discusión.";
+"NO_COURSE_RESULTS" = "이 강좌 게시판에 글이 없습니다.";
 /* Indicates a field that does not apply to the current context */
-"NOT_APPLICABLE" = "ND";
+"NOT_APPLICABLE" = "NA";
 /* Label of switch that toggles push notification support */
-"NOTIFICATIONS_ENABLED" = "Permitir notificaciones";
+"NOTIFICATIONS_ENABLED" = "알림 허용";
 /*Text for author if post is by anonymous user*/
-"ANONYMOUS" = "Anónimo";
+"ANONYMOUS" = "익명";
 /* Label indicating user has on internet connection and is in offline mode */
-"OFFLINE" = "Sin conexión";
+"OFFLINE" = "오프라인";
 /* Alert dialog okay button */
 "OK"="OK";
 /* Button title allowing user to open current page in their web browser */
-"OPEN_IN_BROWSER"="Ver en Safari";
+"OPEN_IN_BROWSER"="사파리 앱에서 보기";
 /* Button label to bring up course finder */
-"OR_SIGN_IN_WITH"="O iniciar sesión con";
+"OR_SIGN_IN_WITH"="혹은 다음을 통해 로그인하세요";
 /* Login screen password field title text */
-"PASSWORD_TITLE_TEXT" = "Contraseñas";
+"PASSWORD_TITLE_TEXT" = "비밀번호";
 /* Alert dialog button shown when finishing a video to ask if user should continue by watching the next video */
-"PLAYBACK_COMPLETE_CONTINUE"="Continuar";
+"PLAYBACK_COMPLETE_CONTINUE"="계속하기";
 /* Alert dialog button shown when finishing a video to ask if user should continue by watching the next video (negative option) */
-"PLAYBACK_COMPLETE_CONTINUE_CANCEL"="No";
+"PLAYBACK_COMPLETE_CONTINUE_CANCEL"="아니오";
 /* Alert dialog content when finishing a video to ask if user should continue by watching the next video */
-"PLAYBACK_COMPLETE_MESSAGE"="¿Desea reproducir el siguiente video?";
+"PLAYBACK_COMPLETE_MESSAGE"="다음 동영상을 보겠습니까?";
 /* Alert dialog title when finishing a video to ask if user should continue by watching the next video */
-"PLAYBACK_COMPLETE_TITLE"="Ha llegado al final del video.";
+"PLAYBACK_COMPLETE_TITLE"="이 동영상을 끝까지 재생하였습니다.";
 /* Post screen title in creating a new post */
-"POST" = "Crear nueva publicación";
+"POST" = "새 글 작성하기";
 /* Title for Row on Discussion screen which opens the posts followed by the user */
-"POSTS_IM_FOLLOWING" = "Publicaciones que estoy siguiendo";
+"POSTS_IM_FOLLOWING" = "팔로우 중인 글";
 /* Navigation item title for post and responses */
-"DISCUSSION_POST" = "Publicación en el foro de discusión";
+"DISCUSSION_POST" = "게시판 글";
 /* Post discussion button title in Create a new post */
-"POST_DISCUSSION"="Publicar discusión";
+"POST_DISCUSSION"="글 추가하기";
 /* Post question button title in Create a new post */
-"POST_QUESTION"="Publicar pregunta";
+"POST_QUESTION"="질문 추가하기";
 /* Button title for moving to the previous block in the course */
-"PREVIOUS" = "Anterior";
+"PREVIOUS" = "이전";
 /* Button title for moving to the next unit in the course */
-"PREVIOUS_UNIT" = "Unidad anterior";
+"PREVIOUS_UNIT" = "이전 학습활동";
 /* A10y hint for the change picture button. */
 "PROFILE.CHANGE_PICTURE_ACCESSIBILITY_HINT" = "Double tap to change profile photo";
 /* Change picture button text on edit profile screen. */
-"PROFILE.CHANGE_PICTURE_BUTTON" = "Cambiar";
+"PROFILE.CHANGE_PICTURE_BUTTON" = "변경";
 /* Text for use a photo already in library for user profile photo alert */
-"PROFILE.CHOOSE_EXISTING" = "Elija una foto";
+"PROFILE.CHOOSE_EXISTING" = "사진 선택하기";
 /* Instruction title text on the photo crop view. */
-"PROFILE.CROP_AND_RESIZE_PICTURE" = "Cortar y redimensionar";
+"PROFILE.CROP_AND_RESIZE_PICTURE" = "잘라내기 및 크기 조절";
 /* 'Current Language' label on top row of edit language in user's profile */
-"PROFILE.CURRENT_LANGUAGE_LABEL" = "Idioma actual:";
+"PROFILE.CURRENT_LANGUAGE_LABEL" = "현재 언어:";
 /* 'Current Location' label on top row of edit country in user's profile */
-"PROFILE.CURRENT_LOCATION_LABEL" = "Ubicación actual:";
+"PROFILE.CURRENT_LOCATION_LABEL" = "현재 위치:";
 /* Profile edit view title */
-"PROFILE.EDIT_TITLE" = "Editar perfil";
+"PROFILE.EDIT_TITLE" = "프로필 편집하기";
 /* Accessibility label for edit profile button */
-"PROFILE.EDIT_ACCESSIBILITY" = "Editar perfil";
+"PROFILE.EDIT_ACCESSIBILITY" = "프로필 편집하기";
 /* Accessibility hint for country field in user profile */
-"PROFILE.COUNTRY_ACCESSIBILITY_HINT" = "Su país";
+"PROFILE.COUNTRY_ACCESSIBILITY_HINT" = "국적";
 /* Accessibility hint for language field in user profile */
-"PROFILE.LANGUAGE_ACCESSIBILITY_HINT" = "Su preferencia de idioma";
+"PROFILE.LANGUAGE_ACCESSIBILITY_HINT" = "선호 언어";
 /* Shown when viewing someone else's limied profile. */
-"PROFILE.LEARNER_HAS_LIMITED_PROFILE" = "Este usuario de {platform_name} está compartiendo un perfil limitado.";
+"PROFILE.LEARNER_HAS_LIMITED_PROFILE" = "이 {platform_name} 학습자는 현재 제한 프로필을 공유하고 있습니다.";
 /* User has not filled in an "about me" on their profile */
-"PROFILE.NO_BIO" = "No se suministró información \"Sobre mí\".";
+"PROFILE.NO_BIO" = "\"자기소개\" 정보가 없습니다.";
 /* Text in the picture taker alert to delete the existing image */
-"PROFILE.REMOVE_IMAGE" = "Eliminar";
+"PROFILE.REMOVE_IMAGE" = "삭제";
 /* Profile screen text indicating that the user is currently only displaying a limited profile */
-"PROFILE.SHOWING_LIMITED" = "Actualmente está compartiendo una versión limitada de su perfil";
+"PROFILE.SHOWING_LIMITED" = "현재 제한 프로필을 공유하고 있습니다";
 /* Text for take picture for user profile photo alert */
-"PROFILE.TAKE_PICTURE" = "Tomar foto";
+"PROFILE.TAKE_PICTURE" = "사진 촬영하기";
 /* Descriptive text for why a limited profile is shown for users under 13, first line */
-"PROFILE.AGE_LIMIT" = "Debe tener más de 13 años para compartir el perfil completo.";
+"PROFILE.AGE_LIMIT" = "13세 이상이 되어야 전체 프로필을 공유할 수 있습니다.";
 /* Error retrieving a profile */
-"PROFILE.UNABLE_TO_GET" = "No se ha podido cargar este perfil.";
+"PROFILE.UNABLE_TO_GET" = "프로필 로딩중에 오류가 발생하였습니다.";
 /* Error message when removing profile picture */
-"PROFILE.UNABLE_TO_REMOVE_PHOTO" = "No fue posible eliminar su foto.";
+"PROFILE.UNABLE_TO_REMOVE_PHOTO" = "사진을 삭제할 수 없었습니다.";
 /* Error saving user profile, for field `field_name` */
-"PROFILE.UNABLE_TO_SEND" = "No fue posible actualizar el campo {field_name}.";
+"PROFILE.UNABLE_TO_SEND" = "{field_name} 를 업데이트 할 수 없었습니다.";
 /* Error message when setting a new profile picture */
-"PROFILE.UNABLE_TO_SET_PHOTO" = "No fue posible actualizar su foto.";
+"PROFILE.UNABLE_TO_SET_PHOTO" = "사진을 업데이트 할 수 없었습니다.";
 /*Pipe sign using for formatting in discussion posts*/
 "PIPE_SIGN" = "|";
 /* Question used in the segmented control Creating a new post */
-"QUESTION"="Pregunta";
+"QUESTION"="질문";
 /* Option to sort discussion post list by recent activity */
-"RECENT_ACTIVITY" = "Actividad reciente";
+"RECENT_ACTIVITY" = "최근 활동";
 /* Label before Sort and Filter buttons on Posts Screen ( The Colon(:) is part of the string) */
-"REFINE" = "Refinar:";
+"REFINE" = "검색 조건:";
 /* Button title when responses are closed for a thread */
-"RESPONSES_CLOSED"="Las respuestas ya están cerradas para esta publicación";
+"RESPONSES_CLOSED"="이 글에 대한 답변은 공개되지 않습니다";
 /* Create account agreement. Followed by list of agreement names like "End User License Agreement" */
-"REGISTRATION_AGREEMENT_MESSAGE"="Al crear una cuenta, usted acepta los ";
+"REGISTRATION_AGREEMENT_MESSAGE"="계정을 생성함으로서 다음에 동의하게 됩니다";
 /* Button text allowing user create an account */
-"REGISTRATION_CREATE_MY_ACCOUNT"="Crear mi cuenta";
+"REGISTRATION_CREATE_MY_ACCOUNT"="계정 생성하기";
 /* Text shown while waiting for registration request */
-"REGISTRATION_CREATING_ACCOUNT"="Creando cuenta...";
+"REGISTRATION_CREATING_ACCOUNT"="계정 생성 중입니다...";
 /* Error prompt shown during registration to indicate an empty field. {field_name} is the name of a registration field like 'password' */
-"REGISTRATION_FIELD_EMPTY_ERROR"="Por favor ingrese su {field_name}.";
+"REGISTRATION_FIELD_EMPTY_ERROR"="{field_name} 을 입력해주세요.";
 /* Error prompt shown during registration to indicate a field missing a selection. {field_name} is the name of a registration field like 'year of birth' */
-"REGISTRATION_FIELD_EMPTY_SELECT_ERROR"="Por favor seleccione su {field_name}.";
+"REGISTRATION_FIELD_EMPTY_SELECT_ERROR"="{field_name} 을 선택해주세요.";
 /* Error prompt shown during registration when a field entry is too long. {field_name} is the name of a registration field like 'password'. {count} is a number of characters */
 /* Error prompt shown during registration when a field entry is too long. {field_name} is the name of a registration field like 'password'. {count} is a number of characters */
-"REGISTRATION_FIELD_MAX_LENGTH_ERROR##{one}"="{field_name} no puede tener más de {count} caracter.";
-"REGISTRATION_FIELD_MAX_LENGTH_ERROR##{other}"="{field_name} no puede tener más de {count} caracteres.";
+"REGISTRATION_FIELD_MAX_LENGTH_ERROR##{other}"="{field_name} 에 {count} 자 이상의 글자를 입력할 수 없습니다.";
 /* Error prompt shown during registration when a field entry is too short.  {field_name} is the name of a registration field like 'password'. {count} is a number of characters */
 /* Error prompt shown during registration when a field entry is too short.  {field_name} is the name of a registration field like 'password'. {count} is a number of characters */
-"REGISTRATION_FIELD_MIN_LENGTH_ERROR##{one}"="{field_name} debe tener al menos {count} caracter.";
-"REGISTRATION_FIELD_MIN_LENGTH_ERROR##{other}"="{field_name} debe tener al menos {count} caracteres.";
+"REGISTRATION_FIELD_MIN_LENGTH_ERROR##{other}"="{field_name} 에 최소 {count} 자 이상의 글자를 입력해야 합니다.";
 /* Button text allowing user to hide visible optional registration fields */
-"REGISTRATION_HIDE_OPTIONAL_FIELDS"="Ocultar campos opcionales";
+"REGISTRATION_HIDE_OPTIONAL_FIELDS"="선택사항 입력창 닫기";
 /* Button text allowing user to show hidden optional registration fields */
-"REGISTRATION_SHOW_OPTIONAL_FIELDS"="Mostrar campos opcionales";
+"REGISTRATION_SHOW_OPTIONAL_FIELDS"="선택사항 입력창 열기";
 /* Heading on registration screen allowing users to sign up using external services like Facebook and Google. Will be followed by text "or sign up with an email". */
-"REGISTRATION_REGISTER_PROMPT"="Registrarse con";
+"REGISTRATION_REGISTER_PROMPT"="에 등록";
 /* Heading on registration screen allowing users to sign up using external services like Facebook and Google. Will be preceded by text "Sign up with" */
-"REGISTRATION_REGISTER_ALTERNATE_PROMPT"="o registrarse con el correo electrónico";
+"REGISTRATION_REGISTER_ALTERNATE_PROMPT"="또는 이메일로 등록";
 /*Title of registration error alert*/
-"REGISTRATION_ERROR_ALERT_TITLE"="Error de Registro";
+"REGISTRATION_ERROR_ALERT_TITLE"="등록 오류";
 /* Detailed info message for registration error alert*/
-"REGISTRATION_ERROR_ALERT_MESSAGE"="Modifique los campos señalados e intente nuevamente.";
+"REGISTRATION_ERROR_ALERT_MESSAGE"="강조 표시된 필드를 업데이트하고 다시 시도하십시오.";
 
 /* Alert dialog title prompting user to enter an email address to reset their password */
-"RESET_PASSWORD_TITLE"="Restablecer contraseña";
+"RESET_PASSWORD_TITLE"="비밀번호 재설정";
 /* Alert dialog content prompting user to enter an email address to reset their password */
-"RESET_PASSWORD_POPUP_TEXT"="Ingrese la dirección de correo para su cuenta y le enviaremos las instrucciones para restablecer su contraseña.";
+"RESET_PASSWORD_POPUP_TEXT"="계정 이메일 주소를 입력하면 비밀번호 재설정에 대한 안내를 보내드리겠습니다.";
 /* Alert dialog title confirming to the user that a reset password was sent to them */
-"RESET_PASSWORD_CONFIRMATION_TITLE"="Correo de restablecimiento de contraseña enviado";
+"RESET_PASSWORD_CONFIRMATION_TITLE"="비밀번호 재설정 이메일 발송 완료";
 /* Alert dialog content confirming to the user that a reset password was sent to them */
-"RESET_PASSWORD_CONFIRMATION_MESSAGE"="Hemos enviado a su correo un mensaje con las instrucciones para restablecer su contraseña. Si no lo recibe en algunos minutos, asegúrese de revisar su carpeta de spam.";
+"RESET_PASSWORD_CONFIRMATION_MESSAGE"="이메일 주소로 비밀번호 재설정 안내를 발송하였습니다. 몇분 내로 이메일을 확인할 수 없다면 스팸 보관함을 확인해보세요.";
 /* Button that allows user to retry an operation that did not succeed */
-"RETRY" = "Reintentar";
+"RETRY" = "재시도";
 /*Offline snackbar button that allows user to reload data*/
-"RELOAD" = "Recargar";
+"RELOAD" = "새로고침";
 /* Response back title in adding a new response */
-"ADD_A_RESPONSE"="Añadir respuesta";
+"ADD_A_RESPONSE"="답변 추가하기";
 /* Discussion response - {count} is a number of responses */
 /* Discussion response - {count} is a number of responses */
-"RESPONSE##{one}"="{count} respuesta";
-"RESPONSE##{other}"="{count} respuestas";
+"RESPONSE##{other}"="{count} 개 답변";
 /* Discussion topics search placeholder */
-"SEARCH_ALL_POSTS"="Buscar en todas las publicaciones";
-/*Placeholder text for search courses textfield*/
-"SEARCH_COURSES_PLACEHOLDER_TEXT"="What do you want to learn today?";
-/*Placeholder text for search programs textfield*/
+"SEARCH_ALL_POSTS"="전체 글 검색하기";
+/*Placeholder text for search course textfield*/
+"SEARCH_COURSES_PLACEHOLDER_TEXT"="오늘은 무엇을 배워볼까요?";
+/*Placeholder text for search program textfield*/
 "SEARCH_PROGRAMS_PLACEHOLDER_TEXT"="Search program";
 /*Placeholder text for search degree textfield*/
 "SEARCH_DEGREES_PLACEHOLDER_TEXT"="Search degree";
 /* Discussion search results  */
-"SEARCH_RESULTS"="Resultados de búsqueda";
+"SEARCH_RESULTS"="검색 결과";
 /* Text shown below the video, in portrait mode */
-"ROTATE_DEVICE"="Gire su dispositivo para ver este video en pantalla completa";
+"ROTATE_DEVICE"="전체 화면으로 동영상을 감상하기 위해 사용중인 장치를 눕혀보세요";
 /*if filter applied then append this string to error message*/
-"REMOVE_FILTER" = "Intente borrar su filtro de publicaciones.";
+"REMOVE_FILTER" = "글 필터를 제거해보세요.";
 /* Label shown when user attempts to view a course section that hasn't been synced  */
-"SECTION_UNAVAILABLE_OFFLINE"="Esta sección no está disponible en modo offline.\nSi ya ha descargado a su dispositivo contenido de otra sección, puede ver ese contenido.";
+"SECTION_UNAVAILABLE_OFFLINE"="이 주제는 오프라인 모드에서 접속할 수 없습니다.\n다른 주제 콘텐츠를 다운로드 했다면 해당 주제로 이동해 콘텐츠를 조회하세요.";
 /* Screen title showing a user's settings */
-"SETTINGS"="Opciones";
+"SETTINGS"="설정";
 /* Text for a Twitter or Facebook post to a course about page */
-"SHARE_A_COURSE"="Estoy tomando un curso en {platform_name}! Dale un vistazo:";
+"SHARE_A_COURSE"="{platform_name} 에서 강좌를 수강중입니다! 확인해보세요:";
 /* Sign in screen title and button initiating login process after user enters credentials like username and password */
-"SIGN_IN_TEXT"="Iniciar sesión";
+"SIGN_IN_TEXT"="로그인";
 /* Message shown while user waits for response to a sign in request */
-"SIGN_IN_BUTTON_TEXT_ON_SIGN_IN"="Iniciando sesión";
+"SIGN_IN_BUTTON_TEXT_ON_SIGN_IN"="로그인 중";
 /*Sign up screen title and button initiating sign up process on the main screen */
-"REGISTER_TEXT"="Registrarse";
+"REGISTER_TEXT"="회원가입";
 /* Indicates a date in the near future */
-"SOON"="Proximamente";
+"SOON"="곧";
 /* Label for posts pinned by Staff */
-"STAFF"="EQUIPO DEL CURSO";
+"STAFF"="운영팀";
 /* Info message text on the startup screen */
-"STARTUP.INFO_MESSAGE_TEXT"="An Open Campus in Your Hand";
+"STARTUP.INFO_MESSAGE_TEXT"="내 손안에 펼쳐지는 오픈 캠퍼스";
 /*Log In button title on the startup screen*/
-"STARTUP.LOGIN_TEXT"="Log In";
+"STARTUP.LOGIN_TEXT"="로그인";
 /*Create your Account button title on the startup screen*/
-"STARTUP.CREATE_YOUR_ACCOUNT_TEXT"="Create your Account";
+"STARTUP.CREATE_YOUR_ACCOUNT_TEXT"="회원가입";
 /* Explore Subjects button text on the first screen */
-"STARTUP_EXPLORE_SUBJECTS"="Explorar temas";
+"STARTUP_EXPLORE_SUBJECTS"="주제 탐색";
 /* Button allowing user to submit feedback about the app via email */
-"SUBMIT_FEEDBACK.OPTION_TITLE" = "Enviar comentario";
+"SUBMIT_FEEDBACK.OPTION_TITLE" = "문의하기";
 /* Support message email title */
-"SUBMIT_FEEDBACK.MESSAGE_SUBJECT" = "Comentarios de usuarios";
+"SUBMIT_FEEDBACK.MESSAGE_SUBJECT" = "사용자 피드백";
 /* Marker in feedback email meant to separate feedback from prepopulated device information */
-"SUBMIT_FEEDBACK.MARKER" = "---- Mantenga sus comentarios sobre esta línea ----";
+"SUBMIT_FEEDBACK.MARKER" = "문의 내용:\n\n\n\n※오류에 대한 문의의 경우,해당 오류가 발생한 위치 및 내용과 함께 스크린샷을 첨부해주시면 보다 정확한 답변을 받으실 수 있습니다.";
 /* Line in submit feedback email that supplies OS version information. For example, "iOS Version: 9.2" */
-"SUBMIT_FEEDBACK.OS_VERSION" = "Versión de iOS: {version}";
+"SUBMIT_FEEDBACK.OS_VERSION" = "iOS 버전: {version}";
 /* Line in submit feedback email that supplies app version information. For example, "App Version: 2.2 (2.2.23)" */
-"SUBMIT_FEEDBACK.APP_VERSION" = "Versión de la aplicación: {version} ({build})";
+"SUBMIT_FEEDBACK.APP_VERSION" = "앱 버전: {version} ({build})";
 /* Line in submit feedback email that supplies device model information. For example, "Device Model: iPhone" */
-"SUBMIT_FEEDBACK.DEVICE_MODEL" = "Dispositivo: {model}";
+"SUBMIT_FEEDBACK.DEVICE_MODEL" = "사용중인 모델: {model}";
 /* Text that indicates the visibility of the post */
-"POST_VISIBILITY"="Esta publicación solo es visible para {cohort}.";
+"POST_VISIBILITY"="이 글은 {cohort} 만 열람할 수 있습니다.";
 /* Text that indicates the visibility of the post to everyone */
-"POST_VISIBILITY_EVERYONE" = "Esta publicación es visible para todos.";
+"POST_VISIBILITY_EVERYONE" = "이 글은 전체 공개 상태입니다.";
 /*Add parenthesis around text*/
 "PARENTHESIS" = "({text})";
 /* Alert dialog title shown when network request takes too long to complete */
-"TIMEOUT_ALERT_TITLE"="Error";
+"TIMEOUT_ALERT_TITLE"="일시정지";
 /* Alert dialog content shown when network request takes too long to complete */
-"TIMEOUT_CHECK_INTERNET_CONNECTION"="Por favor revise su conexión a Internet.\nLa página está tardando más de lo esperado para cargar.";
+"TIMEOUT_CHECK_INTERNET_CONNECTION"="인터넷 연결 상태를 확인해보세요.\n현재 페이지 로딩에 시간이 과하게 걸리고 있습니다.";
 /* Title as place holder in Create a new post */
-"TITLE"="Título";
+"TITLE"="제목";
 /* Topic as button title in Create a new post */
-"TOPIC"="Tema: {topic}";
+"TOPIC"="주제: {topic}";
 /* Back bar button topics */
-"TOPICS"="Temas";
+"TOPICS"="주제";
 /* Button text allowing user to reset their password */
-"TROUBLE_IN_LOGIN_BUTTON"="¿Olvidó su contraseña?";
+"TROUBLE_IN_LOGIN_BUTTON"="비밀번호를 찾으십니까?";
 /* Error shown when video download fails */
-"UNABLE_TO_DOWNLOAD"="Imposible descargar." ;
+"UNABLE_TO_DOWNLOAD"="다운로드를 실패하였습니다." ;
 /* Error shown when the course content could not for an unknown reason. */
-"UNABLE_TO_LOAD_COURSE_CONTENT"="No se ha podido cargar el contenido.\nInténtelo de nuevo más tarde.";
+"UNABLE_TO_LOAD_COURSE_CONTENT"="강좌 콘텐츠를 다운로드 할 수 없었습니다.\n나중에 다시 시도해 보세요.";
 /* Filtering option to show unanswered discussion posts */
-"UNANSWERED"="Sin respuesta";
+"UNANSWERED"="답변 미완료";
 /* Navigation title for a Question Post which has no endorsed answers */
-"UNANSWERED_QUESTION" = "Pregunta sin respuestas";
+"UNANSWERED_QUESTION" = "답변 미완료 질문";
 /* Filtering option to show unread discussion posts*/
-"UNREAD"="No leído";
+"UNREAD"="읽지 않음";
 /* Placeholder title for course content with no title */
-"UNTITLED"="Sin título";
+"UNTITLED"="제목 없음";
 /* Title text for login field */
-"USERNAME_TITLE_TEXT" = "Nombre de usuario o correo electrónico";
+"USERNAME_TITLE_TEXT" = "이메일 주소";
 /*Error message when operation failed with unknow error*/
-"UNKNOWN_ERROR" = "Su acción no pudo ser completada.";
+"UNKNOWN_ERROR" = "작업을 수행할 수 없었습니다.";
 /* Screen title showing a user's account */
-"USER_ACCOUNT"="Cuenta";
+"USER_ACCOUNT"="계정";
 /* Button title for profile view in account*/
-"USER_ACCOUNT.PROFILE"= "Perfil";
+"USER_ACCOUNT.PROFILE"= "프로필";
 /* Text shown to display the current version number. Environment is a server name like "prod", "dev", stage" and may be empty. For example "Version 1.2.3 Prod" */
-"VERSION_DISPLAY" = "Versión {number} {environment}";
+"VERSION_DISPLAY" = "Ver {number} {environment}";
 /* Error shown when video download fails */
-"VIDEO_CONTENT_NOT_AVAILABLE"="Este video está disponible por el momento. Vuelva a intentar más tarde.";
+"VIDEO_CONTENT_NOT_AVAILABLE"="이 동영상은 현재 사용할 수 없습니다. 나중에 다시 시도해 보세요.";
 /* Message shown instead of a video when attempting to watch a video that is only availabe on the web */
-"VIDEO_ONLY_ON_WEB" = "Este video está actualmente solo en la web. Toque la pantalla para verlo en el navegador.";
+"VIDEO_ONLY_ON_WEB" = "이 동영상은 웹 환경에서만 재생할 수 있습니다. 터치하면 웹 브라우저에서 재생됩니다.";
 /* Alert dialog content shown when user attempts to view a video that hasn't been synced  */
-"VIDEO_NOT_AVAILABLE"="Este video no está disponible en modo offline.\nPor favor seleccione un video que ya haya descargado a su dispositivo.";
+"VIDEO_NOT_AVAILABLE"="이 동영상은 오프라인 모드에서 사용할 수 없습니다.\n사용중인 장치에 다운로드한 동영상을 선택하세요.";
 /* Shows in the video setting sub-table which item is selected */
 "VIDEO_SETTING_SELECTED" = "✓ %@";
 /* Button action to open app on YouTube */
-"VIDEO.VIEW_ON_YOUTUBE" = "Ver video en YouTube";
+"VIDEO.VIEW_ON_YOUTUBE" = "YouTube에서 동영상 재생하기";
 /* Message shown for videos that can only be played external the app via YouTube. */
-"VIDEO.ONLY_ON_YOUTUBE" = "Este vídeo solo puede reproducirse en Youtube. ";
+"VIDEO.ONLY_ON_YOUTUBE" = "이 동영상은 YouTube에서만 재생할 수 있습니다.";
 /* Button text for showing an associated item */
-"VIEW" = "Ver";
+"VIEW" = "재생";
 /* Button linking to course announcements */
-"VIEW_HANDOUTS" = "Ver enlaces útiles";
+"VIEW_HANDOUTS" = "강좌 학습자료 보기";
 /* Discussion vote - {count} is a number of votes */
 /* Discussion vote - {count} is a number of votes */
-"VOTE##{one}"="{count} Voto";
-"VOTE##{other}"="{count} Votos";
+"VOTE##{other}"="{count} 개 표";
 /*Title of update button on fullscreen error and SnackBar*/
-"VERSION_UPGRADE_UPDATE" = "Actualizar";
+"VERSION_UPGRADE_UPDATE" = "업로드";
 /*Title of dismiss button on SnackBar*/
-"VERSION_UPGRADE.DISMISS" = "Cancelar";
+"VERSION_UPGRADE.DISMISS" = "취소";
 /*Deprecated version detail message*/
-"VERSION_UPGRADE.DEPRECATED_MESSAGE" = "Una versión nueva de la app está disponible.";
+"VERSION_UPGRADE.DEPRECATED_MESSAGE" = "앱의 새 버전이 출시되었습니다.";
 /*Outdated version detail message*/
-"VERSION_UPGRADE.OUT_DATED_MESSAGE" = "Su versión de la app ya no está soportada.";
+"VERSION_UPGRADE.OUT_DATED_MESSAGE" = "앱의 현재 버전은 더이상 지원되지 않습니다.";
 /*Outdated version alert message for login screen*/
-"VERSION_UPGRADE_OUT_DATED_LOGIN_MESSAGE" = "Su versión de la aplicación ya no es compatible. Actualice a la última versión para iniciar sesión.";
+"VERSION_UPGRADE_OUT_DATED_LOGIN_MESSAGE" = "현재 앱 버전이 더 이상 지원되지 않습니다. 최신 버전으로 업데이트하여 로그인하십시오.";
 /*New version available without deadline message*/
-"VERSION_UPGRADE.NEW_VERSION_AVAILABLE" = "Una versión nueva de la app está disponible.";
+"VERSION_UPGRADE.NEW_VERSION_AVAILABLE" = "앱의 새 버전이 출시되었습니다.";
 /*Video player remaining time default value*/
 "VIDEO_PLAYER_DEFAULT_REMAINING_TIME" = "0:00/0:00";
 /* Overlay shown after a network request has started, telling the user to wait for the response */
-"WAITING_FOR_RESPONSE"="Espere por favor....";
+"WAITING_FOR_RESPONSE"="기다려 주세요...";
 /* Header of 'whats new screen'*/
-"WHATS_NEW.HEADER_TEXT"="Nuevas funciones de la versión {app_version}";
+"WHATS_NEW.HEADER_TEXT"="버전 {app_version} 새로운 기능";
 /*Whats new screen done button title*/
-"WHATS_NEW.DONE"="Hecho";
+"WHATS_NEW.DONE"="완료";
 /*Title for wifi only switch at Settings screen*/
-"WIFI_ONLY_TITLE" = "Descargar solo por Wi-Fi";
+"WIFI_ONLY_TITLE" = "3G/LTE 연결 시 동영상 다운로드 허용하기";
 /*Detail message for wifi only switch at Settings screen*/
-"WIFI_ONLY_DETAIL_MESSAGE" = "Sólo descargar contenido cuando el Wifi está encendido";
+"WIFI_ONLY_DETAIL_MESSAGE" = "3G/LTE 연결시에도 동영상 다운로드 허용합니다.";
 /* Alert dialog button title to confirm an action */
-"YES"="Si";
+"YES"="예";
