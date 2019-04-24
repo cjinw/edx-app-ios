@@ -144,7 +144,7 @@
 /*Accessibility text for close button*/
 "ACCESSIBILITY.CLOSE_LABEL"="닫기";
 /*Accessibility text for profile button*/
-"ACCESSIBILITY.PROFILE_LABEL"="Profile";
+"ACCESSIBILITY.PROFILE_LABEL"="프로필";
 /* Title of user profile section for user accomplishments (like badges) */
 "ACCOMPLISHMENTS.TITLE" = "달성한 성과";
 /* Default text template when user shares an accomplishment */
@@ -178,7 +178,7 @@
 /* Filtering option to show all discussion posts */
 "ALL_POSTS"="전체 글";
 /*Subtitle for bulk download view when in downloading state */
-"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count} 개의 동영상 남음, 총 {remaining_videos_size }MB ";
+"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count} Remaining, {remaining_videos_size}MB total";
 /*Title for bulk download view when in downloaded state */
 "ALL_VIDEOS_DOWNLOADED_TITLE" = "다운로드 한 모든 동영상";
 /* Message shown when there are no announcements for a course */
@@ -573,7 +573,7 @@
 /* Button title for moving to the next unit in the course */
 "PREVIOUS_UNIT" = "이전 학습활동";
 /* A10y hint for the change picture button. */
-"PROFILE.CHANGE_PICTURE_ACCESSIBILITY_HINT" = "Double tap to change profile photo";
+"PROFILE.CHANGE_PICTURE_ACCESSIBILITY_HINT" = "새 프로필 사진을 업로드 합니다.";
 /* Change picture button text on edit profile screen. */
 "PROFILE.CHANGE_PICTURE_BUTTON" = "변경";
 /* Text for use a photo already in library for user profile photo alert */
