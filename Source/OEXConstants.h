@@ -30,10 +30,18 @@ typedef NS_ENUM (NSUInteger, OEXVideoState) {
 
 /**Video player speeds*/
 typedef NS_ENUM(NSUInteger, OEXVideoSpeed) {
+//    OEXVideoSpeedDefault, //1.0x
+//    OEXVideoSpeedSlow, // .5x
+//    OEXVideoSpeedFast, // 1.5x
+//    OEXVideoSpeedXFast, // 2x
+    
     OEXVideoSpeedDefault, //1.0x
-    OEXVideoSpeedSlow, // .5x
+    OEXVideoSpeedSlow, // .075x
     OEXVideoSpeedFast, // 1.5x
     OEXVideoSpeedXFast, // 2x
+    OEXVideoSpeedMFast, // 1.25x
+    OEXVideoSpeedMXFast, // 1.75x
+
 };
 
 //Wifi only Key
