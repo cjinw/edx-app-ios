@@ -143,7 +143,7 @@ class JSONFormBuilder {
         }
         
         func setup() {
-            accessoryType = .disclosureIndicator
+//            accessoryType = .disclosureIndicator
             contentView.addSubview(choiceView)
             choiceView.snp.makeConstraints { make in
                 make.edges.equalTo(contentView).inset(UIEdgeInsets(top: 0, left: StandardHorizontalMargin, bottom: 0, right: StandardHorizontalMargin))
@@ -365,7 +365,7 @@ class JSONFormBuilder {
                 }
             }
             
-            controller.navigationController?.pushViewController(selectionController, animated: true)
+//            controller.navigationController?.pushViewController(selectionController, animated: true)
         }
         
         /** What happens when the user selects the row */
