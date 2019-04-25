@@ -60,7 +60,8 @@ open class DateFormatting: NSObject {
         guard let date = date else { return nil }
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM dd, yyyy"
+//        formatter.dateFormat = "MMMM dd, yyyy"
+        formatter.dateFormat = "yyyy, MMMM dd"
         
         return formatter.string(from: date as Date)
     }
