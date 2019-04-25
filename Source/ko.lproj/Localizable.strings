@@ -178,7 +178,7 @@
 /* Filtering option to show all discussion posts */
 "ALL_POSTS"="전체 글";
 /*Subtitle for bulk download view when in downloading state */
-"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count} Remaining, {remaining_videos_size}MB total";
+"ALL_DOWNLOADING_VIDEOS_SUB_TITLE" = "{remaining_videos_count}개 남음";
 /*Title for bulk download view when in downloaded state */
 "ALL_VIDEOS_DOWNLOADED_TITLE" = "다운로드 한 모든 동영상";
 /* Message shown when there are no announcements for a course */
@@ -214,8 +214,9 @@
 /* This error message will be shown if user tried to login with third party (facebook/google) and server returns 400 status code*/
 "AUTH_PROVIDER_ERROR" = "이메일/아이디 또는 비밀번호를 정확히 입력하셨는지 확인해주세요.\n{auth_provider}계정 로그인을 시도하셨다면, 먼저 {platform_name}웹사이트의 계정설정에서 계정연동을 해주세요.";
 /*Subtitle for bulk download view when in new, partial or downloaded state - {count} is single video*/
+"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{one}" = "{count}개 동영상";
 /*Subtitle for bulk download view when in new, partial or downloaded state - {count} is number of videos*/
-"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{other}" = "\n{count} 개 동영상,  총 {videos_size} MB ";
+"BULK_DOWNLOAD_VIDEOS_SUB_TITLE##{other}" = "{count}개 동영상 ";
 /* Prefix used with Staff of Community TA on the posts screen */
 "BY_AUTHOR" = "{author_name} 가 작성";
 /* Prefix used with Staff of Community TA on the posts screen */
