@@ -64,8 +64,17 @@ class TranscriptManager: NSObject {
     
    private func closedCaptioning(at URLString: String?) {
         if let localFile: String = OEXFileUtility.filePath(forRequestKey: URLString) {
+            let transcriptLang = captionURL.components(separatedBy: "lang=")
             // File to string
             if FileManager.default.fileExists(atPath: localFile) {
+                
+                if transcriptLang[1] == "ko"{
+                    TranscriptObject.ko_set = 1
+                }
+                else {
+                    TranscriptObject.ko_set = 0
+                }
+                
                 // File to string
                 do {
                     let transcript = try String(contentsOfFile: localFile, encoding: .utf8)
