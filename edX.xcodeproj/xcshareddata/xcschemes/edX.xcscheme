@@ -162,6 +162,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "K-MOOC"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
