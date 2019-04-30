@@ -37,7 +37,10 @@
 #import "OEXSession.h"
 #import "OEXSegmentConfig.h"
 
-@interface OEXAppDelegate () <UIApplicationDelegate>
+@import Firebase;
+@import UserNotifications;
+
+@interface OEXAppDelegate () <UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary* dictCompletionHandler;
 @property (nonatomic, strong) OEXEnvironment* environment;
@@ -80,6 +83,37 @@
     [self.environment.router openInWindow:self.window];
     [self configureFabricKits:launchOptions];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    application.applicationIconBadgeNumber = 0;
+    
+    
+    
+    [FIRApp configure];
+    
+    [FIRMessaging messaging].delegate = self;
+    
+    
+    if ([UNUserNotificationCenter class] != nil) {
+        // iOS 10 or later
+        // For iOS 10 display notification (sent via APNS)
+        [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+        UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
+        UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+        [[UNUserNotificationCenter currentNotificationCenter]
+         requestAuthorizationWithOptions:authOptions
+         completionHandler:^(BOOL granted, NSError * _Nullable error) {
+             // ...
+         }];
+    } else {
+        // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
+        UIUserNotificationType allNotificationTypes =
+        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings =
+        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    
+    [application registerForRemoteNotifications];
+    
     
     return YES;
 }
@@ -87,6 +121,7 @@
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     
     UIViewController *topController = self.window.rootViewController;
+    application.applicationIconBadgeNumber = 0;
     
     return [topController supportedInterfaceOrientations];
 }
@@ -129,7 +164,67 @@
 
 #pragma mark Push Notifications
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+// [START ios_10_data_message]
+// Receive data messages on iOS 10+ directly from FCM (bypassing APNs) when the app is in the foreground.
+// To enable direct data messages, you can set [Messaging messaging].shouldEstablishDirectChannel to YES.
+- (void)messaging:(FIRMessaging *)messaging didReceiveMessage:(FIRMessagingRemoteMessage *)remoteMessage {
+    NSLog(@"Received data message: %@", remoteMessage.appData);
+    [FIRMessaging messaging].shouldEstablishDirectChannel = YES;
+}
+// [END ios_10_data_message]
+
+
+// [START ios_10_message_handling]
+// Receive displayed notifications for iOS 10 devices.
+// Handle incoming notification messages while app is in the foreground.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    NSDictionary *userInfo = notification.request.content.userInfo;
+    
+    // With swizzling disabled you must let Messaging know about the message, for Analytics
+    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+    
+    // Print message ID.
+//    if (userInfo[kGCMMessageIDKey]) {
+//        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+//    }
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+    
+    // Change this to your preferred presentation option
+    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
+//    completionHandler(UNNotificationPresentationOptionNone);
+}
+
+// Handle notification messages after display notification is tapped by the user.
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void(^)(void))completionHandler {
+//    NSDictionary *userInfo = response.notification.request.content.userInfo;
+//    if (userInfo[kGCMMessageIDKey]) {
+//        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+//    }
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+    
+    completionHandler();
+}
+// [END ios_10_message_handling]
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    
+    [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
+    
+    NSLog(@"Remote Notification: %@", [userInfo description]);
+//    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+    
+    NSLog(@"%@", userInfo);
+//    application.applicationIconBadgeNumber = [[apsInfo objectForKey:@"badge"] integerValue];
+    
     [self.environment.pushNotificationManager didReceiveRemoteNotificationWithUserInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
@@ -139,6 +234,7 @@
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [FIRMessaging messaging].APNSToken = deviceToken;
     [self.environment.pushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
@@ -200,10 +296,12 @@
     // Make Sure the google app id is valid before configuring firebase, the app can produce crash.
     //Firebase do not get exception with invalid google app ID, https://github.com/firebase/firebase-ios-sdk/issues/1581
     if (config.firebaseConfig.enabled) {
-        FIROptions *options = [[FIROptions alloc] initWithGoogleAppID:config.firebaseConfig.googleAppID GCMSenderID:config.firebaseConfig.gcmSenderID];
-        [options setAPIKey:config.firebaseConfig.apiKey];
-        [options setClientID:config.firebaseConfig.clientID];
-        [FIRApp configureWithOptions:options];
+        
+       
+//        FIROptions *options = [[FIROptions alloc] initWithGoogleAppID:config.firebaseConfig.googleAppID GCMSenderID:config.firebaseConfig.gcmSenderID];
+//        [options setAPIKey:config.firebaseConfig.apiKey];
+//        [options setClientID:config.firebaseConfig.clientID];
+//        [FIRApp configureWithOptions:options];
         if (config.firebaseConfig.analyticsEnabled) {
             [[FIRAnalyticsConfiguration sharedInstance] setAnalyticsCollectionEnabled:YES];
         }
