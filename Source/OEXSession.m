@@ -16,6 +16,8 @@
 #import "OEXUserDetails.h"
 #import <WebKit/WebKit.h>
 
+#import "OEXNaverSocial.h"
+#import "OEXKakaoSocial.h"
 
 NSString* const OEXSessionStartedNotification = @"OEXSessionStartedNotification";
 NSString* const OEXSessionStartedUserDetailsKey = @"OEXSessionStartedUserDetailsKey";

@@ -596,6 +596,14 @@
 		AB8D1C72228269F200D735B3 /* OEXKakaoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D1C6E228269F100D735B3 /* OEXKakaoConfig.m */; };
 		AB8D1C7522826D0600D735B3 /* icon_kakao_brown.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C7322826D0600D735B3 /* icon_kakao_brown.png */; };
 		AB8D1C7622826D0600D735B3 /* icon_kakao_brown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C7422826D0600D735B3 /* icon_kakao_brown@2x.png */; };
+		AB8D1C7D2282993B00D735B3 /* OEXNaverConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D1C7B2282993A00D735B3 /* OEXNaverConfig.m */; };
+		AB8D1C7E2282993B00D735B3 /* OEXNaverSocial.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D1C7C2282993A00D735B3 /* OEXNaverSocial.m */; };
+		AB8D1C812282994500D735B3 /* OEXNaverAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D1C7F2282994500D735B3 /* OEXNaverAuthProvider.m */; };
+		AB8D1C84228299E200D735B3 /* icon_naver_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C82228299E100D735B3 /* icon_naver_green.png */; };
+		AB8D1C85228299E200D735B3 /* icon_naver_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C83228299E200D735B3 /* icon_naver_green@2x.png */; };
+		AB9FA4582282A6AE000A61BB /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; };
+		AB9FA4592282A6BB000A61BB /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; };
+		AB9FA45A2282A6BB000A61BB /* NaverThirdPartyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABB51BF12282671200AB4FD3 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */; };
 		B4132C10195AAFBE00F50B46 /* OEXAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */; };
 		B419295E1A8A3F1900448AD5 /* OEXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B419295D1A8A3F1900448AD5 /* OEXNetworkManager.m */; };
@@ -899,6 +907,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AB9FA45A2282A6BB000A61BB /* NaverThirdPartyLogin.framework in Embed Frameworks */,
 				77E647CB1C90CA1400B6740D /* edXCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1585,6 +1594,15 @@
 		AB8D1C70228269F200D735B3 /* OEXKakaoSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXKakaoSocial.h; sourceTree = "<group>"; };
 		AB8D1C7322826D0600D735B3 /* icon_kakao_brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kakao_brown.png; sourceTree = "<group>"; };
 		AB8D1C7422826D0600D735B3 /* icon_kakao_brown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_kakao_brown@2x.png"; sourceTree = "<group>"; };
+		AB8D1C792282993900D735B3 /* OEXNaverSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXNaverSocial.h; sourceTree = "<group>"; };
+		AB8D1C7A2282993A00D735B3 /* OEXNaverConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXNaverConfig.h; sourceTree = "<group>"; };
+		AB8D1C7B2282993A00D735B3 /* OEXNaverConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverConfig.m; sourceTree = "<group>"; };
+		AB8D1C7C2282993A00D735B3 /* OEXNaverSocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverSocial.m; sourceTree = "<group>"; };
+		AB8D1C7F2282994500D735B3 /* OEXNaverAuthProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEXNaverAuthProvider.m; sourceTree = "<group>"; };
+		AB8D1C802282994500D735B3 /* OEXNaverAuthProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXNaverAuthProvider.h; sourceTree = "<group>"; };
+		AB8D1C82228299E100D735B3 /* icon_naver_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_naver_green.png; sourceTree = "<group>"; };
+		AB8D1C83228299E200D735B3 /* icon_naver_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_naver_green@2x.png"; sourceTree = "<group>"; };
+		AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaverThirdPartyLogin.framework; sourceTree = "<group>"; };
 		ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		ABE57AC922701B8E007CA74D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ABE57ACA22701B8E007CA74D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1939,11 +1957,13 @@
 				77E647A31C90C10300B6740D /* edXCore.framework in Frameworks */,
 				B4A24D0D19EE8A6600CE5010 /* CoreMedia.framework in Frameworks */,
 				77ACA1CB1A323C2500039AD1 /* Fabric.framework in Frameworks */,
+				AB9FA4582282A6AE000A61BB /* NaverThirdPartyLogin.framework in Frameworks */,
 				BE8163F61954244E00F9A2C5 /* MessageUI.framework in Frameworks */,
 				BE0EE28B192B78DA00F9FF98 /* libz.dylib in Frameworks */,
 				77ACA1CA1A323C2500039AD1 /* Crashlytics.framework in Frameworks */,
 				BE0EE289192B78CF00F9FF98 /* SystemConfiguration.framework in Frameworks */,
 				BE0EE287192B78C400F9FF98 /* CoreTelephony.framework in Frameworks */,
+				AB9FA4592282A6BB000A61BB /* NaverThirdPartyLogin.framework in Frameworks */,
 				BECB7B111924C0C3009C77F1 /* CoreGraphics.framework in Frameworks */,
 				BECB7B131924C0C3009C77F1 /* UIKit.framework in Frameworks */,
 				BECB7B0F1924C0C3009C77F1 /* Foundation.framework in Frameworks */,
@@ -2347,6 +2367,8 @@
 		69ECC5B61D50D1170030CF87 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D1C82228299E100D735B3 /* icon_naver_green.png */,
+				AB8D1C83228299E200D735B3 /* icon_naver_green@2x.png */,
 				AB8D1C7322826D0600D735B3 /* icon_kakao_brown.png */,
 				AB8D1C7422826D0600D735B3 /* icon_kakao_brown@2x.png */,
 				E039A8011F74C0D80064ABDB /* loginScreenImage~ipad.png */,
@@ -2772,6 +2794,8 @@
 		77ADF4B01AC1F82300AC8955 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D1C802282994500D735B3 /* OEXNaverAuthProvider.h */,
+				AB8D1C7F2282994500D735B3 /* OEXNaverAuthProvider.m */,
 				AB8D1C6A228269E300D735B3 /* OEXKakaoAuthProvider.h */,
 				AB8D1C6B228269E300D735B3 /* OEXKakaoAuthProvider.m */,
 				77ADF4AD1AC1F80E00AC8955 /* OEXGoogleAuthProvider.h */,
@@ -3068,6 +3092,10 @@
 		8FE04B4A1A1E24C7007F88B8 /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D1C7A2282993A00D735B3 /* OEXNaverConfig.h */,
+				AB8D1C7B2282993A00D735B3 /* OEXNaverConfig.m */,
+				AB8D1C792282993900D735B3 /* OEXNaverSocial.h */,
+				AB8D1C7C2282993A00D735B3 /* OEXNaverSocial.m */,
 				AB8D1C6F228269F100D735B3 /* OEXKakaoConfig.h */,
 				AB8D1C6E228269F100D735B3 /* OEXKakaoConfig.m */,
 				AB8D1C70228269F200D735B3 /* OEXKakaoSocial.h */,
@@ -3558,6 +3586,7 @@
 		BECB7B0D1924C0C3009C77F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */,
 				ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */,
 				776F39281B4EF4CD00ED11E3 /* WebKit.framework */,
 				805329111B0EA2DC0093B177 /* QuartzCore.framework */,
@@ -4143,9 +4172,11 @@
 				B71AA1B420CEF64D00700C5E /* chemistry@2x.png in Resources */,
 				B4B6D5EA1A9490FC000F44E8 /* OEXRegistrationViewController.xib in Resources */,
 				69ECC5FE1D50D1170030CF87 /* OpenSans-Bold.ttf in Resources */,
+				AB8D1C85228299E200D735B3 /* icon_naver_green@2x.png in Resources */,
 				69ECC60F1D50D1170030CF87 /* arrow_next@2x.png in Resources */,
 				B7C5DB5C20BB4AAC00D80AD2 /* TestSubjects.json in Resources */,
 				69ECC6451D50D1170030CF87 /* separator.png in Resources */,
+				AB8D1C84228299E200D735B3 /* icon_naver_green.png in Resources */,
 				69ECC6131D50D1170030CF87 /* loginScreenImage.png in Resources */,
 				E0E27FC21EC469A800D1AEFE /* WhatsNew.json in Resources */,
 				69ECC6011D50D1170030CF87 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -4783,6 +4814,7 @@
 				69EFBB0B1E36259D00FF66C4 /* RatingViewController.swift in Sources */,
 				1AC147391BCEC09F00E0A230 /* UIImage+OEXHelpers.swift in Sources */,
 				775DF4181AFAAC8C00F96B2F /* DataManager.swift in Sources */,
+				AB8D1C7D2282993B00D735B3 /* OEXNaverConfig.m in Sources */,
 				77C182AC1CD2E60E00AE1474 /* StackPaginationManipulator.swift in Sources */,
 				5D7EACC81B3E202C000A6C36 /* DiscussionAPI.swift in Sources */,
 				77EA92261BB4590A00EC625A /* DownloadsAccessoryView.swift in Sources */,
@@ -4866,6 +4898,7 @@
 				775DF41A1AFAB04300F96B2F /* CourseDataManager.swift in Sources */,
 				223DD6BB1F9F5A4B004A21B9 /* CourseDashboardViewController.swift in Sources */,
 				7793764D1BED27D000900A8C /* BasicAuthCredential.swift in Sources */,
+				AB8D1C7E2282993B00D735B3 /* OEXNaverSocial.m in Sources */,
 				E0EC115C221AE70900F0574A /* ListenableObject.m in Sources */,
 				B7CCC72D209B16B100A66923 /* ConstraintLayoutGuide.swift in Sources */,
 				B4B285E51A9A49FF00DD603A /* OEXFabricConfig.m in Sources */,
@@ -4888,6 +4921,7 @@
 				1ACD163C1BB1BE63006ACC82 /* UserProfileViewController.swift in Sources */,
 				5D836DCA1B2FA12E00411CAB /* DiscussionNewCommentViewController.swift in Sources */,
 				1AFEB1B11BBD51EE004C471D /* JSONFormBuilderChooser.swift in Sources */,
+				AB8D1C812282994500D735B3 /* OEXNaverAuthProvider.m in Sources */,
 				19321F651961698B00B7D75C /* OEXDownloadTableCell.m in Sources */,
 				B7CCC730209B16B100A66923 /* ConstraintOffsetTarget.swift in Sources */,
 				E076A5C21C7DB624008A99C6 /* DiscussionResponsesDataController.swift in Sources */,
