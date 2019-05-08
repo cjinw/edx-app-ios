@@ -34,6 +34,12 @@
 #import "Reachability.h"
 #import "OEXStyles.h"
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "OEXKakaoAuthProvider.h"
+#import "OEXKakaoConfig.h"
+#import "OEXKakaoSocial.h"
+
+
 #define USER_EMAIL @"USERNAME"
 
 @interface OEXLoginViewController () <AgreementTextViewDelegate, InterfaceOrientationOverriding>
@@ -81,7 +87,7 @@
 @implementation OEXLoginViewController
 
 - (void)layoutSubviews {
-    if(!([self isFacebookEnabled] || [self isGoogleEnabled])) {
+    if(!([self isFacebookEnabled] || [self isGoogleEnabled] || [self isKakaoEnabled])) {
         self.lbl_OrSignIn.hidden = YES;
         self.seperatorLeft.hidden = YES;
         self.seperatorRight.hidden = YES;
@@ -124,6 +130,11 @@
     return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config googleConfig].enabled;
 }
 
+- (BOOL)isKakaoEnabled {
+    return ![OEXNetworkUtility isOnZeroRatedNetwork] && [self.environment.config kakaoConfig].enabled;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -136,6 +147,11 @@
     if([self isFacebookEnabled]) {
         [providers addObject:[[OEXFacebookAuthProvider alloc] init]];
     }
+    
+    if([self isKakaoEnabled]) {
+        [providers addObject:[[OEXKakaoAuthProvider alloc] init]];
+    }
+
 
     __weak __typeof(self) owner = self;
     OEXExternalAuthOptionsView* externalAuthOptions = [[OEXExternalAuthOptionsView alloc] initWithFrame:self.externalAuthContainer.bounds providers:providers tapAction:^(id<OEXExternalAuthProvider> provider) {

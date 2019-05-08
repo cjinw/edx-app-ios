@@ -804,3 +804,7 @@
 "WIFI_ONLY_DETAIL_MESSAGE" = "3G/LTE 연결시에도 동영상 다운로드 허용합니다.";
 /* Alert dialog button title to confirm an action */
 "YES"="예";
+/* Kakao login method */
+"KAKAO"="카카오";
+/* Naver login method*/
+"NAVER"="네이버";

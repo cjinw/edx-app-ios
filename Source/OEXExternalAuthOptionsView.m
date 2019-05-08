@@ -64,7 +64,7 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
         return CGSizeMake(UIViewNoIntrinsicMetric, 0);
     }
     else {
-        CGFloat height = 30;
+        CGFloat height = 60;
         NSUInteger rows = (self.optionButtons.count + self.optionButtons.count - 1) / self.itemsPerRow;
 
 
@@ -96,7 +96,7 @@ static CGFloat OEXExternalAuthButtonAspectRatio = 3.4;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat rows = 1;
+    CGFloat rows = 2;
     BOOL fits = false;
     
     if(self.bounds.size.width == 0) {

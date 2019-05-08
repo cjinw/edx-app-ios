@@ -819,3 +819,8 @@
 "WIFI_ONLY_DETAIL_MESSAGE" = "Sólo descargar contenido cuando el Wifi está encendido";
 /* Alert dialog button title to confirm an action */
 "YES"="Si";
+
+/* Kakao login method */
+"KAKAO"="KAKAO";
+/* Naver login method*/
+"NAVER"="Naver";

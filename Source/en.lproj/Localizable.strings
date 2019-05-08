@@ -819,3 +819,7 @@
 "WIFI_ONLY_DETAIL_MESSAGE" = "Enable downloads via cellular network connections";
 /* Alert dialog button title to confirm an action */
 "YES"="Yes";
+/* Kakao login method */
+"KAKAO"="KAKAO";
+/* Naver login method*/
+"NAVER"="Naver";

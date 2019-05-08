@@ -37,6 +37,10 @@
 #import "OEXSession.h"
 #import "OEXSegmentConfig.h"
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import "OEXKakaoConfig.h"
+#import "OEXKakaoSocial.h"
+
 @import Firebase;
 @import UserNotifications;
 
@@ -150,8 +154,21 @@
                                           annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
     }
     
+    if (self.environment.config.kakaoConfig.enabled) {
+        if ([KOSession isKakaoAccountLoginCallback:url]) {
+            return [KOSession handleOpenURL:url];
+        }
+    }
+    
     return handled;
 }
+
+// for KAKAO LOGIN
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [KOSession handleDidBecomeActive];
+}
+
 
 // Respond to Universal Links
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
@@ -203,12 +220,12 @@
 didReceiveNotificationResponse:(UNNotificationResponse *)response
          withCompletionHandler:(void(^)(void))completionHandler {
 //    NSDictionary *userInfo = response.notification.request.content.userInfo;
-//    if (userInfo[kGCMMessageIDKey]) {
-//        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
-//    }
-    
-    // Print full message.
-    NSLog(@"%@", userInfo);
+////    if (userInfo[kGCMMessageIDKey]) {
+////        NSLog(@"Message ID: %@", userInfo[kGCMMessageIDKey]);
+////    }
+//    
+//    // Print full message.
+//    NSLog(@"%@", userInfo);
     
     completionHandler();
 }
