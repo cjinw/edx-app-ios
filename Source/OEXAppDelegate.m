@@ -374,4 +374,20 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     }
 }
 
+#pragma mark - SampleOAuthConnectionDelegate
+- (void) presentWebviewControllerWithRequest:(NSURLRequest *)urlRequest   {
+    // FormSheet모달위에 FullScreen모달이 뜰 떄 애니메이션이 이상하게 동작하여 애니메이션이 없도록 함
+    
+    NLoginThirdPartyOAuth20InAppBrowserViewController *inAppBrowserViewController = [[NLoginThirdPartyOAuth20InAppBrowserViewController alloc] initWithRequest:urlRequest];
+    inAppBrowserViewController.parentOrientation = (UIInterfaceOrientation)[[UIDevice currentDevice] orientation];
+//    [self presentViewController:inAppBrowserViewController animated:NO completion:nil];
+}
+
+#pragma mark - OAuth20 deleagate
+
+- (void)oauth20ConnectionDidOpenInAppBrowserForOAuth:(NSURLRequest *)request {
+    [self presentWebviewControllerWithRequest:request];
+}
+
+
 @end

@@ -601,10 +601,10 @@
 		AB8D1C812282994500D735B3 /* OEXNaverAuthProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D1C7F2282994500D735B3 /* OEXNaverAuthProvider.m */; };
 		AB8D1C84228299E200D735B3 /* icon_naver_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C82228299E100D735B3 /* icon_naver_green.png */; };
 		AB8D1C85228299E200D735B3 /* icon_naver_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8D1C83228299E200D735B3 /* icon_naver_green@2x.png */; };
-		AB9FA4582282A6AE000A61BB /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; };
-		AB9FA4592282A6BB000A61BB /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; };
-		AB9FA45A2282A6BB000A61BB /* NaverThirdPartyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ABB51BF12282671200AB4FD3 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */; };
+		ABD421DE228540F900F94936 /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD421DD228540F900F94936 /* NaverThirdPartyLogin.framework */; };
+		ABD421DF2285410A00F94936 /* NaverThirdPartyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD421DD228540F900F94936 /* NaverThirdPartyLogin.framework */; };
+		ABD421E02285410A00F94936 /* NaverThirdPartyLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABD421DD228540F900F94936 /* NaverThirdPartyLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4132C10195AAFBE00F50B46 /* OEXAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = B4132C0F195AAFBE00F50B46 /* OEXAuthentication.m */; };
 		B419295E1A8A3F1900448AD5 /* OEXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B419295D1A8A3F1900448AD5 /* OEXNetworkManager.m */; };
 		B41F22BB1A113D3D0022E01F /* OEXDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F22BA1A113D3D0022E01F /* OEXDownloadManager.m */; };
@@ -907,7 +907,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB9FA45A2282A6BB000A61BB /* NaverThirdPartyLogin.framework in Embed Frameworks */,
+				ABD421E02285410A00F94936 /* NaverThirdPartyLogin.framework in Embed Frameworks */,
 				77E647CB1C90CA1400B6740D /* edXCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1602,8 +1602,8 @@
 		AB8D1C802282994500D735B3 /* OEXNaverAuthProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEXNaverAuthProvider.h; sourceTree = "<group>"; };
 		AB8D1C82228299E100D735B3 /* icon_naver_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_naver_green.png; sourceTree = "<group>"; };
 		AB8D1C83228299E200D735B3 /* icon_naver_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_naver_green@2x.png"; sourceTree = "<group>"; };
-		AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaverThirdPartyLogin.framework; sourceTree = "<group>"; };
 		ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		ABD421DD228540F900F94936 /* NaverThirdPartyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaverThirdPartyLogin.framework; sourceTree = "<group>"; };
 		ABE57AC922701B8E007CA74D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ABE57ACA22701B8E007CA74D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ABE57ACB22701B8F007CA74D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ko; path = ko.lproj/profiles.json; sourceTree = "<group>"; };
@@ -1957,13 +1957,13 @@
 				77E647A31C90C10300B6740D /* edXCore.framework in Frameworks */,
 				B4A24D0D19EE8A6600CE5010 /* CoreMedia.framework in Frameworks */,
 				77ACA1CB1A323C2500039AD1 /* Fabric.framework in Frameworks */,
-				AB9FA4582282A6AE000A61BB /* NaverThirdPartyLogin.framework in Frameworks */,
+				ABD421DE228540F900F94936 /* NaverThirdPartyLogin.framework in Frameworks */,
 				BE8163F61954244E00F9A2C5 /* MessageUI.framework in Frameworks */,
 				BE0EE28B192B78DA00F9FF98 /* libz.dylib in Frameworks */,
 				77ACA1CA1A323C2500039AD1 /* Crashlytics.framework in Frameworks */,
 				BE0EE289192B78CF00F9FF98 /* SystemConfiguration.framework in Frameworks */,
 				BE0EE287192B78C400F9FF98 /* CoreTelephony.framework in Frameworks */,
-				AB9FA4592282A6BB000A61BB /* NaverThirdPartyLogin.framework in Frameworks */,
+				ABD421DF2285410A00F94936 /* NaverThirdPartyLogin.framework in Frameworks */,
 				BECB7B111924C0C3009C77F1 /* CoreGraphics.framework in Frameworks */,
 				BECB7B131924C0C3009C77F1 /* UIKit.framework in Frameworks */,
 				BECB7B0F1924C0C3009C77F1 /* Foundation.framework in Frameworks */,
@@ -3586,7 +3586,7 @@
 		BECB7B0D1924C0C3009C77F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AB9FA4572282A6AD000A61BB /* NaverThirdPartyLogin.framework */,
+				ABD421DD228540F900F94936 /* NaverThirdPartyLogin.framework */,
 				ABB51BF02282671200AB4FD3 /* KakaoOpenSDK.framework */,
 				776F39281B4EF4CD00ED11E3 /* WebKit.framework */,
 				805329111B0EA2DC0093B177 /* QuartzCore.framework */,

@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char NaverThirdPartyLoginVersionString[];
 #import <NaverThirdPartyLogin/NaverThirdPartyLoginConnection.h>
 #import <NaverThirdPartyLogin/NaverThirdPartyConstantsForApp.h>
 #import <NaverThirdPartyLogin/NLoginThirdPartyOAuth20InAppBrowserViewController.h>
+#import <NaverThirdPartyLogin/NaverThirdPartyLoginUrlConnection.h>
